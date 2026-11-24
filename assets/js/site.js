@@ -297,14 +297,42 @@
     if (history.replaceState) history.replaceState(null, "", "#" + el.id);
     $$(".idx a").forEach(function (a) { a.classList.toggle("is-here", a.getAttribute("data-idx") === el.id); });
   }
+  /* nas filas de etiquetas que deslizam (telemóvel), mantém a etiqueta atual à vista */
+  function centerChip(a, smooth) {
+    var ol = a && a.closest("ol");
+    if (!ol || ol.scrollWidth <= ol.clientWidth + 1) return;
+    var d = a.getBoundingClientRect().left - ol.getBoundingClientRect().left - (ol.clientWidth - a.offsetWidth) / 2;
+    if (ol.scrollBy) ol.scrollBy({ left: d, behavior: smooth && !REDUCE ? "smooth" : "auto" });
+    else ol.scrollLeft += d;
+  }
   if (exs.length && "IntersectionObserver" in window) {
     var idxObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) $$(".idx a").forEach(function (a) { a.classList.toggle("is-here", a.getAttribute("data-idx") === e.target.id); });
+        if (!e.isIntersecting) return;
+        $$(".idx a").forEach(function (a) {
+          var on = a.getAttribute("data-idx") === e.target.id;
+          if (on && !a.classList.contains("is-here")) centerChip(a, true);
+          a.classList.toggle("is-here", on);
+        });
       });
     }, { rootMargin: "-20% 0px -70% 0px" });
     exs.forEach(function (el) { idxObs.observe(el); });
+    var dl = $("#entrega");
+    if (dl) idxObs.observe(dl);
   }
+  centerChip($(".ansnav a[aria-current]"), false);
+
+  /* telemóvel: a barra de baixo esconde-se ao descer e volta ao subir ou no fim da página */
+  var mqNav = window.matchMedia && window.matchMedia("(max-width: 899px)"), lastY = window.pageYOffset || 0;
+  window.addEventListener("scroll", function () {
+    if (!mqNav || !mqNav.matches) return;
+    var y = window.pageYOffset || 0, dy = y - lastY;
+    var end = window.innerHeight + y >= document.documentElement.scrollHeight - 48;
+    /* saltos grandes (ligações #, j/k) não são o utilizador a deslizar: a barra fica como está */
+    if (end || y < 120) document.body.classList.remove("nav-off");
+    else if (Math.abs(dy) > 10 && Math.abs(dy) < window.innerHeight * .8) document.body.classList.toggle("nav-off", dy > 0);
+    if (Math.abs(dy) > 10 || end) lastY = y;
+  }, { passive: true });
 
   /* ------------------------------------------------------------ início: retomar */
   var start = $("[data-start]");

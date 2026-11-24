@@ -514,7 +514,7 @@ def build_modulo(i, mod):
 <div class="w mod">
   <aside class="idx" aria-label="Exercícios de {mod.NOME}">
     <p class="idx__h">exercícios</p>
-    <ol>{index}<li><a href="#entrega" class="idx__deliver"><i class="dot" aria-hidden="true"></i><span class="idx__n">git push</span><span class="idx__t">entrega</span></a></li></ol>
+    <ol>{index}<li><a href="#entrega" class="idx__deliver" data-idx="entrega"><i class="dot" aria-hidden="true"></i><span class="idx__n">git push</span><span class="idx__t">entrega</span></a></li></ol>
     <p class="idx__keys"><kbd>j</kbd> <kbd>k</kbd> para saltar</p>
   </aside>
   <div class="exs">
@@ -582,8 +582,8 @@ def build_exames():
     <div class="xbar" data-xbar>
       <div><span class="mute">exame</span> <b data-x-name></b></div>
       <div><span class="mute">level</span> <b data-x-level>0</b></div>
-      <div class="xbar__time" role="timer" aria-live="off"><span class="mute">tempo (sem limite)</span> <b data-x-time>00:00:00</b></div>
-      <div><span class="mute">níveis feitos</span> <b data-x-done>0</b></div>
+      <div class="xbar__time" role="timer" aria-live="off"><span class="mute">tempo<span class="xbar__x"> (sem limite)</span></span> <b data-x-time>00:00:00</b></div>
+      <div><span class="mute"><span class="xbar__x">níveis </span>feitos</span> <b data-x-done>0</b></div>
     </div>
     <article class="ex ex--exam">
       <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t" data-x-subject>subjects/</span><span class="pill" data-x-try>tentativa 1</span></header>

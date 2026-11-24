@@ -92,13 +92,35 @@ strong, b { color: #fff; font-weight: 700; }
   .cmd-btn kbd { display: inline; }
 }
 @media (max-width: 899px) {
-  /* no telemóvel a navegação passa para uma barra que desliza por baixo do topo */
-  .top__in { flex-wrap: wrap; padding-block: 8px 0; row-gap: 4px; }
-  .nav { display: flex; order: 3; width: calc(100% + 2 * var(--gut)); margin: 0 calc(-1 * var(--gut)); padding: 4px var(--gut) 8px; overflow-x: auto; scrollbar-width: none; }
-  .nav::-webkit-scrollbar { display: none; }
-  .nav a { flex: none; font-size: 13px; padding: 6px 10px; border: 1px solid var(--line); }
+  /* No telemóvel o topo fica numa linha e a navegação passa para baixo, como a barra de estado
+     do tmux. O backdrop-filter sai do topo porque prenderia a barra fixa dentro dele. */
+  :root { --top-h: 52px; --bot-h: 56px; }
+  .top { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .brand { font-size: 13.5px; }
+  .cmd-btn { min-height: 38px; min-width: 46px; justify-content: center; }
   .cmd-btn__t { display: none; }
+  .nav {
+    display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; margin: 0;
+    padding: 0 max(4px, env(safe-area-inset-right)) env(safe-area-inset-bottom) max(4px, env(safe-area-inset-left));
+    background: #050708; border-top: 1px solid var(--line-2);
+    transition: transform .25s var(--ease);
+  }
+  .nav a {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+    min-height: var(--bot-h); padding: 6px 2px; border-radius: 0; border-top: 2px solid transparent;
+    font-size: 11px; line-height: 1.2; letter-spacing: -.02em; white-space: nowrap; overflow: hidden;
+  }
+  .nav a .k { margin: 0; font-size: 10.5px; }
+  .nav a:hover { background: none; }
+  .nav a[aria-current] { background: var(--green-dim); border-top-color: var(--green); }
+  .nav-off .nav { transform: translateY(100%); }
+  .in-exam .nav { display: none; }
+  /* com o teclado aberto, a barra só ocuparia espaço */
+  body:has(:is(.mine__ta, .shell__in, .field, textarea):focus) .nav { display: none; }
+  .foot { padding-bottom: calc(var(--bot-h) + 40px + env(safe-area-inset-bottom)); }
 }
+@media (max-width: 359px) { .nav a { font-size: 10px; } }
 
 /* ---------------------------------------------------------------- tipografia */
 .h1 { font-size: clamp(2.1rem, 8.2vw, 4.6rem); font-weight: 800; line-height: 1.04; letter-spacing: -.035em; color: #fff; overflow-wrap: anywhere; }
@@ -283,7 +305,7 @@ strong, b { color: #fff; font-weight: 700; }
 /* o teu código */
 .mine { margin-top: 22px; border: 1px dashed var(--line-2); border-radius: 8px; padding: 12px; background: var(--bg); }
 .mine__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 8px; }
-.mine__head label { color: var(--green); font-weight: 700; font-size: 14px; }
+.mine__head label { color: var(--green); font-weight: 700; font-size: 14px; min-width: 0; overflow-wrap: anywhere; }
 .mine__head label::before { content: "$ vim "; color: var(--mute); font-weight: 400; }
 .mine__saved { color: var(--mute); font-size: 12px; }
 .mine__ta { width: 100%; min-height: 180px; resize: vertical; font: 400 13.5px/1.6 var(--f-mono); tab-size: 4; -moz-tab-size: 4; color: var(--fg); background: #040506; border: 1px solid var(--line); border-radius: 6px; padding: 12px; caret-color: var(--green); white-space: pre; overflow: auto; }
@@ -330,7 +352,6 @@ select { font: 500 14px var(--f-mono); color: var(--fg); background: var(--bg-2)
 .levels li { border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; font-size: 13px; color: var(--fg-2); }
 .levels b { color: var(--green); }
 .xbar { position: sticky; top: calc(var(--top-h) + 8px); z-index: 20; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line-2); border-radius: var(--r); overflow: hidden; margin-bottom: 18px; box-shadow: 0 10px 30px rgba(0, 0, 0, .45); }
-@media (max-width: 899px) { .xbar { top: calc(var(--top-h) + 52px); } }
 @media (min-width: 720px) { .xbar { grid-template-columns: repeat(4, 1fr); } }
 .xbar > div { background: var(--bg-2); padding: 10px 14px; display: flex; flex-direction: column; font-size: 12px; }
 .xbar b { font-size: 18px; color: #fff; font-variant-numeric: tabular-nums; }
@@ -356,8 +377,11 @@ select { font: 500 14px var(--f-mono); color: var(--fg); background: var(--bg-2)
 .norm__toc a::before { content: counter(r, decimal-leading-zero) " "; color: var(--mute); }
 .norm__toc a:hover { background: var(--bg-3); color: var(--fg); text-decoration: none; }
 @media (min-width: 1000px) { .norm__toc { position: sticky; top: calc(var(--top-h) + 18px); align-self: start; } }
-@media (max-width: 999px) { .norm__toc ol { columns: 2; column-gap: 12px; } }
-@media (max-width: 520px) { .norm__toc ol { columns: 1; } }
+@media (max-width: 999px) {
+  /* índice em etiquetas que partem linha: tudo à vista sem ocupar o ecrã inteiro */
+  .norm__toc ol { display: flex; flex-wrap: wrap; gap: 6px; }
+  .norm__toc a { border: 1px solid var(--line); padding: 6px 10px; font-size: 13px; }
+}
 .rule { padding-bottom: 34px; margin-bottom: 34px; border-bottom: 1px dashed var(--line); min-width: 0; }
 .cmp { display: grid; gap: 12px; }
 @media (min-width: 1100px) { .cmp { grid-template-columns: 1fr 1fr; } }
@@ -498,3 +522,70 @@ select { font: 500 14px var(--f-mono); color: var(--fg); background: var(--bg-2)
 .grade { margin-top: 18px; border: 1px solid rgba(77, 255, 154, .4); border-radius: 10px; padding: 16px 18px; background: var(--bg-2); }
 .grade .h3 { margin-top: 0; }
 .tut .term { max-width: 760px; }
+
+/* ---------------------------------------------------------------- telemóvel */
+/* Grelhas de uma coluna: sem minmax(0, 1fr), um bloco de código comprido alarga a página inteira. */
+.mod, .norm, .ans-wrap, .exam { grid-template-columns: minmax(0, 1fr); }
+.mod > *, .norm > *, .ans-wrap > *, .exam > *, .split > *, .sec--split > *, .ans__cols > *, .cmp > * { min-width: 0; }
+@media (min-width: 1000px) {
+  .mod { grid-template-columns: 230px minmax(0, 1fr); }
+  .norm { grid-template-columns: 230px minmax(0, 1fr); }
+  .ans-wrap { grid-template-columns: 200px minmax(0, 1fr); }
+}
+
+@media (max-width: 999px) {
+  /* Nos módulos, o índice de exercícios fica preso por baixo do topo para saltar entre exercícios. */
+  .idx {
+    position: sticky; top: var(--top-h); z-index: 30;
+    margin-inline: calc(-1 * var(--gut)); padding: 8px var(--gut) 0;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+  }
+  .idx__h { display: none; }
+  .idx a { min-height: 36px; }
+  .ex, .deliver { scroll-margin-top: calc(var(--top-h) + 62px); }
+  /* Filas que deslizam: a margem direita esbate-se para mostrar que há mais. */
+  .idx ol, .ansnav ol {
+    scrollbar-width: none; padding-right: 28px;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+  }
+  .idx ol::-webkit-scrollbar, .ansnav ol::-webkit-scrollbar { display: none; }
+  .ansnav a { padding: 7px 12px; }
+}
+
+@media (max-width: 719px) {
+  /* exame: a barra de estado numa só linha, para não tapar o enunciado */
+  .xbar { grid-template-columns: minmax(0, 1.15fr) minmax(0, .9fr) minmax(0, 1.25fr) minmax(0, .7fr); margin-bottom: 14px; }
+  .xbar > div { padding: 7px 8px; font-size: 11px; line-height: 1.35; min-width: 0; }
+  .xbar > div > span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .xbar b { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .xbar__x { display: none; }
+  .mine__ta { min-height: 140px; }
+  .hero__cta { gap: 10px 22px; }
+}
+
+@media (max-width: 519px) {
+  .code pre, .term pre { font-size: 12.5px; padding: 12px 14px; }
+  /* estado do exercício como um seletor de três partes */
+  .status { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .status label { justify-content: center; padding: 8px 4px; font-size: 13px; position: relative; }
+  .status input { position: absolute; opacity: 0; pointer-events: none; }
+  .status label:has(input:focus-visible) { outline: 2px solid var(--green); outline-offset: 2px; }
+  .mine__head { flex-wrap: wrap; }
+  .mnav__a { padding: 12px 14px; }
+  .mnav__a b { font-size: 16px; }
+}
+
+/* Ecrãs táteis: alvos com pelo menos ~40 px e sem dicas de teclado. */
+@media (hover: none) and (pointer: coarse) {
+  .copy { min-height: 36px; padding: 6px 12px; }
+  .link { display: inline-block; padding-block: 8px 4px; }
+  .esheet label { padding: 5px 0; }
+  .esheet input { width: 18px; height: 18px; margin-top: 3px; }
+  .foot__keys { display: none; }
+}
+
+/* iPhone: abaixo de 16 px o Safari faz zoom ao tocar num campo de texto. */
+@supports (-webkit-touch-callout: none) {
+  .mine__ta, .field, select { font-size: 16px; }
+}
