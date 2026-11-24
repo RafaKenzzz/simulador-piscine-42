@@ -1,0 +1,146 @@
+# -*- coding: utf-8 -*-
+from dados import ex
+
+ID = "c02"
+NOME = "C02"
+TIPO = "C"
+DIAS = "primeira semana"
+RESUMO = "Strings: copiar, testar e transformar caracteres. Termina com o `ft_print_memory`."
+INTRO = [
+    "Vários exercícios pedem para reproduzir uma função da biblioteca padrão. Lê o `man` dela (`man strcpy`, `man strlcpy`): a moulinette compara o teu resultado com o original, incluindo o valor devolvido.",
+]
+
+N = "Nenhuma"
+
+
+def is_(nome, oque, extra):
+    return ex(nome[0], nome[1], f"{nome[1]}.c", N,
+              [f"Cria uma função que devolve 1 se a string recebida só tiver {oque}, e 0 se tiver qualquer outro carácter.",
+               "Deve devolver 1 se a string estiver vazia."],
+              proto=f"int\t{nome[1]}(char *str);",
+              sol=[f"c02/{nome[0]}/{nome[1]}.c"],
+              passos=["Percorre-se a string e devolve-se 0 no primeiro carácter que não cumpre a regra.",
+                      "Se o ciclo chegar ao `'\\0'`, todos cumpriram (ou não havia nenhum) e devolve-se 1.",
+                      extra],
+              erros=["Devolver 0 para a string vazia.",
+                     "Usar `<=`/`>=` com os caracteres errados nas fronteiras."],
+              limites=["A string vazia devolve 1."])
+
+
+EXS = [
+    ex("ex00", "ft_strcpy", "ft_strcpy.c", N,
+       ["Reproduz o comportamento da função `strcpy` (`man strcpy`)."],
+       proto="char\t*ft_strcpy(char *dest, char *src);",
+       sol=["c02/ex00/ft_strcpy.c"],
+       passos=["Copia-se carácter a carácter até ao `'\\0'` de `src`.",
+               "O `'\\0'` também é copiado: sem ele, `dest` não acaba onde devia.",
+               "Devolve-se `dest`, como o `strcpy`."],
+       erros=["Esquecer o `'\\0'` no fim de `dest`.",
+              "Devolver `src` ou não devolver nada."],
+       limites=["`src` vazia: `dest[0]` passa a `'\\0'`."]),
+
+    ex("ex01", "ft_strncpy", "ft_strncpy.c", N,
+       ["Reproduz o comportamento da função `strncpy` (`man strncpy`)."],
+       proto="char\t*ft_strncpy(char *dest, char *src, unsigned int n);",
+       sol=["c02/ex01/ft_strncpy.c"],
+       passos=["Copia-se no máximo `n` caracteres de `src`.",
+               "Se `src` acabar antes de `n`, as posições que faltam até `n` são preenchidas com `'\\0'` (está no `man`).",
+               "Se `src` tiver `n` ou mais caracteres, `dest` **não** fica terminado em `'\\0'`."],
+       erros=["Parar no `'\\0'` de `src` sem preencher o resto até `n`.",
+              "Acrescentar um `'\\0'` em `dest[n]`: escreve um byte a mais do que o `strncpy`."],
+       limites=["`n = 0` não mexe em nada.",
+                "A moulinette compara os `n` bytes de `dest`, não só a string."]),
+
+    is_(("ex02", "ft_str_is_alpha"), "letras (maiúsculas ou minúsculas)",
+        "Uma letra está entre `'a'` e `'z'` ou entre `'A'` e `'Z'`. Os caracteres entre `'Z'` e `'a'` (`[`, `\\`, `` ` ``…) não são letras."),
+    is_(("ex03", "ft_str_is_numeric"), "algarismos",
+        "Um algarismo está entre `'0'` e `'9'`. O sinal `-` não é um algarismo."),
+    is_(("ex04", "ft_str_is_lowercase"), "letras minúsculas",
+        "Basta estar entre `'a'` e `'z'`. Um espaço já faz devolver 0."),
+    is_(("ex05", "ft_str_is_uppercase"), "letras maiúsculas",
+        "Basta estar entre `'A'` e `'Z'`."),
+    is_(("ex06", "ft_str_is_printable"), "caracteres imprimíveis",
+        "Os imprimíveis são os de código 32 (espaço) a 126 (`~`). O 127 (DEL) e os bytes acima de 127 não são."),
+
+    ex("ex07", "ft_strupcase", "ft_strupcase.c", N,
+       ["Cria uma função que passa todas as letras a maiúsculas. Deve devolver `str`."],
+       proto="char\t*ft_strupcase(char *str);",
+       sol=["c02/ex07/ft_strupcase.c"],
+       passos=["Na tabela ASCII, uma minúscula e a maiúscula correspondente estão sempre a 32 de distância.",
+               "Só se subtrai 32 às letras entre `'a'` e `'z'`; tudo o resto fica igual."],
+       erros=["Subtrair 32 a todos os caracteres: os algarismos e a pontuação estragam-se."],
+       limites=["Strings com algarismos, pontuação e letras já maiúsculas."]),
+
+    ex("ex08", "ft_strlowcase", "ft_strlowcase.c", N,
+       ["Cria uma função que passa todas as letras a minúsculas. Deve devolver `str`."],
+       proto="char\t*ft_strlowcase(char *str);",
+       sol=["c02/ex08/ft_strlowcase.c"],
+       passos=["O inverso do anterior: soma-se 32 às letras entre `'A'` e `'Z'`."],
+       erros=["Mexer em caracteres como `[` ou `@`, que estão perto das letras na tabela."],
+       limites=["Strings sem letras ficam iguais."]),
+
+    ex("ex09", "ft_strcapitalize", "ft_strcapitalize.c", N,
+       ["Cria uma função que põe em maiúscula a primeira letra de cada palavra e todas as outras letras em minúscula.",
+        "Uma palavra é uma sequência de caracteres alfanuméricos (letras e algarismos). Deve devolver `str`."],
+       proto="char\t*ft_strcapitalize(char *str);",
+       exemplo="salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un\n\nfica:\n\nSalut, Comment Tu Vas ? 42mots Quarante-Deux; Cinquante+Et+Un",
+       sol=["c02/ex09/ft_strcapitalize.c"],
+       passos=["Primeiro passa-se tudo a minúsculas.",
+               "Depois, uma letra fica maiúscula se estiver no início da string ou se o carácter antes dela não for letra nem algarismo.",
+               "`42mots` não muda: o `m` vem depois de um algarismo, por isso não está no início de uma palavra.",
+               "`quarante-deux` passa a `Quarante-Deux`: o `-` separa palavras."],
+       erros=["Considerar só o espaço como separador: `+`, `-` e `;` também separam.",
+              "Pôr `42Mots`, esquecendo que os algarismos fazem parte da palavra.",
+              "Não passar a minúsculas o resto da palavra (`oLA` tem de dar `Ola`)."],
+       limites=["O exemplo do enunciado é o primeiro teste.",
+                "Uma letra isolada (`a b`) fica maiúscula."]),
+
+    ex("ex10", "ft_strlcpy", "ft_strlcpy.c", N,
+       ["Reproduz o comportamento da função `strlcpy` (`man strlcpy`)."],
+       proto="unsigned int\tft_strlcpy(char *dest, char *src, unsigned int size);",
+       sol=["c02/ex10/ft_strlcpy.c"],
+       passos=["`size` é o tamanho total do buffer `dest`. Cabem `size - 1` caracteres mais o `'\\0'`.",
+               "Copia-se até ao fim de `src` ou até `size - 1` caracteres, e termina-se com `'\\0'`.",
+               "Com `size == 0` não se escreve nada.",
+               "Devolve-se sempre o tamanho de `src`. Se for `>= size`, quem chama sabe que a cópia ficou cortada."],
+       erros=["Devolver o número de caracteres copiados em vez do tamanho de `src`.",
+              "Escrever o `'\\0'` quando `size` é 0.",
+              "Calcular `size - 1` com `size == 0`: em `unsigned int` dá 4294967295 e a cópia não pára."],
+       limites=["`size` 0, 1, igual e maior do que o tamanho de `src`."]),
+
+    ex("ex11", "ft_putstr_non_printable", "ft_putstr_non_printable.c", "write",
+       ["Cria uma função que mostra uma string. Os caracteres não imprimíveis são mostrados em hexadecimal (com letras minúsculas), precedidos de uma barra invertida."],
+       proto="void\tft_putstr_non_printable(char *str);",
+       exemplo="Coucou\\ntu vas bien ?\n\nmostra:\n\nCoucou\\0atu vas bien ?",
+       sol=["c02/ex11/ft_putstr_non_printable.c"],
+       passos=["Imprimíveis: códigos de 32 a 126. Os restantes saem como `\\` e dois algarismos hexadecimais.",
+               "Os dois algarismos são `c / 16` e `c % 16`, usados como índices da string `\"0123456789abcdef\"`.",
+               "O carácter é lido como `unsigned char`: os bytes acima de 127 (acentos em UTF-8) dariam valores negativos num `char`."],
+       erros=["Mostrar `\\a` em vez de `\\0a`: são sempre dois algarismos.",
+              "Usar maiúsculas (`\\0A`).",
+              "Esquecer os bytes acima de 127."],
+       limites=["`\\n` dá `\\0a`, o tab dá `\\09`, o 127 dá `\\7f`.",
+                "Um `é` em UTF-8 são dois bytes: `\\c3\\a9`."]),
+
+    ex("ex12", "ft_print_memory", "ft_print_memory.c", "write",
+       ["Cria uma função que mostra uma zona de memória. Cada linha tem três colunas separadas por um espaço:",
+        "- o endereço hexadecimal do primeiro carácter da linha, seguido de `:`;",
+        "- o conteúdo em hexadecimal, com um espaço a cada 2 caracteres e espaços a preencher quando faltam bytes (ver exemplo);",
+        "- o conteúdo em caracteres imprimíveis; os não imprimíveis aparecem como um ponto.",
+        "Cada linha mostra 16 caracteres. Se `size` for 0, não mostra nada. Deve devolver `addr`."],
+       proto="void\t*ft_print_memory(void *addr, unsigned int size);",
+       exemplo="$> ./ft_print_memory | cat -te\n0000000107ff9f40: 426f 6e6a 6f75 7220 6c65 7320 616d 696e Bonjour les amin$\n0000000107ff9f50: 6368 6573 090a 0963 2020 6573 7420 666f ches...c  est fo$\n0000000107ff9f60: 7509 746f 7574 0963 6520 7175 206f 6e20 u.tout.ce qu on $\n0000000107ff9f70: 7065 7574 2066 6169 7265 2061 7665 6309 peut faire avec.$\n0000000107ff9f80: 0a09 7072 696e 745f 6d65 6d6f 7279 0a0a ..print_memory..$\n0000000107ff9f90: 0a09 6c6f 6c2e 6c6f 6c0a 2000           ..lol.lol. .$\n$>",
+       sol=["c02/ex12/ft_print_memory.c"],
+       passos=["Trabalha-se com `unsigned char *`, para ler um byte de cada vez sem sinal.",
+               "Cada linha começa no byte `off` (0, 16, 32…). O endereço desse byte é escrito com 16 algarismos hexadecimais.",
+               "A coluna do meio tem sempre 16 posições: dois algarismos por byte, ou dois espaços quando o byte não existe (última linha). Depois de cada posição ímpar vem um espaço.",
+               "A coluna da direita mostra só os bytes que existem.",
+               "A função `ft_put_hex` escreve qualquer número com uma largura fixa: 16 para o endereço e 2 para cada byte.",
+               "Dividido em quatro funções, nenhuma passa das 25 linhas."],
+       erros=["Não alinhar a última linha: sem espaços na coluna do meio, a coluna dos caracteres fica fora do sítio.",
+              "Usar `char` em vez de `unsigned char`: os bytes acima de 127 dão algarismos errados.",
+              "Escrever o endereço sem zeros à esquerda.",
+              "Mostrar uma linha vazia quando `size` é 0."],
+       limites=["O exemplo do enunciado, com o `'\\0'` final incluído no tamanho.",
+                "`size` múltiplo de 16 e não múltiplo; `size` menor do que 16."]),
+]

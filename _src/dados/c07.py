@@ -1,0 +1,101 @@
+# -*- coding: utf-8 -*-
+from dados import ex
+
+ID = "c07"
+NOME = "C07"
+TIPO = "C"
+DIAS = "segunda semana"
+RESUMO = "Memória dinâmica com `malloc`: duplicar, criar arrays, juntar strings e o primeiro `ft_split`."
+INTRO = [
+    "O `malloc` pode falhar e devolver `NULL`. Testa sempre o resultado antes de escrever na memória.",
+    "Tudo o que reservas tem de ter o tamanho certo: um byte a menos para o `'\\0'` é um erro clássico que só aparece às vezes.",
+]
+
+M = "malloc"
+EXS = [
+    ex("ex00", "ft_strdup", "ft_strdup.c", M,
+       ["Reproduz o comportamento da função `strdup` (`man strdup`)."],
+       proto="char\t*ft_strdup(char *src);",
+       sol=["c07/ex00/ft_strdup.c"],
+       passos=["Mede-se `src` e reservam-se `len + 1` bytes: o `+ 1` é para o `'\\0'`.",
+               "Se o `malloc` devolver `NULL`, devolve-se `NULL`.",
+               "Copia-se tudo, incluindo o `'\\0'`, e devolve-se a cópia."],
+       erros=["Reservar só `len` bytes.",
+              "Não testar o retorno do `malloc`."],
+       limites=["String vazia: devolve uma string nova com só o `'\\0'`."]),
+
+    ex("ex01", "ft_range", "ft_range.c", M,
+       ["Cria uma função `ft_range` que devolve um array de `int` com todos os valores entre `min` e `max`.",
+        "`min` incluído, `max` excluído.",
+        "Se `min` for maior ou igual a `max`, devolve um ponteiro nulo."],
+       proto="int\t*ft_range(int min, int max);",
+       sol=["c07/ex01/ft_range.c"],
+       passos=["O array tem `max - min` elementos. Esse tamanho é calculado em `long`: com `min = INT_MIN` e `max = INT_MAX`, a diferença não cabe num `int`.",
+               "Reserva-se `sizeof(int) * tamanho` e preenche-se com `min + i`."],
+       erros=["Reservar `max - min` bytes em vez de `max - min` inteiros (esquecer o `sizeof(int)`).",
+              "Incluir o `max`."],
+       limites=["`min == max` dá `NULL`; intervalos com negativos; extremos do `int`."]),
+
+    ex("ex02", "ft_ultimate_range", "ft_ultimate_range.c", M,
+       ["Cria uma função `ft_ultimate_range` que reserva e preenche um array de `int` com todos os valores entre `min` e `max` (`min` incluído, `max` excluído).",
+        "Devolve o tamanho do array, ou -1 em caso de erro.",
+        "Se `min` for maior ou igual a `max`, `range` fica a apontar para `NULL` e a função devolve 0."],
+       proto="int\tft_ultimate_range(int **range, int min, int max);",
+       sol=["c07/ex02/ft_ultimate_range.c"],
+       passos=["É o `ft_range` com o array devolvido através de `*range`.",
+               "`range` é o endereço de um ponteiro de quem chama; escrever em `*range` muda esse ponteiro.",
+               "Para escrever no array usa-se `(*range)[i]`: os parênteses são obrigatórios, porque `*range[i]` seria `*(range[i])`."],
+       erros=["Escrever `*range[i]`.",
+              "Esquecer o `*range = NULL` quando `min >= max`."],
+       limites=["Testam o valor devolvido e o ponteiro nos três casos: normal, vazio e erro."]),
+
+    ex("ex03", "ft_strjoin", "ft_strjoin.c", M,
+       ["Escreve uma função que junta todas as strings de `strs`, separadas por `sep`.",
+        "`size` é o número de strings em `strs`.",
+        "Se `size` for 0, devolve uma string vazia que se possa libertar com `free`."],
+       proto="char\t*ft_strjoin(int size, char **strs, char *sep);",
+       sol=["c07/ex03/ft_strjoin.c"],
+       passos=["Calcula-se o tamanho final: a soma dos tamanhos das strings, mais `size - 1` separadores, mais 1 para o `'\\0'`.",
+               "Reserva-se tudo de uma vez.",
+               "Copia-se cada string e, entre elas (não depois da última), o separador. A função `ft_append` devolve o novo fim, para não ter de medir o resultado outra vez."],
+       erros=["Pôr um separador depois da última string.",
+              "Com `size == 0`, devolver `NULL` ou uma string literal `\"\"` (que não pode ser libertada)."],
+       limites=["`size` 0 e 1; strings vazias; separador vazio."]),
+
+    ex("ex04", "ft_convert_base", "ft_convert_base.c, ft_convert_base2.c", "malloc, free",
+       ["Cria uma função que devolve o resultado da conversão da string `nbr` da base `base_from` para a base `base_to`.",
+        "`nbr`, `base_from` e `base_to` podem não ser modificáveis.",
+        "`nbr` segue as regras do `ft_atoi_base` (do C04): cuidado com os `+`, os `-` e os espaços.",
+        "O número representado por `nbr` cabe num `int`.",
+        "Se uma base for inválida, devolve `NULL`.",
+        "O resultado só pode ter um `-` à frente, se for preciso: sem espaços e sem `+`."],
+       proto="char\t*ft_convert_base(char *nbr, char *base_from, char *base_to);",
+       sol=["c07/ex04/ft_convert_base.c", "c07/ex04/ft_convert_base2.c"],
+       passos=["São dois passos: ler `nbr` para um número (um `ft_atoi_base`) e escrever esse número na outra base (um `ft_itoa_base`).",
+               "Como cada ficheiro só pode ter 5 funções, as funções auxiliares ficam no `ft_convert_base2.c`. Os protótipos delas são declarados no início do `ft_convert_base.c`.",
+               "O número é guardado num `long`: assim o valor positivo de `-2147483648` cabe durante a conversão.",
+               "Para escrever, calcula-se primeiro quantos caracteres são precisos, reserva-se o tamanho exato e preenche-se do fim para o início.",
+               "As duas bases são validadas com as regras do `ft_atoi_base` (sem `+`, `-` e espaços em branco)."],
+       erros=["Converter através de um `int`: falha com `-2147483648`.",
+              "Mostrar `-0` para zero com sinal negativo.",
+              "Esquecer que as strings podem não ser modificáveis e tentar escrever nelas."],
+       limites=["`\"-0\"` dá `\"0\"`; `INT_MAX` e `INT_MIN`; bases inválidas dão `NULL`."]),
+
+    ex("ex05", "ft_split", "ft_split.c", M,
+       ["Cria uma função que divide uma string em várias, usando como separador cada carácter da string `charset`.",
+        "A função devolve um array em que cada elemento é o endereço de uma string entre dois separadores. O último elemento do array é 0, para marcar o fim.",
+        "Não pode haver strings vazias no array.",
+        "A string recebida não pode ser modificada."],
+       proto="char\t**ft_split(char *str, char *charset);",
+       sol=["c07/ex05/ft_split.c"],
+       passos=["Primeiro contam-se as palavras: começa uma palavra em cada carácter que não é separador e que vem depois de um separador (ou no início).",
+               "Reserva-se o array com mais uma posição para o 0 final.",
+               "Depois repete-se: saltar separadores, copiar a palavra para uma string nova, saltar a palavra.",
+               "Como os separadores são saltados todos de uma vez, separadores seguidos nunca dão strings vazias.",
+               "Neste exercício só o `malloc` é permitido, por isso não há `free` em caso de erro."],
+       erros=["Criar strings vazias com separadores seguidos ou no início e no fim.",
+              "Esquecer o 0 no fim do array.",
+              "Modificar a string original (por exemplo, pôr `'\\0'` no lugar dos separadores)."],
+       limites=["String vazia ou só com separadores: array só com o 0.",
+                "`charset` vazio: a string inteira é uma palavra."]),
+]

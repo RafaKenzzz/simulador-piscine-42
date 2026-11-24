@@ -1,0 +1,16 @@
+{
+  "name": "Simulador da Piscine",
+  "short_name": "piscine.sim",
+  "lang": "pt-PT",
+  "start_url": "index.html",
+  "display": "browser",
+  "background_color": "#07090b",
+  "theme_color": "#07090b",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

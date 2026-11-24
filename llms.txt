@@ -1,0 +1,45 @@
+# Simulador da Piscine
+
+> Simulador de treino da Piscine C da 42 Lisboa: módulos Shell00–01, C00–C13, Rush00–02 e BSQ com enunciados em português, progresso guardado no navegador, simulador de exames por níveis e resumo da Norminette.
+
+Site estático de treino. Não é oficial nem tem ligação à 42 Lisboa.
+
+## Páginas
+
+- [Início](index.html): o que é a Piscine e como funciona este simulador
+- [Tutorial](tutorial.html): como usar o simulador, entregar e fazer o exame
+- [Módulos](modulos.html): todos os módulos e exercícios, com entrega e moulinette
+- [Exames](exames.html): simulador do examshell por níveis, sem tempo limite
+- [Norminette](norminette.html): resumo das regras da Norma
+
+## Módulos
+
+- [Shell00](modulos/shell00.html): Ficheiros, permissões, datas, tar, git e find. O primeiro contacto com o terminal. (10 exercícios)
+- [Shell01](modulos/shell01.html): Pipes, find, sed, tr, variáveis de ambiente e bases numéricas com bc. (9 exercícios)
+- [C00](modulos/c00.html): O primeiro C: write, ciclos while, a tabela ASCII e o famoso ft_putnbr. (9 exercícios)
+- [C01](modulos/c01.html): Ponteiros: ler e escrever através de um endereço, trocar valores, percorrer arrays e strings. (9 exercícios)
+- [C02](modulos/c02.html): Strings: copiar, testar e transformar caracteres. Termina com o ft_print_memory. (13 exercícios)
+- [C03](modulos/c03.html): Comparar, juntar e procurar strings: strcmp, strcat, strstr e o traiçoeiro strlcat. (6 exercícios)
+- [C04](modulos/c04.html): Números e strings: ft_atoi, ft_putnbr e as versões em qualquer base. (6 exercícios)
+- [C05](modulos/c05.html): Matemática e recursão: fatoriais, potências, Fibonacci, raízes, primos e as dez rainhas. (9 exercícios)
+- [C06](modulos/c06.html): Os primeiros programas: main(argc, argv) e os argumentos da linha de comandos. (4 exercícios)
+- [C07](modulos/c07.html): Memória dinâmica com malloc: duplicar, criar arrays, juntar strings e o primeiro ft_split. (6 exercícios)
+- [C08](modulos/c08.html): Ficheiros .h, macros, typedef e estruturas (struct). (6 exercícios)
+- [C09](modulos/c09.html): Bibliotecas estáticas (ar), o primeiro Makefile e o ft_split de novo. (3 exercícios)
+- [C10](modulos/c10.html): Ficheiros: open, read, close e erros com errno. Reescreves o cat, o tail e o hexdump. (4 exercícios)
+- [C11](modulos/c11.html): Ponteiros para funções: aplicar, filtrar, ordenar e o programa do-op. (8 exercícios)
+- [C12](modulos/c12.html): Listas ligadas: criar, percorrer, inverter, ordenar e juntar listas de t_list. (18 exercícios)
+- [C13](modulos/c13.html): Árvores binárias: criar nós, os três percursos, inserir, procurar, medir e percorrer por níveis. (8 exercícios)
+- [Rush00](modulos/rush00.html): Desenhar um retângulo com ft_putchar. Primeiro projeto de grupo, com cinco variantes. (1 exercícios)
+- [Rush01](modulos/rush01.html): Skyscraper 4×4: preencher uma grelha de prédios com as vistas dadas. Backtracking em grupo. (1 exercícios)
+- [Rush02](modulos/rush02.html): Converter números em palavras com um dicionário em ficheiro: leitura, parsing e memória dinâmica. (1 exercícios)
+- [BSQ](modulos/bsq.html): O projeto final: encontrar e desenhar o maior quadrado possível num mapa com obstáculos. (1 exercícios)
+
+## Exames
+
+- level 0: aff_a, aff_first_param, aff_last_param, aff_z, ft_countdown, ft_print_numbers, hello, maff_alpha, maff_revalpha, only_a, only_z
+- level 1: first_word, ft_putstr, ft_strcpy, ft_strlen, ft_swap, repeat_alpha, rev_print, rot_13, rotone, search_and_replace, ulstr
+- level 2: alpha_mirror, do_op, ft_atoi, ft_strcmp, ft_strdup, ft_strrev, inter, is_power_of_2, last_word, max, print_bits, reverse_bits, swap_bits, union, wdmatch
+- level 3: add_prime_sum, epur_str, expand_str, ft_atoi_base, ft_list_size, ft_range, ft_rrange, hidenp, lcm, paramsum, pgcd, print_hex, rstr_capitalizer, str_capitalizer, tab_mult
+- level 4: fprime, ft_itoa, ft_list_foreach, ft_list_remove_if, ft_split, rev_wstr, rostring, sort_int_tab, sort_list, check_mate
+- level 5: brackets, brainfuck, ft_itoa_base, options, print_memory, rpn_calc

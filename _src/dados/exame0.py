@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+"""Exame, level 0. Fontes: joaquim-oliveira-neto/42-Piscine-C-Exam e nigal.freeshell.org."""
+from dados.exames import x
+
+P, F, W = "programa", "função", "write"
+
+EXS = [
+    x(0, "aff_a", P, W,
+      ["Escreve um programa que recebe uma string e mostra o primeiro carácter `a` que encontrar nela, seguido de uma quebra de linha.",
+       "Se não houver nenhum `a`, mostra só a quebra de linha. Se o número de parâmetros não for 1, mostra `a` seguido de uma quebra de linha."],
+      exemplo='$> ./aff_a "abc" | cat -e\na$\n$> ./aff_a "dubO a POIL" | cat -e\na$\n$> ./aff_a "zz sent le poney" | cat -e\n$\n$> ./aff_a | cat -e\na$',
+      passos=["Primeiro trata-se o caso do número errado de argumentos: `a\\n` e acabou.",
+              "Com um argumento, avança-se até encontrar um `a` ou o fim. Se parou num `a`, escreve-se o `a`.",
+              "Em todos os casos acaba com `\\n`."],
+      erros=["Escrever só `\\n` quando não há argumentos: aí o enunciado pede `a\\n`.",
+             "Escrever todos os `a` em vez do primeiro."],
+      limites=["String sem `a`, string vazia, nenhum argumento, dois argumentos."]),
+
+    x(0, "aff_first_param", P, W,
+      ["Escreve um programa que recebe strings como argumentos e mostra o primeiro, seguido de uma quebra de linha.",
+       "Sem argumentos, mostra só a quebra de linha."],
+      exemplo='$> ./aff_first_param vincent mit "l\'ane" dans un pre et "s\'en" vint | cat -e\nvincent$\n$> ./aff_first_param "j\'aime le fromage de chevre" | cat -e\nj\'aime le fromage de chevre$\n$> ./aff_first_param\n$',
+      passos=["O primeiro argumento é `argv[1]`, que só existe se `argc > 1`.",
+              "Mede-se e escreve-se de uma vez; depois a quebra de linha."],
+      erros=["Escrever `argv[0]` (o nome do programa)."],
+      limites=["Argumentos com espaços (entre aspas) contam como um só."]),
+
+    x(0, "aff_last_param", P, W,
+      ["Escreve um programa que recebe strings como argumentos e mostra a última, seguida de uma quebra de linha.",
+       "Sem argumentos, mostra só a quebra de linha."],
+      exemplo='$> ./aff_last_param "zaz" "mange" "des" "chats" | cat -e\nchats$\n$> ./aff_last_param "j\'aime le savon" | cat -e\nj\'aime le savon$\n$> ./aff_last_param\n$',
+      passos=["O último argumento é `argv[argc - 1]`.",
+              "Sem argumentos, `argv[argc - 1]` seria o nome do programa: por isso testa-se `argc > 1`."],
+      erros=["Mostrar o nome do programa quando não há argumentos."],
+      limites=["Um só argumento: é o primeiro e o último."]),
+
+    x(0, "aff_z", P, W,
+      ["Escreve um programa que recebe uma string e mostra o primeiro carácter `z` que encontrar nela, seguido de uma quebra de linha.",
+       "Se não houver nenhum `z`, mostra `z` seguido de uma quebra de linha. Se o número de parâmetros não for 1, mostra `z` seguido de uma quebra de linha."],
+      exemplo='$> ./aff_z "abc" | cat -e\nz$\n$> ./aff_z "dubO a POIL" | cat -e\nz$\n$> ./aff_z "zaz sent le poney" | cat -e\nz$\n$> ./aff_z | cat -e\nz$',
+      passos=["Lê o enunciado até ao fim: com `z`, sem `z` e com o número errado de argumentos, a saída é sempre `z\\n`.",
+              "A solução mais simples é escrever `z\\n` e acabar. Procurar o `z` também está certo, mas dá o mesmo resultado."],
+      erros=["Escrever só `\\n` quando não há `z` (isso é o `aff_a`)."],
+      limites=["Todos os casos dão `z\\n`."]),
+
+    x(0, "ft_countdown", P, W,
+      ["Escreve um programa que mostra todos os algarismos por ordem decrescente, seguidos de uma quebra de linha."],
+      exemplo="$> ./ft_countdown | cat -e\n9876543210$",
+      passos=["Começa em `'9'` e desce até `'0'`; no fim, `\\n`."],
+      erros=["Esquecer a quebra de linha (ao contrário do `ft_print_numbers`, aqui é pedida)."],
+      limites=["Saída exata: `9876543210\\n`."]),
+
+    x(0, "ft_print_numbers", F, W,
+      ["Escreve uma função que mostra todos os algarismos por ordem crescente."],
+      proto="void\tft_print_numbers(void);",
+      passos=["É uma função, não um programa: não há `main`.",
+              "Escreve de `'0'` a `'9'`, sem quebra de linha."],
+      erros=["Entregar com `main`: o examshell compila com o `main` dele e dá erro de duplicação."],
+      limites=["Saída exata: `0123456789`."]),
+
+    x(0, "hello", P, W,
+      ["Escreve um programa que mostra `Hello World!` seguido de uma quebra de linha."],
+      exemplo="$>./hello\nHello World!\n$>./hello | cat -e\nHello World!$",
+      passos=["Um só `write` com os 13 bytes: as 12 letras e sinais e o `\\n`."],
+      erros=["Contar mal os bytes do `write`.",
+             "Esquecer o `!` ou a maiúscula do `W`."],
+      limites=["Comparação exata com `Hello World!\\n`."]),
+
+    x(0, "maff_alpha", P, W,
+      ["Escreve um programa que mostra o alfabeto com as letras pares em maiúscula e as ímpares em minúscula, seguido de uma quebra de linha."],
+      exemplo="$> ./maff_alpha | cat -e\naBcDeFgHiJkLmNoPqRsTuVwXyZ$",
+      passos=["Contando a partir de 0, as letras nas posições ímpares (b, d, f, …) saem em maiúscula.",
+              "A letra na posição `i` é `'a' + i` ou `'A' + i`."],
+      erros=["Começar com `A` maiúsculo: o exemplo começa em `a`."],
+      limites=["Saída exata do exemplo."]),
+
+    x(0, "maff_revalpha", P, W,
+      ["Escreve um programa que mostra o alfabeto ao contrário, com as letras pares em maiúscula e as ímpares em minúscula, seguido de uma quebra de linha."],
+      exemplo="$> ./maff_revalpha | cat -e\nzYxWvUtSrQpOnMlKjIhGfEdCbA$",
+      passos=["A letra na posição `i` (a contar do `z`) é `'z' - i`; nas posições ímpares usa-se `'Z' - i`."],
+      erros=["Alternar ao contrário (`ZyXw…`)."],
+      limites=["Saída exata do exemplo."]),
+
+    x(0, "only_a", P, W,
+      ["Escreve um programa que mostra um carácter `a` na saída padrão."],
+      passos=["Um `write` de um byte. O enunciado não pede quebra de linha."],
+      erros=["Acrescentar um `\\n`."],
+      limites=["Saída exata: `a`."]),
+
+    x(0, "only_z", P, W,
+      ["Escreve um programa que mostra um carácter `z` na saída padrão."],
+      passos=["Um `write` de um byte, sem quebra de linha."],
+      erros=["Acrescentar um `\\n`."],
+      limites=["Saída exata: `z`."]),
+]

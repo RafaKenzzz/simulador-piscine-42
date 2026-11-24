@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>C07: respostas · Simulador da Piscine</title>
+  <meta name="description" content="Soluções comentadas de C07, com passo a passo, erros comuns e casos limite.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://rafakenzzz.github.io/simulador-piscine-42/respostas/c07.html">
+  <meta property="og:url" content="https://rafakenzzz.github.io/simulador-piscine-42/respostas/c07.html">
+  <meta name="theme-color" content="#07090b">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Simulador da Piscine">
+  <meta property="og:title" content="C07: respostas · Simulador da Piscine">
+  <meta property="og:description" content="Soluções comentadas de C07, com passo a passo, erros comuns e casos limite.">
+  <meta property="og:locale" content="pt_PT">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=d6190e1b">
+  <style>:root{--bg:#07090b;--bg-2:#0c1013;--bg-3:#121a1e;--line:#1d272c;--line-2:#2b3940;--fg:#d5e2db;--fg-2:#a3b5ac;--mute:#73867d;--green:#4dff9a;--green-2:#2bd97a;--green-dim:#0f3323;--cyan:#5ce1ff;--cyan-dim:#0c2e38;--amber:#ffcc66;--red:#ff7070;--violet:#c4a7ff;--orange:#ffa066;--f-mono:"JetBrains Mono",ui-monospace,'Cascadia Mono','Segoe UI Mono',Menlo,Consolas,monospace}</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"C07: respostas · Simulador da Piscine","description":"Soluções comentadas de C07, com passo a passo, erros comuns e casos limite.","inLanguage":"pt-PT","dateModified":"2026-11-24","url":"https://rafakenzzz.github.io/simulador-piscine-42/respostas/c07.html","isPartOf":{"@id":"https://rafakenzzz.github.io/simulador-piscine-42/#website"}}]}</script>
+</head>
+<body data-kind="respostas" data-root="../">
+<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+<header class="top" data-top>
+  <div class="w top__in">
+    <a class="brand" href="../index.html" aria-label="Simulador da Piscine: página inicial"><span class="pr-u">piscine@42lisboa</span><span class="pr-s">:</span><span class="pr-p">~/respostas/c07</span><span class="pr-s">$</span></a>
+    <nav class="nav" aria-label="Principal"><a href="../index.html" data-key="1"><span class="k">[1]</span>início</a><a href="../tutorial.html" data-key="2"><span class="k">[2]</span>tutorial</a><a href="../modulos.html" data-key="3"><span class="k">[3]</span>módulos</a><a href="../exames.html" data-key="4"><span class="k">[4]</span>exames</a><a href="../norminette.html" data-key="5"><span class="k">[5]</span>norminette</a></nav>
+    <button class="cmd-btn" type="button" data-cmd-open aria-label="Abrir a linha de comandos (tecla /)"><span aria-hidden="true">&gt;_</span><span class="cmd-btn__t">comando</span><kbd>/</kbd></button>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<section class="phero w">
+  <p class="crumbs"><a href="index.html">~/respostas</a>/<b>c07</b></p>
+  <h1 class="h1 " data-type>C07: respostas</h1>
+  <div class="warn" role="note">
+  <p class="warn__t">Tenta primeiro sozinho.</p>
+  <p>Ler a solução antes de tentar tira-te o treino de que vais precisar no exame, onde não há respostas. Usa esta página só depois de teres o teu código a funcionar, ou depois de estares mesmo bloqueado. Cada solução está fechada: só abre quando carregares em «mostrar solução».</p>
+</div>
+</section>
+<div class="w ans-wrap"><nav class="ansnav" aria-label="Respostas por módulo"><ol><li><a href="shell00.html">Shell00</a></li><li><a href="shell01.html">Shell01</a></li><li><a href="c00.html">C00</a></li><li><a href="c01.html">C01</a></li><li><a href="c02.html">C02</a></li><li><a href="c03.html">C03</a></li><li><a href="c04.html">C04</a></li><li><a href="c05.html">C05</a></li><li><a href="c06.html">C06</a></li><li><a href="c07.html" aria-current=page>C07</a></li><li><a href="c08.html">C08</a></li><li><a href="c09.html">C09</a></li><li><a href="c10.html">C10</a></li><li><a href="c11.html">C11</a></li><li><a href="c12.html">C12</a></li><li><a href="c13.html">C13</a></li><li><a href="rush00.html">Rush00</a></li><li><a href="rush01.html">Rush01</a></li><li><a href="rush02.html">Rush02</a></li><li><a href="bsq.html">BSQ</a></li><li><a href="exame-nivel-0.html">exame · level 0</a></li><li><a href="exame-nivel-1.html">exame · level 1</a></li><li><a href="exame-nivel-2.html">exame · level 2</a></li><li><a href="exame-nivel-3.html">exame · level 3</a></li><li><a href="exame-nivel-4.html">exame · level 4</a></li><li><a href="exame-nivel-5.html">exame · level 5</a></li></ol></nav><div class="ans-list"><article class="ans" id="r-c07-ex00">
+  <h2 class="ex__h"><span class="ex__num">ex00</span> ft_strdup</h2>
+  <p class="ans__q">Reproduz o comportamento da função <code>strdup</code> (<code>man strdup</code>).</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex00/ft_strdup.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;stdlib.h&gt;</span>
+
+<span class="t-com">/*
+** Reserva len + 1 bytes (o + 1 é para o '\0'), copia e devolve a cópia.
+** Se o malloc falhar, devolve NULL, como o strdup.
+*/</span>
+<span class="t-ty">char</span>	*<span class="t-fn">ft_strdup</span>(<span class="t-ty">char</span> *src)
+{
+	<span class="t-ty">char</span>	*dup;
+	<span class="t-ty">int</span>		len;
+	<span class="t-ty">int</span>		i;
+
+	len = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (src[len])
+		len++;
+	dup = (<span class="t-ty">char</span> *)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">char</span>) * (len + <span class="t-num">1</span>));
+	<span class="t-kw">if</span> (!dup)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (i &lt;= len)
+	{
+		dup[i] = src[i];
+		i++;
+	}
+	<span class="t-kw">return</span> (dup);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Mede-se <code>src</code> e reservam-se <code>len + 1</code> bytes: o <code>+ 1</code> é para o <code>'\0'</code>.</li><li>Se o <code>malloc</code> devolver <code>NULL</code>, devolve-se <code>NULL</code>.</li><li>Copia-se tudo, incluindo o <code>'\0'</code>, e devolve-se a cópia.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Reservar só <code>len</code> bytes.</li><li>Não testar o retorno do <code>malloc</code>.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>String vazia: devolve uma string nova com só o <code>'\0'</code>.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c07-ex01">
+  <h2 class="ex__h"><span class="ex__num">ex01</span> ft_range</h2>
+  <p class="ans__q">Cria uma função <code>ft_range</code> que devolve um array de <code>int</code> com todos os valores entre <code>min</code> e <code>max</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex01/ft_range.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;stdlib.h&gt;</span>
+
+<span class="t-com">/*
+** Array com min, min + 1, ..., max - 1. O tamanho é max - min, calculado
+** em long: com min = -2147483648 e max = 2147483647 não cabe num int.
+*/</span>
+<span class="t-ty">int</span>	*<span class="t-fn">ft_range</span>(<span class="t-ty">int</span> min, <span class="t-ty">int</span> max)
+{
+	<span class="t-ty">int</span>		*range;
+	<span class="t-ty">long</span>	size;
+	<span class="t-ty">long</span>	i;
+
+	<span class="t-kw">if</span> (min &gt;= max)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	size = (<span class="t-ty">long</span>)max - min;
+	range = (<span class="t-ty">int</span> *)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">int</span>) * size);
+	<span class="t-kw">if</span> (!range)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (i &lt; size)
+	{
+		range[i] = min + i;
+		i++;
+	}
+	<span class="t-kw">return</span> (range);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>O array tem <code>max - min</code> elementos. Esse tamanho é calculado em <code>long</code>: com <code>min = INT_MIN</code> e <code>max = INT_MAX</code>, a diferença não cabe num <code>int</code>.</li><li>Reserva-se <code>sizeof(int) * tamanho</code> e preenche-se com <code>min + i</code>.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Reservar <code>max - min</code> bytes em vez de <code>max - min</code> inteiros (esquecer o <code>sizeof(int)</code>).</li><li>Incluir o <code>max</code>.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li><code>min == max</code> dá <code>NULL</code>; intervalos com negativos; extremos do <code>int</code>.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c07-ex02">
+  <h2 class="ex__h"><span class="ex__num">ex02</span> ft_ultimate_range</h2>
+  <p class="ans__q">Cria uma função <code>ft_ultimate_range</code> que reserva e preenche um array de <code>int</code> com todos os valores entre <code>min</code> e <code>max</code> (<code>min</code> incluído, <code>max</code> excluído).</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex02/ft_ultimate_range.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;stdlib.h&gt;</span>
+
+<span class="t-com">/*
+** Igual ao ft_range, mas o array é devolvido através de *range e a
+** função devolve o tamanho: 0 se min &gt;= max (com *range = NULL) e -1 se
+** o malloc falhar.
+*/</span>
+<span class="t-ty">int</span>	<span class="t-fn">ft_ultimate_range</span>(<span class="t-ty">int</span> **range, <span class="t-ty">int</span> min, <span class="t-ty">int</span> max)
+{
+	<span class="t-ty">long</span>	size;
+	<span class="t-ty">long</span>	i;
+
+	<span class="t-kw">if</span> (min &gt;= max)
+	{
+		*range = <span class="t-con">NULL</span>;
+		<span class="t-kw">return</span> (<span class="t-num">0</span>);
+	}
+	size = (<span class="t-ty">long</span>)max - min;
+	*range = (<span class="t-ty">int</span> *)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">int</span>) * size);
+	<span class="t-kw">if</span> (!*range)
+		<span class="t-kw">return</span> (-<span class="t-num">1</span>);
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (i &lt; size)
+	{
+		(*range)[i] = min + i;
+		i++;
+	}
+	<span class="t-kw">return</span> (size);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>É o <code>ft_range</code> com o array devolvido através de <code>*range</code>.</li><li><code>range</code> é o endereço de um ponteiro de quem chama; escrever em <code>*range</code> muda esse ponteiro.</li><li>Para escrever no array usa-se <code>(*range)[i]</code>: os parênteses são obrigatórios, porque <code>*range[i]</code> seria <code>*(range[i])</code>.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Escrever <code>*range[i]</code>.</li><li>Esquecer o <code>*range = NULL</code> quando <code>min &gt;= max</code>.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Testam o valor devolvido e o ponteiro nos três casos: normal, vazio e erro.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c07-ex03">
+  <h2 class="ex__h"><span class="ex__num">ex03</span> ft_strjoin</h2>
+  <p class="ans__q">Escreve uma função que junta todas as strings de <code>strs</code>, separadas por <code>sep</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex03/ft_strjoin.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;stdlib.h&gt;</span>
+
+<span class="t-kw">static</span> <span class="t-ty">int</span>	<span class="t-fn">ft_strlen</span>(<span class="t-ty">char</span> *s)
+{
+	<span class="t-ty">int</span>	i;
+
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (s[i])
+		i++;
+	<span class="t-kw">return</span> (i);
+}
+
+<span class="t-com">/*
+** Copia src para o fim de dest e devolve o novo fim de dest.
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">char</span>	*<span class="t-fn">ft_append</span>(<span class="t-ty">char</span> *dest, <span class="t-ty">char</span> *src)
+{
+	<span class="t-kw">while</span> (*src)
+		*dest++ = *src++;
+	<span class="t-kw">return</span> (dest);
+}
+
+<span class="t-com">/*
+** Primeiro calcula o tamanho total (todas as strings, size - 1
+** separadores e o '\0'), reserva-o de uma vez e depois copia tudo.
+** Com size 0 devolve uma string vazia que pode ser libertada com free.
+*/</span>
+<span class="t-ty">char</span>	*<span class="t-fn">ft_strjoin</span>(<span class="t-ty">int</span> size, <span class="t-ty">char</span> **strs, <span class="t-ty">char</span> *sep)
+{
+	<span class="t-ty">char</span>	*res;
+	<span class="t-ty">char</span>	*end;
+	<span class="t-ty">int</span>		total;
+	<span class="t-ty">int</span>		i;
+
+	total = <span class="t-num">1</span>;
+	i = -<span class="t-num">1</span>;
+	<span class="t-kw">while</span> (++i &lt; size)
+		total += <span class="t-fn">ft_strlen</span>(strs[i]);
+	<span class="t-kw">if</span> (size &gt; <span class="t-num">0</span>)
+		total += <span class="t-fn">ft_strlen</span>(sep) * (size - <span class="t-num">1</span>);
+	res = (<span class="t-ty">char</span> *)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">char</span>) * total);
+	<span class="t-kw">if</span> (!res)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	end = res;
+	i = -<span class="t-num">1</span>;
+	<span class="t-kw">while</span> (++i &lt; size)
+	{
+		end = <span class="t-fn">ft_append</span>(end, strs[i]);
+		<span class="t-kw">if</span> (i &lt; size - <span class="t-num">1</span>)
+			end = <span class="t-fn">ft_append</span>(end, sep);
+	}
+	*end = <span class="t-chr">'\0'</span>;
+	<span class="t-kw">return</span> (res);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Calcula-se o tamanho final: a soma dos tamanhos das strings, mais <code>size - 1</code> separadores, mais 1 para o <code>'\0'</code>.</li><li>Reserva-se tudo de uma vez.</li><li>Copia-se cada string e, entre elas (não depois da última), o separador. A função <code>ft_append</code> devolve o novo fim, para não ter de medir o resultado outra vez.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Pôr um separador depois da última string.</li><li>Com <code>size == 0</code>, devolver <code>NULL</code> ou uma string literal <code>""</code> (que não pode ser libertada).</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li><code>size</code> 0 e 1; strings vazias; separador vazio.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c07-ex04">
+  <h2 class="ex__h"><span class="ex__num">ex04</span> ft_convert_base</h2>
+  <p class="ans__q">Cria uma função que devolve o resultado da conversão da string <code>nbr</code> da base <code>base_from</code> para a base <code>base_to</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex04/ft_convert_base.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;stdlib.h&gt;</span>
+
+<span class="t-ty">int</span>		<span class="t-fn">ft_base_len</span>(<span class="t-ty">char</span> *base);
+<span class="t-ty">int</span>		<span class="t-fn">ft_index</span>(<span class="t-ty">char</span> c, <span class="t-ty">char</span> *base);
+<span class="t-ty">char</span>	*<span class="t-fn">ft_itoa_base</span>(<span class="t-ty">long</span> n, <span class="t-ty">char</span> *base, <span class="t-ty">int</span> len);
+
+<span class="t-com">/*
+** Salta os espaços e lê os sinais, como o ft_atoi. Devolve o sinal e
+** deixa *s a apontar para o primeiro algarismo.
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">int</span>	<span class="t-fn">ft_skip</span>(<span class="t-ty">char</span> **s)
+{
+	<span class="t-ty">int</span>	sign;
+
+	<span class="t-kw">while</span> (**s == <span class="t-chr">' '</span> || (**s &gt;= <span class="t-num">9</span> &amp;&amp; **s &lt;= <span class="t-num">13</span>))
+		(*s)++;
+	sign = <span class="t-num">1</span>;
+	<span class="t-kw">while</span> (**s == <span class="t-chr">'+'</span> || **s == <span class="t-chr">'-'</span>)
+	{
+		<span class="t-kw">if</span> (**s == <span class="t-chr">'-'</span>)
+			sign = -sign;
+		(*s)++;
+	}
+	<span class="t-kw">return</span> (sign);
+}
+
+<span class="t-com">/*
+** Lê nbr na base de origem (como o ft_atoi_base) para um long e
+** escreve o resultado na base de destino.
+** Se alguma das bases for inválida, devolve NULL.
+*/</span>
+<span class="t-ty">char</span>	*<span class="t-fn">ft_convert_base</span>(<span class="t-ty">char</span> *nbr, <span class="t-ty">char</span> *base_from, <span class="t-ty">char</span> *base_to)
+{
+	<span class="t-ty">int</span>		len_from;
+	<span class="t-ty">int</span>		len_to;
+	<span class="t-ty">int</span>		sign;
+	<span class="t-ty">long</span>	n;
+
+	len_from = <span class="t-fn">ft_base_len</span>(base_from);
+	len_to = <span class="t-fn">ft_base_len</span>(base_to);
+	<span class="t-kw">if</span> (len_from == <span class="t-num">0</span> || len_to == <span class="t-num">0</span>)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	sign = <span class="t-fn">ft_skip</span>(&amp;nbr);
+	n = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (<span class="t-fn">ft_index</span>(*nbr, base_from) &gt;= <span class="t-num">0</span>)
+	{
+		n = n * len_from + <span class="t-fn">ft_index</span>(*nbr, base_from);
+		nbr++;
+	}
+	<span class="t-kw">return</span> (<span class="t-fn">ft_itoa_base</span>(n * sign, base_to, len_to));
+}
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex04/ft_convert_base2.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;stdlib.h&gt;</span>
+
+<span class="t-com">/*
+** Tamanho da base, ou 0 se for inválida: menos de 2 símbolos, símbolos
+** repetidos, '+', '-' ou espaços em branco.
+*/</span>
+<span class="t-ty">int</span>	<span class="t-fn">ft_base_len</span>(<span class="t-ty">char</span> *base)
+{
+	<span class="t-ty">int</span>	i;
+	<span class="t-ty">int</span>	j;
+
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (base[i])
+	{
+		<span class="t-kw">if</span> (base[i] == <span class="t-chr">'+'</span> || base[i] == <span class="t-chr">'-'</span> || base[i] == <span class="t-chr">' '</span>
+			|| (base[i] &gt;= <span class="t-num">9</span> &amp;&amp; base[i] &lt;= <span class="t-num">13</span>))
+			<span class="t-kw">return</span> (<span class="t-num">0</span>);
+		j = i + <span class="t-num">1</span>;
+		<span class="t-kw">while</span> (base[j])
+		{
+			<span class="t-kw">if</span> (base[i] == base[j])
+				<span class="t-kw">return</span> (<span class="t-num">0</span>);
+			j++;
+		}
+		i++;
+	}
+	<span class="t-kw">if</span> (i &lt; <span class="t-num">2</span>)
+		<span class="t-kw">return</span> (<span class="t-num">0</span>);
+	<span class="t-kw">return</span> (i);
+}
+
+<span class="t-ty">int</span>	<span class="t-fn">ft_index</span>(<span class="t-ty">char</span> c, <span class="t-ty">char</span> *base)
+{
+	<span class="t-ty">int</span>	i;
+
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (base[i])
+	{
+		<span class="t-kw">if</span> (base[i] == c)
+			<span class="t-kw">return</span> (i);
+		i++;
+	}
+	<span class="t-kw">return</span> (-<span class="t-num">1</span>);
+}
+
+<span class="t-com">/*
+** Quantos caracteres são precisos para escrever n na base: os
+** algarismos e, se for negativo, o '-'.
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">int</span>	<span class="t-fn">ft_nb_len</span>(<span class="t-ty">long</span> n, <span class="t-ty">int</span> len)
+{
+	<span class="t-ty">int</span>	size;
+
+	size = <span class="t-num">1</span>;
+	<span class="t-kw">if</span> (n &lt; <span class="t-num">0</span>)
+	{
+		size++;
+		n = -n;
+	}
+	<span class="t-kw">while</span> (n &gt;= len)
+	{
+		n /= len;
+		size++;
+	}
+	<span class="t-kw">return</span> (size);
+}
+
+<span class="t-com">/*
+** Reserva a string com o tamanho exato e preenche-a do fim para o
+** início, com o algarismo das unidades primeiro. Se houver sinal, a
+** posição 0 fica com o '-' e o ciclo pára antes dela.
+*/</span>
+<span class="t-ty">char</span>	*<span class="t-fn">ft_itoa_base</span>(<span class="t-ty">long</span> n, <span class="t-ty">char</span> *base, <span class="t-ty">int</span> len)
+{
+	<span class="t-ty">char</span>	*res;
+	<span class="t-ty">int</span>		size;
+	<span class="t-ty">int</span>		stop;
+
+	size = <span class="t-fn">ft_nb_len</span>(n, len);
+	res = (<span class="t-ty">char</span> *)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">char</span>) * (size + <span class="t-num">1</span>));
+	<span class="t-kw">if</span> (!res)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	res[size] = <span class="t-chr">'\0'</span>;
+	stop = <span class="t-num">0</span>;
+	<span class="t-kw">if</span> (n &lt; <span class="t-num">0</span>)
+	{
+		res[<span class="t-num">0</span>] = <span class="t-chr">'-'</span>;
+		n = -n;
+		stop = <span class="t-num">1</span>;
+	}
+	<span class="t-kw">while</span> (size &gt; stop)
+	{
+		res[size - <span class="t-num">1</span>] = base[n % len];
+		n /= len;
+		size--;
+	}
+	<span class="t-kw">return</span> (res);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>São dois passos: ler <code>nbr</code> para um número (um <code>ft_atoi_base</code>) e escrever esse número na outra base (um <code>ft_itoa_base</code>).</li><li>Como cada ficheiro só pode ter 5 funções, as funções auxiliares ficam no <code>ft_convert_base2.c</code>. Os protótipos delas são declarados no início do <code>ft_convert_base.c</code>.</li><li>O número é guardado num <code>long</code>: assim o valor positivo de <code>-2147483648</code> cabe durante a conversão.</li><li>Para escrever, calcula-se primeiro quantos caracteres são precisos, reserva-se o tamanho exato e preenche-se do fim para o início.</li><li>As duas bases são validadas com as regras do <code>ft_atoi_base</code> (sem <code>+</code>, <code>-</code> e espaços em branco).</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Converter através de um <code>int</code>: falha com <code>-2147483648</code>.</li><li>Mostrar <code>-0</code> para zero com sinal negativo.</li><li>Esquecer que as strings podem não ser modificáveis e tentar escrever nelas.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li><code>"-0"</code> dá <code>"0"</code>; <code>INT_MAX</code> e <code>INT_MIN</code>; bases inválidas dão <code>NULL</code>.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c07-ex05">
+  <h2 class="ex__h"><span class="ex__num">ex05</span> ft_split</h2>
+  <p class="ans__q">Cria uma função que divide uma string em várias, usando como separador cada carácter da string <code>charset</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex05/ft_split.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;stdlib.h&gt;</span>
+
+<span class="t-kw">static</span> <span class="t-ty">int</span>	<span class="t-fn">ft_is_sep</span>(<span class="t-ty">char</span> c, <span class="t-ty">char</span> *charset)
+{
+	<span class="t-kw">while</span> (*charset)
+	{
+		<span class="t-kw">if</span> (c == *charset)
+			<span class="t-kw">return</span> (<span class="t-num">1</span>);
+		charset++;
+	}
+	<span class="t-kw">return</span> (<span class="t-num">0</span>);
+}
+
+<span class="t-com">/*
+** Uma palavra começa onde há um carácter que não é separador e o
+** anterior é separador (ou é o início da string).
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">int</span>	<span class="t-fn">ft_count_words</span>(<span class="t-ty">char</span> *str, <span class="t-ty">char</span> *charset)
+{
+	<span class="t-ty">int</span>	count;
+	<span class="t-ty">int</span>	i;
+
+	count = <span class="t-num">0</span>;
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (str[i])
+	{
+		<span class="t-kw">if</span> (!<span class="t-fn">ft_is_sep</span>(str[i], charset)
+			&amp;&amp; (i == <span class="t-num">0</span> || <span class="t-fn">ft_is_sep</span>(str[i - <span class="t-num">1</span>], charset)))
+			count++;
+		i++;
+	}
+	<span class="t-kw">return</span> (count);
+}
+
+<span class="t-com">/*
+** Copia a palavra que começa em str (até ao próximo separador ou ao
+** fim) para uma string nova.
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">char</span>	*<span class="t-fn">ft_word_dup</span>(<span class="t-ty">char</span> *str, <span class="t-ty">char</span> *charset)
+{
+	<span class="t-ty">char</span>	*word;
+	<span class="t-ty">int</span>		len;
+	<span class="t-ty">int</span>		i;
+
+	len = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (str[len] &amp;&amp; !<span class="t-fn">ft_is_sep</span>(str[len], charset))
+		len++;
+	word = (<span class="t-ty">char</span> *)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">char</span>) * (len + <span class="t-num">1</span>));
+	<span class="t-kw">if</span> (!word)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	i = -<span class="t-num">1</span>;
+	<span class="t-kw">while</span> (++i &lt; len)
+		word[i] = str[i];
+	word[len] = <span class="t-chr">'\0'</span>;
+	<span class="t-kw">return</span> (word);
+}
+
+<span class="t-com">/*
+** Reserva o array com espaço para todas as palavras e para o 0 final;
+** depois salta separadores, copia uma palavra, salta-a, e repete.
+** Os separadores seguidos nunca geram strings vazias.
+*/</span>
+<span class="t-ty">char</span>	**<span class="t-fn">ft_split</span>(<span class="t-ty">char</span> *str, <span class="t-ty">char</span> *charset)
+{
+	<span class="t-ty">char</span>	**tab;
+	<span class="t-ty">int</span>		w;
+
+	tab = (<span class="t-ty">char</span> **)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">char</span> *) * (<span class="t-fn">ft_count_words</span>(str, charset) + <span class="t-num">1</span>));
+	<span class="t-kw">if</span> (!tab)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	w = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (*str)
+	{
+		<span class="t-kw">while</span> (*str &amp;&amp; <span class="t-fn">ft_is_sep</span>(*str, charset))
+			str++;
+		<span class="t-kw">if</span> (*str)
+		{
+			tab[w] = <span class="t-fn">ft_word_dup</span>(str, charset);
+			w++;
+		}
+		<span class="t-kw">while</span> (*str &amp;&amp; !<span class="t-fn">ft_is_sep</span>(*str, charset))
+			str++;
+	}
+	tab[w] = <span class="t-num">0</span>;
+	<span class="t-kw">return</span> (tab);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Primeiro contam-se as palavras: começa uma palavra em cada carácter que não é separador e que vem depois de um separador (ou no início).</li><li>Reserva-se o array com mais uma posição para o 0 final.</li><li>Depois repete-se: saltar separadores, copiar a palavra para uma string nova, saltar a palavra.</li><li>Como os separadores são saltados todos de uma vez, separadores seguidos nunca dão strings vazias.</li><li>Neste exercício só o <code>malloc</code> é permitido, por isso não há <code>free</code> em caso de erro.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Criar strings vazias com separadores seguidos ou no início e no fim.</li><li>Esquecer o 0 no fim do array.</li><li>Modificar a string original (por exemplo, pôr <code>'\0'</code> no lugar dos separadores).</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>String vazia ou só com separadores: array só com o 0.</li><li><code>charset</code> vazio: a string inteira é uma palavra.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article></div></div>
+</main>
+<footer class="foot">
+  <div class="w foot__in">
+    <p class="foot__brand"><span class="t-prompt">$</span> piscine.sim <span class="mute">· treino para a Piscine C</span></p>
+    <p class="foot__note">Projeto de treino pessoal, sem ligação à 42 Lisboa nem à rede 42. Os enunciados são resumos em português dos originais públicos; confirma sempre o enunciado oficial no dia.</p>
+    <p class="foot__keys"><kbd>/</kbd> comando · <kbd>?</kbd> atalhos · <kbd>1</kbd>–<kbd>5</kbd> páginas</p>
+  </div>
+</footer>
+<div class="cmd" data-cmd hidden>
+  <div class="cmd__box" role="dialog" aria-modal="true" aria-label="Linha de comandos">
+    <div class="cmd__out" data-cmd-out aria-live="polite"></div>
+    <form class="cmd__form" data-cmd-form autocomplete="off">
+      <label class="cmd__pr" for="cmd-in">piscine@42lisboa:<span data-cmd-path>~</span>$</label>
+      <input id="cmd-in" class="cmd__in" data-cmd-in type="text" spellcheck="false" autocapitalize="off" enterkeyhint="go" aria-describedby="cmd-hint">
+    </form>
+    <p class="cmd__hint" id="cmd-hint">escreve <b>help</b> · <kbd>Tab</kbd> completa · <kbd>↑</kbd> histórico · <kbd>Esc</kbd> fecha</p>
+  </div>
+</div>
+<div class="help" data-help hidden>
+  <div class="help__box" role="dialog" aria-modal="true" aria-labelledby="help-t">
+    <h2 id="help-t">Atalhos de teclado</h2>
+    <dl>
+      <div><dt><kbd>/</kbd> ou <kbd>:</kbd></dt><dd>abrir a linha de comandos</dd></div>
+      <div><dt><kbd>1</kbd> … <kbd>5</kbd></dt><dd>início, tutorial, módulos, exames, norminette</dd></div>
+      <div><dt><kbd>j</kbd> / <kbd>k</kbd></dt><dd>exercício seguinte / anterior</dd></div>
+      <div><dt><kbd>n</kbd> / <kbd>p</kbd></dt><dd>módulo seguinte / anterior</dd></div>
+      <div><dt><kbd>e</kbd></dt><dd>escrever no exercício atual</dd></div>
+      <div><dt><kbd>f</kbd></dt><dd>marcar o exercício atual como feito</dd></div>
+      <div><dt><kbd>g</kbd></dt><dd>voltar ao topo</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>mostrar ou esconder esta ajuda</dd></div>
+      <div><dt><kbd>Esc</kbd></dt><dd>fechar / sair do campo de código</dd></div>
+    </dl>
+    <button class="btn btn--ghost" type="button" data-help-close>fechar</button>
+  </div>
+</div>
+<script id="site-data" type="application/json">{"store": "p42", "mods": [{"id": "shell00", "nome": "Shell00", "href": "../modulos/shell00.html", "exs": ["shell00-ex00", "shell00-ex01", "shell00-ex02", "shell00-ex03", "shell00-ex04", "shell00-ex05", "shell00-ex06", "shell00-ex07", "shell00-ex08", "shell00-ex09"]}, {"id": "shell01", "nome": "Shell01", "href": "../modulos/shell01.html", "exs": ["shell01-ex00", "shell01-ex01", "shell01-ex02", "shell01-ex03", "shell01-ex04", "shell01-ex05", "shell01-ex06", "shell01-ex07", "shell01-ex08"]}, {"id": "c00", "nome": "C00", "href": "../modulos/c00.html", "exs": ["c00-ex00", "c00-ex01", "c00-ex02", "c00-ex03", "c00-ex04", "c00-ex05", "c00-ex06", "c00-ex07", "c00-ex08"]}, {"id": "c01", "nome": "C01", "href": "../modulos/c01.html", "exs": ["c01-ex00", "c01-ex01", "c01-ex02", "c01-ex03", "c01-ex04", "c01-ex05", "c01-ex06", "c01-ex07", "c01-ex08"]}, {"id": "c02", "nome": "C02", "href": "../modulos/c02.html", "exs": ["c02-ex00", "c02-ex01", "c02-ex02", "c02-ex03", "c02-ex04", "c02-ex05", "c02-ex06", "c02-ex07", "c02-ex08", "c02-ex09", "c02-ex10", "c02-ex11", "c02-ex12"]}, {"id": "c03", "nome": "C03", "href": "../modulos/c03.html", "exs": ["c03-ex00", "c03-ex01", "c03-ex02", "c03-ex03", "c03-ex04", "c03-ex05"]}, {"id": "c04", "nome": "C04", "href": "../modulos/c04.html", "exs": ["c04-ex00", "c04-ex01", "c04-ex02", "c04-ex03", "c04-ex04", "c04-ex05"]}, {"id": "c05", "nome": "C05", "href": "../modulos/c05.html", "exs": ["c05-ex00", "c05-ex01", "c05-ex02", "c05-ex03", "c05-ex04", "c05-ex05", "c05-ex06", "c05-ex07", "c05-ex08"]}, {"id": "c06", "nome": "C06", "href": "../modulos/c06.html", "exs": ["c06-ex00", "c06-ex01", "c06-ex02", "c06-ex03"]}, {"id": "c07", "nome": "C07", "href": "../modulos/c07.html", "exs": ["c07-ex00", "c07-ex01", "c07-ex02", "c07-ex03", "c07-ex04", "c07-ex05"]}, {"id": "c08", "nome": "C08", "href": "../modulos/c08.html", "exs": ["c08-ex00", "c08-ex01", "c08-ex02", "c08-ex03", "c08-ex04", "c08-ex05"]}, {"id": "c09", "nome": "C09", "href": "../modulos/c09.html", "exs": ["c09-ex00", "c09-ex01", "c09-ex02"]}, {"id": "c10", "nome": "C10", "href": "../modulos/c10.html", "exs": ["c10-ex00", "c10-ex01", "c10-ex02", "c10-ex03"]}, {"id": "c11", "nome": "C11", "href": "../modulos/c11.html", "exs": ["c11-ex00", "c11-ex01", "c11-ex02", "c11-ex03", "c11-ex04", "c11-ex05", "c11-ex06", "c11-ex07"]}, {"id": "c12", "nome": "C12", "href": "../modulos/c12.html", "exs": ["c12-ex00", "c12-ex01", "c12-ex02", "c12-ex03", "c12-ex04", "c12-ex05", "c12-ex06", "c12-ex07", "c12-ex08", "c12-ex09", "c12-ex10", "c12-ex11", "c12-ex12", "c12-ex13", "c12-ex14", "c12-ex15", "c12-ex16", "c12-ex17"]}, {"id": "c13", "nome": "C13", "href": "../modulos/c13.html", "exs": ["c13-ex00", "c13-ex01", "c13-ex02", "c13-ex03", "c13-ex04", "c13-ex05", "c13-ex06", "c13-ex07"]}, {"id": "rush00", "nome": "Rush00", "href": "../modulos/rush00.html", "exs": ["rush00-ex00"]}, {"id": "rush01", "nome": "Rush01", "href": "../modulos/rush01.html", "exs": ["rush01-ex00"]}, {"id": "rush02", "nome": "Rush02", "href": "../modulos/rush02.html", "exs": ["rush02-ex00"]}, {"id": "bsq", "nome": "BSQ", "href": "../modulos/bsq.html", "exs": ["bsq-ex00"]}], "pages": {"inicio": "../index.html", "tutorial": "../tutorial.html", "modulos": "../modulos.html", "exames": "../exames.html", "norminette": "../norminette.html", "respostas": "../respostas/index.html"}, "prompt": "piscine@42lisboa"}</script>
+<script src="../assets/js/site.js?v=f96fd0ac" defer></script>
+</body>
+</html>

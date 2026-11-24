@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>C09: respostas · Simulador da Piscine</title>
+  <meta name="description" content="Soluções comentadas de C09, com passo a passo, erros comuns e casos limite.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://rafakenzzz.github.io/simulador-piscine-42/respostas/c09.html">
+  <meta property="og:url" content="https://rafakenzzz.github.io/simulador-piscine-42/respostas/c09.html">
+  <meta name="theme-color" content="#07090b">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Simulador da Piscine">
+  <meta property="og:title" content="C09: respostas · Simulador da Piscine">
+  <meta property="og:description" content="Soluções comentadas de C09, com passo a passo, erros comuns e casos limite.">
+  <meta property="og:locale" content="pt_PT">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=d6190e1b">
+  <style>:root{--bg:#07090b;--bg-2:#0c1013;--bg-3:#121a1e;--line:#1d272c;--line-2:#2b3940;--fg:#d5e2db;--fg-2:#a3b5ac;--mute:#73867d;--green:#4dff9a;--green-2:#2bd97a;--green-dim:#0f3323;--cyan:#5ce1ff;--cyan-dim:#0c2e38;--amber:#ffcc66;--red:#ff7070;--violet:#c4a7ff;--orange:#ffa066;--f-mono:"JetBrains Mono",ui-monospace,'Cascadia Mono','Segoe UI Mono',Menlo,Consolas,monospace}</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"C09: respostas · Simulador da Piscine","description":"Soluções comentadas de C09, com passo a passo, erros comuns e casos limite.","inLanguage":"pt-PT","dateModified":"2026-11-24","url":"https://rafakenzzz.github.io/simulador-piscine-42/respostas/c09.html","isPartOf":{"@id":"https://rafakenzzz.github.io/simulador-piscine-42/#website"}}]}</script>
+</head>
+<body data-kind="respostas" data-root="../">
+<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+<header class="top" data-top>
+  <div class="w top__in">
+    <a class="brand" href="../index.html" aria-label="Simulador da Piscine: página inicial"><span class="pr-u">piscine@42lisboa</span><span class="pr-s">:</span><span class="pr-p">~/respostas/c09</span><span class="pr-s">$</span></a>
+    <nav class="nav" aria-label="Principal"><a href="../index.html" data-key="1"><span class="k">[1]</span>início</a><a href="../tutorial.html" data-key="2"><span class="k">[2]</span>tutorial</a><a href="../modulos.html" data-key="3"><span class="k">[3]</span>módulos</a><a href="../exames.html" data-key="4"><span class="k">[4]</span>exames</a><a href="../norminette.html" data-key="5"><span class="k">[5]</span>norminette</a></nav>
+    <button class="cmd-btn" type="button" data-cmd-open aria-label="Abrir a linha de comandos (tecla /)"><span aria-hidden="true">&gt;_</span><span class="cmd-btn__t">comando</span><kbd>/</kbd></button>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<section class="phero w">
+  <p class="crumbs"><a href="index.html">~/respostas</a>/<b>c09</b></p>
+  <h1 class="h1 " data-type>C09: respostas</h1>
+  <div class="warn" role="note">
+  <p class="warn__t">Tenta primeiro sozinho.</p>
+  <p>Ler a solução antes de tentar tira-te o treino de que vais precisar no exame, onde não há respostas. Usa esta página só depois de teres o teu código a funcionar, ou depois de estares mesmo bloqueado. Cada solução está fechada: só abre quando carregares em «mostrar solução».</p>
+</div>
+</section>
+<div class="w ans-wrap"><nav class="ansnav" aria-label="Respostas por módulo"><ol><li><a href="shell00.html">Shell00</a></li><li><a href="shell01.html">Shell01</a></li><li><a href="c00.html">C00</a></li><li><a href="c01.html">C01</a></li><li><a href="c02.html">C02</a></li><li><a href="c03.html">C03</a></li><li><a href="c04.html">C04</a></li><li><a href="c05.html">C05</a></li><li><a href="c06.html">C06</a></li><li><a href="c07.html">C07</a></li><li><a href="c08.html">C08</a></li><li><a href="c09.html" aria-current=page>C09</a></li><li><a href="c10.html">C10</a></li><li><a href="c11.html">C11</a></li><li><a href="c12.html">C12</a></li><li><a href="c13.html">C13</a></li><li><a href="rush00.html">Rush00</a></li><li><a href="rush01.html">Rush01</a></li><li><a href="rush02.html">Rush02</a></li><li><a href="bsq.html">BSQ</a></li><li><a href="exame-nivel-0.html">exame · level 0</a></li><li><a href="exame-nivel-1.html">exame · level 1</a></li><li><a href="exame-nivel-2.html">exame · level 2</a></li><li><a href="exame-nivel-3.html">exame · level 3</a></li><li><a href="exame-nivel-4.html">exame · level 4</a></li><li><a href="exame-nivel-5.html">exame · level 5</a></li></ol></nav><div class="ans-list"><article class="ans" id="r-c09-ex00">
+  <h2 class="ex__h"><span class="ex__num">ex00</span> libft</h2>
+  <p class="ans__q">Cria a tua biblioteca, chamada <code>libft.a</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="sh"><figcaption><span class="code__name">ex00/libft_creator.sh</span><span class="code__lang">sh</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-com">#!/bin/sh</span>
+<span class="t-fn">gcc</span> <span class="t-opt">-Wall</span> <span class="t-opt">-Wextra</span> <span class="t-opt">-Werror</span> <span class="t-opt">-c</span> ft_putchar.c ft_swap.c ft_putstr.c ft_strlen.c ft_strcmp.c
+<span class="t-fn">ar</span> rc libft.a ft_putchar.o ft_swap.o ft_putstr.o ft_strlen.o ft_strcmp.o
+<span class="t-fn">ranlib</span> libft.a
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex00/ft_putchar.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-ty">void</span>	<span class="t-fn">ft_putchar</span>(<span class="t-ty">char</span> c)
+{
+	<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;c, <span class="t-num">1</span>);
+}
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex00/ft_swap.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">void</span>	<span class="t-fn">ft_swap</span>(<span class="t-ty">int</span> *a, <span class="t-ty">int</span> *b)
+{
+	<span class="t-ty">int</span>	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex00/ft_putstr.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-ty">void</span>	<span class="t-fn">ft_putstr</span>(<span class="t-ty">char</span> *str)
+{
+	<span class="t-kw">while</span> (*str)
+	{
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, str, <span class="t-num">1</span>);
+		str++;
+	}
+}
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex00/ft_strlen.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_strlen</span>(<span class="t-ty">char</span> *str)
+{
+	<span class="t-ty">int</span>	i;
+
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (str[i])
+		i++;
+	<span class="t-kw">return</span> (i);
+}
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex00/ft_strcmp.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_strcmp</span>(<span class="t-ty">char</span> *s1, <span class="t-ty">char</span> *s2)
+{
+	<span class="t-ty">int</span>	i;
+
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (s1[i] &amp;&amp; s1[i] == s2[i])
+		i++;
+	<span class="t-kw">return</span> ((<span class="t-ty">unsigned</span> <span class="t-ty">char</span>)s1[i] - (<span class="t-ty">unsigned</span> <span class="t-ty">char</span>)s2[i]);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li><code>gcc -c</code> compila cada <code>.c</code> para um <code>.o</code>, sem criar um executável (não há <code>main</code>).</li><li><code>ar rc libft.a</code> junta os <code>.o</code> numa biblioteca: <code>r</code> acrescenta ou substitui, <code>c</code> cria o arquivo se não existir.</li><li><code>ranlib</code> cria o índice da biblioteca, que permite ao compilador encontrar as funções.</li><li>Os ficheiros são escritos pelo nome, sem <code>*.c</code>: assim nada que esteja a mais na pasta entra na biblioteca.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Compilar sem <code>-c</code>: o <code>gcc</code> tenta criar um programa e falha por não haver <code>main</code>.</li><li>Esquecer o <code>ranlib</code> (em alguns sistemas a ligação falha sem índice).</li><li>Esquecer as flags <code>-Wall -Wextra -Werror</code>.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>A moulinette compila um <code>main</code> dela com <code>-L. -lft</code> e chama as cinco funções.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c09-ex01">
+  <h2 class="ex__h"><span class="ex__num">ex01</span> Makefile</h2>
+  <p class="ans__q">Cria o Makefile que compila a biblioteca <code>libft.a</code>:</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="make"><figcaption><span class="code__name">ex01/Makefile</span><span class="code__lang">make</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">NAME</span>	= libft.a
+<span class="t-ty">SRCS</span>	= srcs/ft_putchar.c srcs/ft_swap.c srcs/ft_putstr.c \
+		  srcs/ft_strlen.c srcs/ft_strcmp.c
+<span class="t-ty">OBJS</span>	= $(SRCS:.c=.o)
+<span class="t-ty">CC</span>		= gcc
+<span class="t-ty">CFLAGS</span>	= -Wall -Wextra -Werror
+<span class="t-ty">INCS</span>	= includes
+
+<span class="t-fn">all</span>: <span class="t-var">$(NAME)</span>
+
+<span class="t-var">$(NAME)</span>: <span class="t-var">$(OBJS)</span>
+	ar rc <span class="t-var">$(NAME)</span> <span class="t-var">$(OBJS)</span>
+	ranlib <span class="t-var">$(NAME)</span>
+
+<span class="t-fn">%.o</span>: %.c
+	<span class="t-var">$(CC)</span> <span class="t-var">$(CFLAGS)</span> -I <span class="t-var">$(INCS)</span> -c <span class="t-var">$&lt;</span> -o <span class="t-var">$@</span>
+
+<span class="t-fn">clean</span>:
+	rm -f <span class="t-var">$(OBJS)</span>
+
+<span class="t-fn">fclean</span>: clean
+	rm -f <span class="t-var">$(NAME)</span>
+
+<span class="t-fn">re</span>: fclean all
+
+<span class="t-fn">.PHONY</span>: all clean fclean re
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li><code>OBJS = $(SRCS:.c=.o)</code> troca a extensão de cada fonte: os <code>.o</code> ficam na mesma pasta dos <code>.c</code>.</li><li>A regra <code>$(NAME): $(OBJS)</code> só corre se algum <code>.o</code> for mais recente do que a biblioteca. Assim, um segundo <code>make</code> não faz nada.</li><li>A regra <code>%.o: %.c</code> compila cada <code>.c</code> com <code>-I includes</code>, para encontrar o <code>ft.h</code>. Só recompila os <code>.c</code> que mudaram.</li><li><code>all</code> é a primeira regra, por isso é a que o <code>make</code> corre sem argumentos.</li><li><code>.PHONY</code> diz que <code>all</code>, <code>clean</code>, <code>fclean</code> e <code>re</code> não são ficheiros.</li><li>As fontes estão escritas uma a uma: o enunciado avisa contra os wildcards (<code>*.c</code>).</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Usar espaços em vez de tabs antes dos comandos: <code>missing separator</code>.</li><li>Usar <code>$(wildcard srcs/*.c)</code> ou <code>*.c</code>.</li><li>Pôr <code>@</code> antes dos comandos: o enunciado pede que sejam mostrados.</li><li>Um <code>re</code> que não volta a compilar tudo.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li><code>make</code> duas vezes seguidas: a segunda não compila nada.</li><li>Alterar um <code>.c</code> e correr <code>make</code>: só esse é recompilado.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c09-ex02">
+  <h2 class="ex__h"><span class="ex__num">ex02</span> ft_split</h2>
+  <p class="ans__q">Cria uma função que divide uma string usando como separador cada carácter de <code>charset</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex02/ft_split.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;stdlib.h&gt;</span>
+
+<span class="t-kw">static</span> <span class="t-ty">int</span>	<span class="t-fn">ft_is_sep</span>(<span class="t-ty">char</span> c, <span class="t-ty">char</span> *charset)
+{
+	<span class="t-kw">while</span> (*charset)
+	{
+		<span class="t-kw">if</span> (c == *charset)
+			<span class="t-kw">return</span> (<span class="t-num">1</span>);
+		charset++;
+	}
+	<span class="t-kw">return</span> (<span class="t-num">0</span>);
+}
+
+<span class="t-com">/*
+** Uma palavra começa num carácter que não é separador e cujo anterior é
+** separador (ou que está no início da string).
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">int</span>	<span class="t-fn">ft_count_words</span>(<span class="t-ty">char</span> *str, <span class="t-ty">char</span> *charset)
+{
+	<span class="t-ty">int</span>	count;
+	<span class="t-ty">int</span>	i;
+
+	count = <span class="t-num">0</span>;
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (str[i])
+	{
+		<span class="t-kw">if</span> (!<span class="t-fn">ft_is_sep</span>(str[i], charset)
+			&amp;&amp; (i == <span class="t-num">0</span> || <span class="t-fn">ft_is_sep</span>(str[i - <span class="t-num">1</span>], charset)))
+			count++;
+		i++;
+	}
+	<span class="t-kw">return</span> (count);
+}
+
+<span class="t-kw">static</span> <span class="t-ty">char</span>	*<span class="t-fn">ft_word_dup</span>(<span class="t-ty">char</span> *str, <span class="t-ty">char</span> *charset)
+{
+	<span class="t-ty">char</span>	*word;
+	<span class="t-ty">int</span>		len;
+	<span class="t-ty">int</span>		i;
+
+	len = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (str[len] &amp;&amp; !<span class="t-fn">ft_is_sep</span>(str[len], charset))
+		len++;
+	word = (<span class="t-ty">char</span> *)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">char</span>) * (len + <span class="t-num">1</span>));
+	<span class="t-kw">if</span> (!word)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	i = -<span class="t-num">1</span>;
+	<span class="t-kw">while</span> (++i &lt; len)
+		word[i] = str[i];
+	word[len] = <span class="t-chr">'\0'</span>;
+	<span class="t-kw">return</span> (word);
+}
+
+<span class="t-com">/*
+** Salta separadores, copia uma palavra, salta-a, e repete até ao fim.
+** O array tem uma posição a mais para o 0 final.
+*/</span>
+<span class="t-ty">char</span>	**<span class="t-fn">ft_split</span>(<span class="t-ty">char</span> *str, <span class="t-ty">char</span> *charset)
+{
+	<span class="t-ty">char</span>	**tab;
+	<span class="t-ty">int</span>		w;
+
+	tab = (<span class="t-ty">char</span> **)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">char</span> *) * (<span class="t-fn">ft_count_words</span>(str, charset) + <span class="t-num">1</span>));
+	<span class="t-kw">if</span> (!tab)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	w = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (*str)
+	{
+		<span class="t-kw">while</span> (*str &amp;&amp; <span class="t-fn">ft_is_sep</span>(*str, charset))
+			str++;
+		<span class="t-kw">if</span> (*str)
+		{
+			tab[w] = <span class="t-fn">ft_word_dup</span>(str, charset);
+			w++;
+		}
+		<span class="t-kw">while</span> (*str &amp;&amp; !<span class="t-fn">ft_is_sep</span>(*str, charset))
+			str++;
+	}
+	tab[w] = <span class="t-num">0</span>;
+	<span class="t-kw">return</span> (tab);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>É o mesmo exercício do C07. Conta-se o número de palavras, reserva-se o array (+1 para o 0) e copia-se cada palavra.</li><li>Uma palavra começa num carácter que não é separador e que vem depois de um separador ou no início.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Strings vazias entre separadores seguidos.</li><li>Esquecer o 0 no fim.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>String vazia, só separadores, <code>charset</code> vazio.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article></div></div>
+</main>
+<footer class="foot">
+  <div class="w foot__in">
+    <p class="foot__brand"><span class="t-prompt">$</span> piscine.sim <span class="mute">· treino para a Piscine C</span></p>
+    <p class="foot__note">Projeto de treino pessoal, sem ligação à 42 Lisboa nem à rede 42. Os enunciados são resumos em português dos originais públicos; confirma sempre o enunciado oficial no dia.</p>
+    <p class="foot__keys"><kbd>/</kbd> comando · <kbd>?</kbd> atalhos · <kbd>1</kbd>–<kbd>5</kbd> páginas</p>
+  </div>
+</footer>
+<div class="cmd" data-cmd hidden>
+  <div class="cmd__box" role="dialog" aria-modal="true" aria-label="Linha de comandos">
+    <div class="cmd__out" data-cmd-out aria-live="polite"></div>
+    <form class="cmd__form" data-cmd-form autocomplete="off">
+      <label class="cmd__pr" for="cmd-in">piscine@42lisboa:<span data-cmd-path>~</span>$</label>
+      <input id="cmd-in" class="cmd__in" data-cmd-in type="text" spellcheck="false" autocapitalize="off" enterkeyhint="go" aria-describedby="cmd-hint">
+    </form>
+    <p class="cmd__hint" id="cmd-hint">escreve <b>help</b> · <kbd>Tab</kbd> completa · <kbd>↑</kbd> histórico · <kbd>Esc</kbd> fecha</p>
+  </div>
+</div>
+<div class="help" data-help hidden>
+  <div class="help__box" role="dialog" aria-modal="true" aria-labelledby="help-t">
+    <h2 id="help-t">Atalhos de teclado</h2>
+    <dl>
+      <div><dt><kbd>/</kbd> ou <kbd>:</kbd></dt><dd>abrir a linha de comandos</dd></div>
+      <div><dt><kbd>1</kbd> … <kbd>5</kbd></dt><dd>início, tutorial, módulos, exames, norminette</dd></div>
+      <div><dt><kbd>j</kbd> / <kbd>k</kbd></dt><dd>exercício seguinte / anterior</dd></div>
+      <div><dt><kbd>n</kbd> / <kbd>p</kbd></dt><dd>módulo seguinte / anterior</dd></div>
+      <div><dt><kbd>e</kbd></dt><dd>escrever no exercício atual</dd></div>
+      <div><dt><kbd>f</kbd></dt><dd>marcar o exercício atual como feito</dd></div>
+      <div><dt><kbd>g</kbd></dt><dd>voltar ao topo</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>mostrar ou esconder esta ajuda</dd></div>
+      <div><dt><kbd>Esc</kbd></dt><dd>fechar / sair do campo de código</dd></div>
+    </dl>
+    <button class="btn btn--ghost" type="button" data-help-close>fechar</button>
+  </div>
+</div>
+<script id="site-data" type="application/json">{"store": "p42", "mods": [{"id": "shell00", "nome": "Shell00", "href": "../modulos/shell00.html", "exs": ["shell00-ex00", "shell00-ex01", "shell00-ex02", "shell00-ex03", "shell00-ex04", "shell00-ex05", "shell00-ex06", "shell00-ex07", "shell00-ex08", "shell00-ex09"]}, {"id": "shell01", "nome": "Shell01", "href": "../modulos/shell01.html", "exs": ["shell01-ex00", "shell01-ex01", "shell01-ex02", "shell01-ex03", "shell01-ex04", "shell01-ex05", "shell01-ex06", "shell01-ex07", "shell01-ex08"]}, {"id": "c00", "nome": "C00", "href": "../modulos/c00.html", "exs": ["c00-ex00", "c00-ex01", "c00-ex02", "c00-ex03", "c00-ex04", "c00-ex05", "c00-ex06", "c00-ex07", "c00-ex08"]}, {"id": "c01", "nome": "C01", "href": "../modulos/c01.html", "exs": ["c01-ex00", "c01-ex01", "c01-ex02", "c01-ex03", "c01-ex04", "c01-ex05", "c01-ex06", "c01-ex07", "c01-ex08"]}, {"id": "c02", "nome": "C02", "href": "../modulos/c02.html", "exs": ["c02-ex00", "c02-ex01", "c02-ex02", "c02-ex03", "c02-ex04", "c02-ex05", "c02-ex06", "c02-ex07", "c02-ex08", "c02-ex09", "c02-ex10", "c02-ex11", "c02-ex12"]}, {"id": "c03", "nome": "C03", "href": "../modulos/c03.html", "exs": ["c03-ex00", "c03-ex01", "c03-ex02", "c03-ex03", "c03-ex04", "c03-ex05"]}, {"id": "c04", "nome": "C04", "href": "../modulos/c04.html", "exs": ["c04-ex00", "c04-ex01", "c04-ex02", "c04-ex03", "c04-ex04", "c04-ex05"]}, {"id": "c05", "nome": "C05", "href": "../modulos/c05.html", "exs": ["c05-ex00", "c05-ex01", "c05-ex02", "c05-ex03", "c05-ex04", "c05-ex05", "c05-ex06", "c05-ex07", "c05-ex08"]}, {"id": "c06", "nome": "C06", "href": "../modulos/c06.html", "exs": ["c06-ex00", "c06-ex01", "c06-ex02", "c06-ex03"]}, {"id": "c07", "nome": "C07", "href": "../modulos/c07.html", "exs": ["c07-ex00", "c07-ex01", "c07-ex02", "c07-ex03", "c07-ex04", "c07-ex05"]}, {"id": "c08", "nome": "C08", "href": "../modulos/c08.html", "exs": ["c08-ex00", "c08-ex01", "c08-ex02", "c08-ex03", "c08-ex04", "c08-ex05"]}, {"id": "c09", "nome": "C09", "href": "../modulos/c09.html", "exs": ["c09-ex00", "c09-ex01", "c09-ex02"]}, {"id": "c10", "nome": "C10", "href": "../modulos/c10.html", "exs": ["c10-ex00", "c10-ex01", "c10-ex02", "c10-ex03"]}, {"id": "c11", "nome": "C11", "href": "../modulos/c11.html", "exs": ["c11-ex00", "c11-ex01", "c11-ex02", "c11-ex03", "c11-ex04", "c11-ex05", "c11-ex06", "c11-ex07"]}, {"id": "c12", "nome": "C12", "href": "../modulos/c12.html", "exs": ["c12-ex00", "c12-ex01", "c12-ex02", "c12-ex03", "c12-ex04", "c12-ex05", "c12-ex06", "c12-ex07", "c12-ex08", "c12-ex09", "c12-ex10", "c12-ex11", "c12-ex12", "c12-ex13", "c12-ex14", "c12-ex15", "c12-ex16", "c12-ex17"]}, {"id": "c13", "nome": "C13", "href": "../modulos/c13.html", "exs": ["c13-ex00", "c13-ex01", "c13-ex02", "c13-ex03", "c13-ex04", "c13-ex05", "c13-ex06", "c13-ex07"]}, {"id": "rush00", "nome": "Rush00", "href": "../modulos/rush00.html", "exs": ["rush00-ex00"]}, {"id": "rush01", "nome": "Rush01", "href": "../modulos/rush01.html", "exs": ["rush01-ex00"]}, {"id": "rush02", "nome": "Rush02", "href": "../modulos/rush02.html", "exs": ["rush02-ex00"]}, {"id": "bsq", "nome": "BSQ", "href": "../modulos/bsq.html", "exs": ["bsq-ex00"]}], "pages": {"inicio": "../index.html", "tutorial": "../tutorial.html", "modulos": "../modulos.html", "exames": "../exames.html", "norminette": "../norminette.html", "respostas": "../respostas/index.html"}, "prompt": "piscine@42lisboa"}</script>
+<script src="../assets/js/site.js?v=f96fd0ac" defer></script>
+</body>
+</html>

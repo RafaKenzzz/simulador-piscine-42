@@ -1,0 +1,100 @@
+# -*- coding: utf-8 -*-
+from dados import ex
+
+ID = "c08"
+NOME = "C08"
+TIPO = "C"
+DIAS = "terceira semana"
+RESUMO = "Ficheiros `.h`, macros, `typedef` e estruturas (`struct`)."
+INTRO = [
+    "Os headers levam sempre proteção contra inclusão dupla: `#ifndef NOME_H`, `# define NOME_H` … `#endif`. Repara no espaço entre `#` e `define` quando a diretiva está dentro de outra: é a indentação que a Norma pede.",
+    "Os enunciados de `ft_boolean.h` e `ft_abs.h` pedem macros com parâmetros. A norminette atual recusa-as (`MACRO_FUNC_FORBIDDEN`); o enunciado manda usar `-R CheckDefine`, uma opção da norminette 2 que hoje é ignorada. Entrega o que o enunciado pede.",
+]
+
+N = "Nenhuma"
+EXS = [
+    ex("ex00", "ft.h", "ft.h", N,
+       ["Cria o teu ficheiro `ft.h` com os protótipos de todas estas funções:"],
+       proto="void\tft_putchar(char c);\nvoid\tft_swap(int *a, int *b);\nvoid\tft_putstr(char *str);\nint\t\tft_strlen(char *str);\nint\t\tft_strcmp(char *s1, char *s2);",
+       sol=["c08/ex00/ft.h"],
+       passos=["O header só declara as funções: diz ao compilador o nome, os parâmetros e o tipo devolvido. O código fica nos `.c`.",
+               "A proteção `#ifndef FT_H` / `# define FT_H` / `#endif` impede erros se o header for incluído duas vezes.",
+               "Os nomes das funções ficam alinhados com tabs, na mesma coluna, como pede a Norma."],
+       erros=["Esquecer a proteção contra inclusão dupla.",
+              "Pôr o corpo das funções no header."],
+       limites=["A moulinette inclui o `ft.h` num `main` dela e compila com as funções. Os protótipos têm de ser exatamente estes."]),
+
+    ex("ex01", "ft_boolean.h", "ft_boolean.h", N,
+       ["Cria um ficheiro `ft_boolean.h` com o qual o `main` abaixo compile e funcione.",
+        "O programa mostra `I have an even number of arguments.` ou `I have an odd number of arguments.`, seguido de uma quebra de linha.",
+        "A norminette deve ser corrida com a opção `-R CheckDefine` (a moulinette também)."],
+       proto='#include "ft_boolean.h"\n\nvoid\tft_putstr(char *str)\n{\n\twhile (*str)\n\t\twrite(1, str++, 1);\n}\n\nt_bool\tft_is_even(int nbr)\n{\n\treturn ((EVEN(nbr)) ? TRUE : FALSE);\n}\n\nint\tmain(int argc, char **argv)\n{\n\t(void)argv;\n\tif (ft_is_even(argc - 1) == TRUE)\n\t\tft_putstr(EVEN_MSG);\n\telse\n\t\tft_putstr(ODD_MSG);\n\treturn (SUCCESS);\n}',
+       sol=["c08/ex01/ft_boolean.h"],
+       passos=["Faz a lista do que o `main` usa e não existe: `write`, `t_bool`, `TRUE`, `FALSE`, `EVEN`, `EVEN_MSG`, `ODD_MSG` e `SUCCESS`.",
+               "`write` precisa de `<unistd.h>`: como o `main` não o inclui, o header inclui-o.",
+               "`t_bool` é um `typedef` de `int`; `TRUE`, `FALSE` e `SUCCESS` são constantes.",
+               "`EVEN(nbr)` é uma macro com parâmetro. Os parênteses à volta de `nbr` protegem expressões como `EVEN(argc - 1)`.",
+               "As mensagens já levam o `\\n`, porque o `main` não escreve nenhuma quebra de linha."],
+       erros=["Esquecer o `#include <unistd.h>`: o `main` não compila.",
+              "Escrever `# define EVEN(nbr) nbr % 2 == 0` sem parênteses.",
+              "Esquecer a quebra de linha nas mensagens."],
+       limites=["Com 0, 1 e 2 argumentos: par, ímpar, par."]),
+
+    ex("ex02", "ft_abs.h", "ft_abs.h", N,
+       ["Cria uma macro `ABS` que substitui o argumento pelo seu valor absoluto: `#define ABS(Value)`.",
+        "A norminette deve ser corrida com a opção `-R CheckDefine` (a moulinette também)."],
+       sol=["c08/ex02/ft_abs.h"],
+       passos=["O valor absoluto é `Value` se for positivo e `-Value` se for negativo.",
+               "Sem o operador ternário (proibido), multiplica-se `Value` por 1 ou -1: `((Value) > 0) * 2 - 1` dá 1 quando é positivo e -1 quando não é.",
+               "Para 0 dá `0 * -1`, que é 0.",
+               "Cada uso de `Value` vai entre parênteses, para `ABS(x + 1)` funcionar."],
+       erros=["Escrever `Value < 0 ? -Value : Value` sem parênteses: `ABS(x + 1)` vira `x + 1 < 0 ? -x + 1 : x + 1`.",
+              "Usar o ternário, proibido pela Norma."],
+       limites=["`ABS(-42)`, `ABS(0)`, `ABS(x + 1)` com `x` negativo."]),
+
+    ex("ex03", "ft_point.h", "ft_point.h", N,
+       ["Cria um ficheiro `ft_point.h` com o qual o `main` abaixo compile."],
+       proto='#include "ft_point.h"\n\nvoid\tset_point(t_point *point)\n{\n\tpoint->x = 42;\n\tpoint->y = 21;\n}\n\nint\tmain(void)\n{\n\tt_point\tpoint;\n\n\tset_point(&point);\n\treturn (0);\n}',
+       sol=["c08/ex03/ft_point.h"],
+       passos=["O `main` usa um tipo `t_point` com dois campos inteiros, `x` e `y`.",
+               "Pela Norma, a estrutura chama-se `s_point` e o `typedef` chama-se `t_point`.",
+               "As estruturas só podem ser declaradas em `.h`, nunca num `.c`."],
+       erros=["Chamar `point` à estrutura em vez de `s_point`: a norminette recusa."],
+       limites=["Só tem de compilar com o `main` do enunciado."]),
+
+    ex("ex04", "ft_strs_to_tab", "ft_strs_to_tab.c", "malloc, free",
+       ["Cria uma função que recebe um array de strings e o seu tamanho e transforma cada elemento numa estrutura:",
+        "- `size`: o tamanho da string;",
+        "- `str`: a string;",
+        "- `copy`: uma cópia da string.",
+        "A estrutura está definida no ficheiro `ft_stock_str.h`, que é dado. A ordem de `av` mantém-se.",
+        "O array devolvido é reservado com `malloc` e o último elemento tem `str` a 0, para marcar o fim. Em caso de erro, devolve `NULL`.",
+        "A função é testada com o `ft_show_tab` do exercício seguinte."],
+       proto="struct s_stock_str\t*ft_strs_to_tab(int ac, char **av);\n\ntypedef struct s_stock_str\n{\n\tint\t\tsize;\n\tchar\t*str;\n\tchar\t*copy;\n}\tt_stock_str;",
+       sol=["c08/ex04/ft_strs_to_tab.c", "c08/ex04/ft_stock_str.h"],
+       passos=["Reservam-se `ac + 1` estruturas: uma por argumento e uma para marcar o fim.",
+               "Em cada uma, `size` é o comprimento, `str` aponta para o original e `copy` para uma cópia nova (um `ft_strdup`).",
+               "A última fica com `str = 0`.",
+               "Se uma cópia falhar a meio, libertam-se as que já foram feitas e o array, e devolve-se `NULL`.",
+               "O `ft_stock_str.h` está aqui só para poderes compilar: é dado pela moulinette e não se entrega."],
+       erros=["Pôr `str` a apontar para a cópia e `copy` para o original.",
+              "Esquecer o elemento final com `str = 0`: o `ft_show_tab` não sabe onde parar.",
+              "Reservar `ac` elementos em vez de `ac + 1`."],
+       limites=["`ac = 0` devolve um array só com o elemento final.",
+                "Strings vazias: `size = 0` e `copy` é uma string vazia nova."]),
+
+    ex("ex05", "ft_show_tab", "ft_show_tab.c", "write",
+       ["Cria uma função que mostra o conteúdo do array criado pelo exercício anterior.",
+        "Para cada elemento, mostra:",
+        "- a string, seguida de `\\n`;",
+        "- o tamanho, seguido de `\\n`;",
+        "- a cópia da string (que pode ter sido modificada), seguida de `\\n`."],
+       proto="void\tft_show_tab(struct s_stock_str *par);",
+       sol=["c08/ex05/ft_show_tab.c", "c08/ex05/ft_stock_str.h"],
+       passos=["Percorre-se o array até ao elemento com `str` a 0.",
+               "Para cada um: `ft_putstr(str)`, `ft_putnbr(size)` e `ft_putstr(copy)`, com uma quebra de linha depois de cada.",
+               "O `ft_putnbr` é o do C00, copiado como função `static`."],
+       erros=["Mostrar `str` duas vezes em vez de `copy`: a moulinette altera a cópia antes de chamar a função para apanhar isto.",
+              "Parar quando `size` é 0 em vez de quando `str` é 0."],
+       limites=["Testam com a cópia alterada depois do `ft_strs_to_tab`."]),
+]

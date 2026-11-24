@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>C00: respostas · Simulador da Piscine</title>
+  <meta name="description" content="Soluções comentadas de C00, com passo a passo, erros comuns e casos limite.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://rafakenzzz.github.io/simulador-piscine-42/respostas/c00.html">
+  <meta property="og:url" content="https://rafakenzzz.github.io/simulador-piscine-42/respostas/c00.html">
+  <meta name="theme-color" content="#07090b">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Simulador da Piscine">
+  <meta property="og:title" content="C00: respostas · Simulador da Piscine">
+  <meta property="og:description" content="Soluções comentadas de C00, com passo a passo, erros comuns e casos limite.">
+  <meta property="og:locale" content="pt_PT">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=d6190e1b">
+  <style>:root{--bg:#07090b;--bg-2:#0c1013;--bg-3:#121a1e;--line:#1d272c;--line-2:#2b3940;--fg:#d5e2db;--fg-2:#a3b5ac;--mute:#73867d;--green:#4dff9a;--green-2:#2bd97a;--green-dim:#0f3323;--cyan:#5ce1ff;--cyan-dim:#0c2e38;--amber:#ffcc66;--red:#ff7070;--violet:#c4a7ff;--orange:#ffa066;--f-mono:"JetBrains Mono",ui-monospace,'Cascadia Mono','Segoe UI Mono',Menlo,Consolas,monospace}</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"C00: respostas · Simulador da Piscine","description":"Soluções comentadas de C00, com passo a passo, erros comuns e casos limite.","inLanguage":"pt-PT","dateModified":"2026-11-24","url":"https://rafakenzzz.github.io/simulador-piscine-42/respostas/c00.html","isPartOf":{"@id":"https://rafakenzzz.github.io/simulador-piscine-42/#website"}}]}</script>
+</head>
+<body data-kind="respostas" data-root="../">
+<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+<header class="top" data-top>
+  <div class="w top__in">
+    <a class="brand" href="../index.html" aria-label="Simulador da Piscine: página inicial"><span class="pr-u">piscine@42lisboa</span><span class="pr-s">:</span><span class="pr-p">~/respostas/c00</span><span class="pr-s">$</span></a>
+    <nav class="nav" aria-label="Principal"><a href="../index.html" data-key="1"><span class="k">[1]</span>início</a><a href="../tutorial.html" data-key="2"><span class="k">[2]</span>tutorial</a><a href="../modulos.html" data-key="3"><span class="k">[3]</span>módulos</a><a href="../exames.html" data-key="4"><span class="k">[4]</span>exames</a><a href="../norminette.html" data-key="5"><span class="k">[5]</span>norminette</a></nav>
+    <button class="cmd-btn" type="button" data-cmd-open aria-label="Abrir a linha de comandos (tecla /)"><span aria-hidden="true">&gt;_</span><span class="cmd-btn__t">comando</span><kbd>/</kbd></button>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<section class="phero w">
+  <p class="crumbs"><a href="index.html">~/respostas</a>/<b>c00</b></p>
+  <h1 class="h1 " data-type>C00: respostas</h1>
+  <div class="warn" role="note">
+  <p class="warn__t">Tenta primeiro sozinho.</p>
+  <p>Ler a solução antes de tentar tira-te o treino de que vais precisar no exame, onde não há respostas. Usa esta página só depois de teres o teu código a funcionar, ou depois de estares mesmo bloqueado. Cada solução está fechada: só abre quando carregares em «mostrar solução».</p>
+</div>
+</section>
+<div class="w ans-wrap"><nav class="ansnav" aria-label="Respostas por módulo"><ol><li><a href="shell00.html">Shell00</a></li><li><a href="shell01.html">Shell01</a></li><li><a href="c00.html" aria-current=page>C00</a></li><li><a href="c01.html">C01</a></li><li><a href="c02.html">C02</a></li><li><a href="c03.html">C03</a></li><li><a href="c04.html">C04</a></li><li><a href="c05.html">C05</a></li><li><a href="c06.html">C06</a></li><li><a href="c07.html">C07</a></li><li><a href="c08.html">C08</a></li><li><a href="c09.html">C09</a></li><li><a href="c10.html">C10</a></li><li><a href="c11.html">C11</a></li><li><a href="c12.html">C12</a></li><li><a href="c13.html">C13</a></li><li><a href="rush00.html">Rush00</a></li><li><a href="rush01.html">Rush01</a></li><li><a href="rush02.html">Rush02</a></li><li><a href="bsq.html">BSQ</a></li><li><a href="exame-nivel-0.html">exame · level 0</a></li><li><a href="exame-nivel-1.html">exame · level 1</a></li><li><a href="exame-nivel-2.html">exame · level 2</a></li><li><a href="exame-nivel-3.html">exame · level 3</a></li><li><a href="exame-nivel-4.html">exame · level 4</a></li><li><a href="exame-nivel-5.html">exame · level 5</a></li></ol></nav><div class="ans-list"><article class="ans" id="r-c00-ex00">
+  <h2 class="ex__h"><span class="ex__num">ex00</span> ft_putchar</h2>
+  <p class="ans__q">Escreve uma função que mostra o carácter recebido como parâmetro.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex00/ft_putchar.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-com">/*
+** Mostra o carácter c na saída padrão (descritor 1).
+** write recebe o endereço do que vai escrever, por isso passamos &amp;c.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_putchar</span>(<span class="t-ty">char</span> c)
+{
+	<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;c, <span class="t-num">1</span>);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li><code>write(fd, endereço, n)</code> escreve <code>n</code> bytes a partir de <code>endereço</code> no descritor <code>fd</code>. O <code>1</code> é a saída padrão (o ecrã).</li><li><code>c</code> é uma variável, não um endereço; <code>&amp;c</code> dá o endereço onde está guardada.</li><li>Escreve-se 1 byte, porque um <code>char</code> ocupa 1 byte.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Escrever <code>write(1, c, 1)</code>: o compilador avisa que um <code>char</code> não é um ponteiro e, com <code>-Werror</code>, não compila.</li><li>Incluir <code>&lt;stdio.h&gt;</code> ou usar <code>printf</code>.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Testam caracteres não imprimíveis, como <code>'\n'</code> e <code>'\0'</code>: também têm de ser escritos tal e qual.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c00-ex01">
+  <h2 class="ex__h"><span class="ex__num">ex01</span> ft_print_alphabet</h2>
+  <p class="ans__q">Cria uma função que mostra o alfabeto em minúsculas, numa só linha, por ordem crescente, a começar no <code>a</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex01/ft_print_alphabet.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-com">/*
+** As letras são números na tabela ASCII ('a' = 97 … 'z' = 122),
+** por isso basta somar 1 a 'a' até passar de 'z'.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_print_alphabet</span>(<span class="t-ty">void</span>)
+{
+	<span class="t-ty">char</span>	c;
+
+	c = <span class="t-chr">'a'</span>;
+	<span class="t-kw">while</span> (c &lt;= <span class="t-chr">'z'</span>)
+	{
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;c, <span class="t-num">1</span>);
+		c++;
+	}
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Na tabela ASCII as letras minúsculas são números seguidos: <code>'a'</code> é 97 e <code>'z'</code> é 122.</li><li>Começa-se em <code>'a'</code> e soma-se 1 até passar de <code>'z'</code>, escrevendo cada letra.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Escrever uma quebra de linha no fim: o enunciado não a pede.</li><li>Escrever as 26 letras com <code>write(1, "abc…", 26)</code>: funciona, mas foge ao objetivo e há quem conte como errado na avaliação.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>A saída é exatamente <code>abcdefghijklmnopqrstuvwxyz</code>, sem <code>\n</code>.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c00-ex02">
+  <h2 class="ex__h"><span class="ex__num">ex02</span> ft_print_reverse_alphabet</h2>
+  <p class="ans__q">Cria uma função que mostra o alfabeto em minúsculas, numa só linha, por ordem decrescente, a começar no <code>z</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex02/ft_print_reverse_alphabet.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-com">/*
+** O mesmo que ft_print_alphabet, a descer de 'z' até 'a'.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_print_reverse_alphabet</span>(<span class="t-ty">void</span>)
+{
+	<span class="t-ty">char</span>	c;
+
+	c = <span class="t-chr">'z'</span>;
+	<span class="t-kw">while</span> (c &gt;= <span class="t-chr">'a'</span>)
+	{
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;c, <span class="t-num">1</span>);
+		c--;
+	}
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>É o exercício anterior ao contrário: começa-se em <code>'z'</code> e subtrai-se 1 até passar de <code>'a'</code>.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Parar em <code>c &gt; 'a'</code>, que deixa o <code>a</code> de fora.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Saída exata: <code>zyxwvutsrqponmlkjihgfedcba</code>, sem <code>\n</code>.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c00-ex03">
+  <h2 class="ex__h"><span class="ex__num">ex03</span> ft_print_numbers</h2>
+  <p class="ans__q">Cria uma função que mostra todos os algarismos, numa só linha, por ordem crescente.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex03/ft_print_numbers.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-com">/*
+** Os algarismos '0' a '9' também são consecutivos na tabela ASCII.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_print_numbers</span>(<span class="t-ty">void</span>)
+{
+	<span class="t-ty">char</span>	c;
+
+	c = <span class="t-chr">'0'</span>;
+	<span class="t-kw">while</span> (c &lt;= <span class="t-chr">'9'</span>)
+	{
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;c, <span class="t-num">1</span>);
+		c++;
+	}
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Os caracteres <code>'0'</code> a <code>'9'</code> também são consecutivos na tabela ASCII (48 a 57).</li><li>Escreve-se o carácter, não o número: <code>'0'</code> (48) e não <code>0</code>.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Usar <code>int i = 0</code> e escrever <code>&amp;i</code>: escreve o byte de valor 0, que não é o carácter <code>'0'</code>.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Saída exata: <code>0123456789</code>, sem <code>\n</code>.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c00-ex04">
+  <h2 class="ex__h"><span class="ex__num">ex04</span> ft_is_negative</h2>
+  <p class="ans__q">Cria uma função que mostra <code>N</code> ou <code>P</code> consoante o sinal do inteiro recebido.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex04/ft_is_negative.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-com">/*
+** 'N' para negativos; 'P' para positivos e para o zero.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_is_negative</span>(<span class="t-ty">int</span> n)
+{
+	<span class="t-kw">if</span> (n &lt; <span class="t-num">0</span>)
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, <span class="t-str">"N"</span>, <span class="t-num">1</span>);
+	<span class="t-kw">else</span>
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, <span class="t-str">"P"</span>, <span class="t-num">1</span>);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Um só <code>if</code>: <code>n &lt; 0</code> mostra <code>N</code>; em qualquer outro caso (incluindo o zero) mostra <code>P</code>.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Tratar o zero como negativo (<code>n &lt;= 0</code>).</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Testam <code>0</code>, <code>INT_MIN</code> e <code>INT_MAX</code>.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c00-ex05">
+  <h2 class="ex__h"><span class="ex__num">ex05</span> ft_print_comb</h2>
+  <p class="ans__q">Cria uma função que mostra, por ordem crescente, todas as combinações de três algarismos diferentes, também eles por ordem crescente.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex05/ft_print_comb.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-com">/*
+** Escreve os três algarismos e, se não for a última combinação (789),
+** a separação ", ". A última é a única que começa por '7'.
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">void</span>	<span class="t-fn">ft_put_comb</span>(<span class="t-ty">char</span> a, <span class="t-ty">char</span> b, <span class="t-ty">char</span> c)
+{
+	<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;a, <span class="t-num">1</span>);
+	<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;b, <span class="t-num">1</span>);
+	<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;c, <span class="t-num">1</span>);
+	<span class="t-kw">if</span> (a != <span class="t-chr">'7'</span>)
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, <span class="t-str">", "</span>, <span class="t-num">2</span>);
+}
+
+<span class="t-com">/*
+** Três ciclos encaixados com a &lt; b &lt; c: cada combinação aparece uma vez
+** e já por ordem crescente.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_print_comb</span>(<span class="t-ty">void</span>)
+{
+	<span class="t-ty">char</span>	a;
+	<span class="t-ty">char</span>	b;
+	<span class="t-ty">char</span>	c;
+
+	a = <span class="t-chr">'0'</span>;
+	<span class="t-kw">while</span> (a &lt;= <span class="t-chr">'7'</span>)
+	{
+		b = a + <span class="t-num">1</span>;
+		<span class="t-kw">while</span> (b &lt;= <span class="t-chr">'8'</span>)
+		{
+			c = b + <span class="t-num">1</span>;
+			<span class="t-kw">while</span> (c &lt;= <span class="t-chr">'9'</span>)
+			{
+				<span class="t-fn">ft_put_comb</span>(a, b, c);
+				c++;
+			}
+			b++;
+		}
+		a++;
+	}
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Três ciclos encaixados com <code>a &lt; b &lt; c</code>: o segundo começa em <code>a + 1</code> e o terceiro em <code>b + 1</code>. Assim cada combinação aparece uma vez e já ordenada.</li><li>Os limites são <code>'7'</code>, <code>'8'</code> e <code>'9'</code>: o primeiro algarismo nunca passa de 7, porque precisa de dois maiores depois dele.</li><li>A separação <code>", "</code> vai depois de todas as combinações menos da última. A última, <code>789</code>, é a única que começa por 7.</li><li>A escrita de cada combinação vai para uma função auxiliar, para a função principal não passar das 25 linhas.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Deixar <code>, </code> depois do <code>789</code>: o <code>cat -e</code> mostra <code>789, $</code> e a moulinette recusa.</li><li>Pôr uma quebra de linha no fim.</li><li>Ultrapassar as 25 linhas numa só função.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>São 120 combinações, de <code>012</code> a <code>789</code>.</li><li>A saída é comparada carácter a carácter.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c00-ex06">
+  <h2 class="ex__h"><span class="ex__num">ex06</span> ft_print_comb2</h2>
+  <p class="ans__q">Cria uma função que mostra todas as combinações diferentes de dois números entre <code>00</code> e <code>99</code>, por ordem crescente.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex06/ft_print_comb2.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-com">/*
+** Escreve um número de 0 a 99 sempre com dois algarismos (7 -&gt; "07").
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">void</span>	<span class="t-fn">ft_put_two</span>(<span class="t-ty">int</span> n)
+{
+	<span class="t-ty">char</span>	digits[<span class="t-num">2</span>];
+
+	digits[<span class="t-num">0</span>] = <span class="t-chr">'0'</span> + n / <span class="t-num">10</span>;
+	digits[<span class="t-num">1</span>] = <span class="t-chr">'0'</span> + n % <span class="t-num">10</span>;
+	<span class="t-fn">write</span>(<span class="t-num">1</span>, digits, <span class="t-num">2</span>);
+}
+
+<span class="t-com">/*
+** Pares (a, b) com a &lt; b, de "00 01" até "98 99".
+** Só a última combinação não leva ", " a seguir.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_print_comb2</span>(<span class="t-ty">void</span>)
+{
+	<span class="t-ty">int</span>	a;
+	<span class="t-ty">int</span>	b;
+
+	a = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (a &lt;= <span class="t-num">98</span>)
+	{
+		b = a + <span class="t-num">1</span>;
+		<span class="t-kw">while</span> (b &lt;= <span class="t-num">99</span>)
+		{
+			<span class="t-fn">ft_put_two</span>(a);
+			<span class="t-fn">write</span>(<span class="t-num">1</span>, <span class="t-str">" "</span>, <span class="t-num">1</span>);
+			<span class="t-fn">ft_put_two</span>(b);
+			<span class="t-kw">if</span> (a != <span class="t-num">98</span>)
+				<span class="t-fn">write</span>(<span class="t-num">1</span>, <span class="t-str">", "</span>, <span class="t-num">2</span>);
+			b++;
+		}
+		a++;
+	}
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Dois ciclos com inteiros: <code>a</code> de 0 a 98 e <code>b</code> de <code>a + 1</code> a 99. <code>00 00</code> e <code>01 00</code> não aparecem, porque <code>b</code> é sempre maior do que <code>a</code>.</li><li>Cada número é escrito sempre com dois algarismos: dezenas (<code>n / 10</code>) e unidades (<code>n % 10</code>), convertidos para carácter com <code>'0' +</code>.</li><li>O par <code>98 99</code> é o último e o único com <code>a == 98</code>: é o único sem <code>", "</code> a seguir.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Escrever <code>7</code> em vez de <code>07</code>.</li><li>Incluir pares iguais como <code>00 00</code>.</li><li>Esquecer o espaço entre os dois números.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>São 4950 pares. O primeiro é <code>00 01</code> e o último <code>98 99</code>.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c00-ex07">
+  <h2 class="ex__h"><span class="ex__num">ex07</span> ft_putnbr</h2>
+  <p class="ans__q">Cria uma função que mostra o número recebido como parâmetro.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex07/ft_putnbr.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-com">/*
+** Copiamos nb para um long: -2147483648 não tem simétrico em int,
+** mas em long tem. A recursão escreve primeiro os algarismos da esquerda
+** (n / 10) e depois o último (n % 10).
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_putnbr</span>(<span class="t-ty">int</span> nb)
+{
+	<span class="t-ty">long</span>	n;
+	<span class="t-ty">char</span>	c;
+
+	n = nb;
+	<span class="t-kw">if</span> (n &lt; <span class="t-num">0</span>)
+	{
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, <span class="t-str">"-"</span>, <span class="t-num">1</span>);
+		n = -n;
+	}
+	<span class="t-kw">if</span> (n &gt;= <span class="t-num">10</span>)
+		<span class="t-fn">ft_putnbr</span>(n / <span class="t-num">10</span>);
+	c = <span class="t-chr">'0'</span> + n % <span class="t-num">10</span>;
+	<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;c, <span class="t-num">1</span>);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Num <code>int</code> de 32 bits os valores vão de <code>-2147483648</code> a <code>2147483647</code>. O mais pequeno não tem simétrico em <code>int</code>: <code>-(-2147483648)</code> transborda.</li><li>Por isso copia-se para um <code>long</code>, onde o simétrico cabe.</li><li>Se for negativo, escreve-se o <code>-</code> e trabalha-se com o valor positivo.</li><li>A recursão trata primeiro <code>n / 10</code> (todos os algarismos menos o último) e só depois escreve <code>n % 10</code>. Assim os algarismos saem pela ordem certa.</li><li>Exemplo com 42: <code>ft_putnbr(4)</code> escreve <code>4</code>, depois escreve-se <code>2</code>.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Fazer <code>nb = -nb</code> num <code>int</code> com <code>-2147483648</code>: o resultado continua negativo e a saída fica errada.</li><li>Escrever os algarismos ao contrário (<code>24</code> em vez de <code>42</code>) ao usar um ciclo sem guardar os algarismos.</li><li>Não mostrar nada para o <code>0</code>.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li><code>0</code>, <code>-1</code>, <code>10</code>, <code>-10</code>, <code>2147483647</code> e <code>-2147483648</code> estão sempre nos testes.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c00-ex08">
+  <h2 class="ex__h"><span class="ex__num">ex08</span> ft_print_combn</h2>
+  <p class="ans__q">Cria uma função que mostra, por ordem crescente, todas as combinações de <code>n</code> algarismos diferentes, também por ordem crescente.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex08/ft_print_combn.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-com">/*
+** Escreve a combinação guardada em tab. A última combinação é a única
+** que começa pelo algarismo 10 - n (por exemplo "89" para n = 2).
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">void</span>	<span class="t-fn">ft_put_comb</span>(<span class="t-ty">char</span> *tab, <span class="t-ty">int</span> n)
+{
+	<span class="t-fn">write</span>(<span class="t-num">1</span>, tab, n);
+	<span class="t-kw">if</span> (tab[<span class="t-num">0</span>] != <span class="t-chr">'0'</span> + <span class="t-num">10</span> - n)
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, <span class="t-str">", "</span>, <span class="t-num">2</span>);
+}
+
+<span class="t-com">/*
+** Preenche a posição pos com cada algarismo possível e chama-se a si
+** própria para a posição seguinte. Cada algarismo tem de ser maior do que
+** o anterior e deixar espaço para os que faltam (no máximo '9' - restantes).
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">void</span>	<span class="t-fn">ft_fill</span>(<span class="t-ty">char</span> *tab, <span class="t-ty">int</span> pos, <span class="t-ty">int</span> n)
+{
+	<span class="t-ty">char</span>	d;
+
+	<span class="t-kw">if</span> (pos == n)
+	{
+		<span class="t-fn">ft_put_comb</span>(tab, n);
+		<span class="t-kw">return</span> ;
+	}
+	d = <span class="t-chr">'0'</span>;
+	<span class="t-kw">if</span> (pos &gt; <span class="t-num">0</span>)
+		d = tab[pos - <span class="t-num">1</span>] + <span class="t-num">1</span>;
+	<span class="t-kw">while</span> (d &lt;= <span class="t-chr">'9'</span> - (n - <span class="t-num">1</span> - pos))
+	{
+		tab[pos] = d;
+		<span class="t-fn">ft_fill</span>(tab, pos + <span class="t-num">1</span>, n);
+		d++;
+	}
+}
+
+<span class="t-ty">void</span>	<span class="t-fn">ft_print_combn</span>(<span class="t-ty">int</span> n)
+{
+	<span class="t-ty">char</span>	tab[<span class="t-num">10</span>];
+
+	<span class="t-kw">if</span> (n &lt;= <span class="t-num">0</span> || n &gt;= <span class="t-num">10</span>)
+		<span class="t-kw">return</span> ;
+	<span class="t-fn">ft_fill</span>(tab, <span class="t-num">0</span>, n);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Não dá para escrever <code>n</code> ciclos à mão, porque <code>n</code> muda. A solução é uma função recursiva que preenche uma posição de cada vez num array <code>tab</code>.</li><li>Na posição <code>pos</code>, o algarismo começa logo a seguir ao anterior (<code>tab[pos - 1] + 1</code>) e vai até <code>'9' - (n - 1 - pos)</code>, para deixar espaço para os que faltam.</li><li>Quando <code>pos == n</code>, a combinação está completa e é escrita.</li><li>A última combinação é a única que começa pelo algarismo <code>10 - n</code> (<code>89</code> para n = 2, <code>123456789</code> para n = 9). Todas as outras levam <code>", "</code> a seguir.</li><li>O array tem tamanho fixo 10: arrays de tamanho variável (<code>char tab[n]</code>) são proibidos pela Norma.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Usar um array de tamanho <code>n</code> (VLA), proibido pela Norma.</li><li>Deixar <code>, </code> depois da última combinação.</li><li>Tentar resolver com 9 ciclos encaixados: passa das 25 linhas e é difícil de acertar.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Testam todos os valores de 1 a 9. Para <code>n = 1</code> a saída é <code>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</code>.</li><li>Para <code>n = 9</code> a saída é <code>012345678, 012345679, …, 123456789</code>.</li><li>Fora do intervalo (0 ou 10) a função não deve mostrar nada nem rebentar.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article></div></div>
+</main>
+<footer class="foot">
+  <div class="w foot__in">
+    <p class="foot__brand"><span class="t-prompt">$</span> piscine.sim <span class="mute">· treino para a Piscine C</span></p>
+    <p class="foot__note">Projeto de treino pessoal, sem ligação à 42 Lisboa nem à rede 42. Os enunciados são resumos em português dos originais públicos; confirma sempre o enunciado oficial no dia.</p>
+    <p class="foot__keys"><kbd>/</kbd> comando · <kbd>?</kbd> atalhos · <kbd>1</kbd>–<kbd>5</kbd> páginas</p>
+  </div>
+</footer>
+<div class="cmd" data-cmd hidden>
+  <div class="cmd__box" role="dialog" aria-modal="true" aria-label="Linha de comandos">
+    <div class="cmd__out" data-cmd-out aria-live="polite"></div>
+    <form class="cmd__form" data-cmd-form autocomplete="off">
+      <label class="cmd__pr" for="cmd-in">piscine@42lisboa:<span data-cmd-path>~</span>$</label>
+      <input id="cmd-in" class="cmd__in" data-cmd-in type="text" spellcheck="false" autocapitalize="off" enterkeyhint="go" aria-describedby="cmd-hint">
+    </form>
+    <p class="cmd__hint" id="cmd-hint">escreve <b>help</b> · <kbd>Tab</kbd> completa · <kbd>↑</kbd> histórico · <kbd>Esc</kbd> fecha</p>
+  </div>
+</div>
+<div class="help" data-help hidden>
+  <div class="help__box" role="dialog" aria-modal="true" aria-labelledby="help-t">
+    <h2 id="help-t">Atalhos de teclado</h2>
+    <dl>
+      <div><dt><kbd>/</kbd> ou <kbd>:</kbd></dt><dd>abrir a linha de comandos</dd></div>
+      <div><dt><kbd>1</kbd> … <kbd>5</kbd></dt><dd>início, tutorial, módulos, exames, norminette</dd></div>
+      <div><dt><kbd>j</kbd> / <kbd>k</kbd></dt><dd>exercício seguinte / anterior</dd></div>
+      <div><dt><kbd>n</kbd> / <kbd>p</kbd></dt><dd>módulo seguinte / anterior</dd></div>
+      <div><dt><kbd>e</kbd></dt><dd>escrever no exercício atual</dd></div>
+      <div><dt><kbd>f</kbd></dt><dd>marcar o exercício atual como feito</dd></div>
+      <div><dt><kbd>g</kbd></dt><dd>voltar ao topo</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>mostrar ou esconder esta ajuda</dd></div>
+      <div><dt><kbd>Esc</kbd></dt><dd>fechar / sair do campo de código</dd></div>
+    </dl>
+    <button class="btn btn--ghost" type="button" data-help-close>fechar</button>
+  </div>
+</div>
+<script id="site-data" type="application/json">{"store": "p42", "mods": [{"id": "shell00", "nome": "Shell00", "href": "../modulos/shell00.html", "exs": ["shell00-ex00", "shell00-ex01", "shell00-ex02", "shell00-ex03", "shell00-ex04", "shell00-ex05", "shell00-ex06", "shell00-ex07", "shell00-ex08", "shell00-ex09"]}, {"id": "shell01", "nome": "Shell01", "href": "../modulos/shell01.html", "exs": ["shell01-ex00", "shell01-ex01", "shell01-ex02", "shell01-ex03", "shell01-ex04", "shell01-ex05", "shell01-ex06", "shell01-ex07", "shell01-ex08"]}, {"id": "c00", "nome": "C00", "href": "../modulos/c00.html", "exs": ["c00-ex00", "c00-ex01", "c00-ex02", "c00-ex03", "c00-ex04", "c00-ex05", "c00-ex06", "c00-ex07", "c00-ex08"]}, {"id": "c01", "nome": "C01", "href": "../modulos/c01.html", "exs": ["c01-ex00", "c01-ex01", "c01-ex02", "c01-ex03", "c01-ex04", "c01-ex05", "c01-ex06", "c01-ex07", "c01-ex08"]}, {"id": "c02", "nome": "C02", "href": "../modulos/c02.html", "exs": ["c02-ex00", "c02-ex01", "c02-ex02", "c02-ex03", "c02-ex04", "c02-ex05", "c02-ex06", "c02-ex07", "c02-ex08", "c02-ex09", "c02-ex10", "c02-ex11", "c02-ex12"]}, {"id": "c03", "nome": "C03", "href": "../modulos/c03.html", "exs": ["c03-ex00", "c03-ex01", "c03-ex02", "c03-ex03", "c03-ex04", "c03-ex05"]}, {"id": "c04", "nome": "C04", "href": "../modulos/c04.html", "exs": ["c04-ex00", "c04-ex01", "c04-ex02", "c04-ex03", "c04-ex04", "c04-ex05"]}, {"id": "c05", "nome": "C05", "href": "../modulos/c05.html", "exs": ["c05-ex00", "c05-ex01", "c05-ex02", "c05-ex03", "c05-ex04", "c05-ex05", "c05-ex06", "c05-ex07", "c05-ex08"]}, {"id": "c06", "nome": "C06", "href": "../modulos/c06.html", "exs": ["c06-ex00", "c06-ex01", "c06-ex02", "c06-ex03"]}, {"id": "c07", "nome": "C07", "href": "../modulos/c07.html", "exs": ["c07-ex00", "c07-ex01", "c07-ex02", "c07-ex03", "c07-ex04", "c07-ex05"]}, {"id": "c08", "nome": "C08", "href": "../modulos/c08.html", "exs": ["c08-ex00", "c08-ex01", "c08-ex02", "c08-ex03", "c08-ex04", "c08-ex05"]}, {"id": "c09", "nome": "C09", "href": "../modulos/c09.html", "exs": ["c09-ex00", "c09-ex01", "c09-ex02"]}, {"id": "c10", "nome": "C10", "href": "../modulos/c10.html", "exs": ["c10-ex00", "c10-ex01", "c10-ex02", "c10-ex03"]}, {"id": "c11", "nome": "C11", "href": "../modulos/c11.html", "exs": ["c11-ex00", "c11-ex01", "c11-ex02", "c11-ex03", "c11-ex04", "c11-ex05", "c11-ex06", "c11-ex07"]}, {"id": "c12", "nome": "C12", "href": "../modulos/c12.html", "exs": ["c12-ex00", "c12-ex01", "c12-ex02", "c12-ex03", "c12-ex04", "c12-ex05", "c12-ex06", "c12-ex07", "c12-ex08", "c12-ex09", "c12-ex10", "c12-ex11", "c12-ex12", "c12-ex13", "c12-ex14", "c12-ex15", "c12-ex16", "c12-ex17"]}, {"id": "c13", "nome": "C13", "href": "../modulos/c13.html", "exs": ["c13-ex00", "c13-ex01", "c13-ex02", "c13-ex03", "c13-ex04", "c13-ex05", "c13-ex06", "c13-ex07"]}, {"id": "rush00", "nome": "Rush00", "href": "../modulos/rush00.html", "exs": ["rush00-ex00"]}, {"id": "rush01", "nome": "Rush01", "href": "../modulos/rush01.html", "exs": ["rush01-ex00"]}, {"id": "rush02", "nome": "Rush02", "href": "../modulos/rush02.html", "exs": ["rush02-ex00"]}, {"id": "bsq", "nome": "BSQ", "href": "../modulos/bsq.html", "exs": ["bsq-ex00"]}], "pages": {"inicio": "../index.html", "tutorial": "../tutorial.html", "modulos": "../modulos.html", "exames": "../exames.html", "norminette": "../norminette.html", "respostas": "../respostas/index.html"}, "prompt": "piscine@42lisboa"}</script>
+<script src="../assets/js/site.js?v=f96fd0ac" defer></script>
+</body>
+</html>

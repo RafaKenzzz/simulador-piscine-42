@@ -1,0 +1,100 @@
+# -*- coding: utf-8 -*-
+from dados import ex
+
+ID = "c04"
+NOME = "C04"
+TIPO = "C"
+DIAS = "segunda semana"
+RESUMO = "Números e strings: `ft_atoi`, `ft_putnbr` e as versões em qualquer base."
+INTRO = [
+    "Os três primeiros exercícios repetem funções que já fizeste. Volta a escrevê-las de raiz: a moulinette corrige cada módulo sozinho.",
+    "Nas bases, a validação é metade do exercício. Lê com atenção a lista de bases inválidas de cada enunciado.",
+]
+
+N = "Nenhuma"
+EXS = [
+    ex("ex00", "ft_strlen", "ft_strlen.c", N,
+       ["Cria uma função que conta e devolve o número de caracteres de uma string."],
+       proto="int\tft_strlen(char *str);",
+       sol=["c04/ex00/ft_strlen.c"],
+       passos=["Conta-se até ao `'\\0'`, que não entra na conta."],
+       erros=["Contar o `'\\0'`."],
+       limites=["String vazia devolve 0."]),
+
+    ex("ex01", "ft_putstr", "ft_putstr.c", "write",
+       ["Cria uma função que mostra uma string de caracteres na saída padrão."],
+       proto="void\tft_putstr(char *str);",
+       sol=["c04/ex01/ft_putstr.c"],
+       passos=["Escreve-se um carácter de cada vez até ao `'\\0'`."],
+       erros=["Acrescentar uma quebra de linha."],
+       limites=["String vazia não mostra nada."]),
+
+    ex("ex02", "ft_putnbr", "ft_putnbr.c", "write",
+       ["Cria uma função que mostra o número recebido como parâmetro. Tem de funcionar com todos os valores possíveis de um `int`.",
+        "Por exemplo, `ft_putnbr(42)` mostra `42`."],
+       proto="void\tft_putnbr(int nb);",
+       sol=["c04/ex02/ft_putnbr.c"],
+       passos=["Copia-se o valor para um `long`, para `-2147483648` ter simétrico.",
+               "Escreve-se o `-` se for negativo e trabalha-se com o valor positivo.",
+               "A recursão trata `n / 10` antes de escrever `n % 10`, para os algarismos saírem pela ordem certa."],
+       erros=["Falhar o `INT_MIN`."],
+       limites=["`0`, `INT_MAX`, `INT_MIN`."]),
+
+    ex("ex03", "ft_atoi", "ft_atoi.c", N,
+       ["Escreve uma função que converte a parte inicial da string `str` para `int`:",
+        "- a string pode começar com quantos espaços em branco quiser (os do `isspace(3)`);",
+        "- depois pode ter quantos `+` e `-` quiser: o resultado é negativo se o número de `-` for ímpar;",
+        "- depois vêm os algarismos da base 10;",
+        "- a leitura pára no primeiro carácter que não siga estas regras e devolve o número lido até aí.",
+        "Não precisas de tratar de overflow: nesse caso o resultado pode ser qualquer um."],
+       proto="int\tft_atoi(char *str);",
+       exemplo="$>./a.out \" ---+--+1234ab567\"\n-1234",
+       sol=["c04/ex03/ft_atoi.c"],
+       passos=["Os espaços em branco do `isspace` são o espaço e os códigos 9 a 13: `\\t`, `\\n`, `\\v`, `\\f` e `\\r`.",
+               "Depois dos espaços lê-se uma sequência de sinais. Cada `-` troca o sinal; os `+` não mudam nada.",
+               "Por fim acumula-se: `resultado = resultado * 10 + algarismo`. O ciclo pára no primeiro carácter que não seja algarismo.",
+               "Atenção: isto **não** é o `atoi` da biblioteca, que só aceita um sinal. Segue o enunciado."],
+       erros=["Aceitar só um sinal, como o `atoi` original: `\"--5\"` tem de dar 5.",
+              "Saltar espaços entre os sinais e os algarismos: `\" - 1\"` dá 0.",
+              "Esquecer o `\\v` e o `\\f` nos espaços."],
+       limites=["O exemplo do enunciado dá `-1234`.",
+                "String vazia ou sem algarismos dá 0."]),
+
+    ex("ex04", "ft_putnbr_base", "ft_putnbr_base.c", "write",
+       ["Cria uma função que mostra um número numa base à escolha.",
+        "O número é um `int` e a base é uma string com todos os símbolos que a compõem:",
+        "- `0123456789` é a base decimal; `01` é binária; `0123456789ABCDEF` é hexadecimal; `poneyvif` é octal.",
+        "A função tem de tratar números negativos.",
+        "Se um argumento for inválido, não mostra nada. Exemplos de argumentos inválidos:",
+        "- base vazia ou com um só símbolo;",
+        "- base com o mesmo símbolo duas vezes;",
+        "- base com `+` ou `-`."],
+       proto="void\tft_putnbr_base(int nbr, char *base);",
+       sol=["c04/ex04/ft_putnbr_base.c"],
+       passos=["Primeiro valida-se a base: cada símbolo é comparado com todos os que vêm depois dele, e `+` e `-` fazem-na inválida. O tamanho da base é o número de símbolos.",
+               "Depois é o `ft_putnbr` com outra base: divide-se pelo tamanho da base em vez de 10, e o algarismo `k` é o símbolo `base[k]`.",
+               "O número passa para `long` por causa do `INT_MIN`."],
+       erros=["Mostrar alguma coisa (por exemplo o `-`) antes de validar a base.",
+              "Usar `'0' + resto` em vez de `base[resto]`.",
+              "Falhar o `INT_MIN` em binário."],
+       limites=["`8` na base `poneyvif` dá `op`.",
+                "Todas as bases inválidas da lista: nada é mostrado."]),
+
+    ex("ex05", "ft_atoi_base", "ft_atoi_base.c", N,
+       ["Escreve uma função que converte a parte inicial da string `str` para `int`.",
+        "`str` está numa base indicada no segundo parâmetro. Fora a base, a função funciona exatamente como o `ft_atoi`.",
+        "Se um argumento for inválido, devolve 0. Exemplos de argumentos inválidos:",
+        "- base vazia ou com um só símbolo;",
+        "- base com o mesmo símbolo duas vezes;",
+        "- base com `+`, `-` ou espaços em branco."],
+       proto="int\tft_atoi_base(char *str, char *base);",
+       sol=["c04/ex05/ft_atoi_base.c"],
+       passos=["Valida-se a base como no `ft_putnbr_base`, agora também sem espaços em branco (o `atoi` salta-os, por isso não podem ser algarismos).",
+               "Saltam-se os espaços e lêem-se os sinais, como no `ft_atoi`.",
+               "Cada carácter seguinte é procurado na base: a posição onde está é o valor do algarismo. Se não estiver na base, a leitura acaba.",
+               "Acumula-se com `resultado * tamanho_da_base + valor`."],
+       erros=["Aceitar letras maiúsculas numa base com minúsculas: `\"FF\"` na base `0123456789abcdef` dá 0.",
+              "Esquecer os espaços em branco na validação da base."],
+       limites=["`\"ff\"` em hexadecimal dá 255; `\"101\"` com sinal ímpar em binário dá -5.",
+                "Todas as bases inválidas devolvem 0."]),
+]

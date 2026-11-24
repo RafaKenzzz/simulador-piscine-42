@@ -1,0 +1,20 @@
+#include "ft_list.h"
+
+/*
+** Liga o início da segunda lista ao último elemento da primeira. Não se
+** cria nenhum elemento.
+*/
+void	ft_list_merge(t_list **begin_list1, t_list *begin_list2)
+{
+	t_list	*last;
+
+	if (!*begin_list1)
+	{
+		*begin_list1 = begin_list2;
+		return ;
+	}
+	last = *begin_list1;
+	while (last->next)
+		last = last->next;
+	last->next = begin_list2;
+}

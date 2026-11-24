@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>C11: respostas · Simulador da Piscine</title>
+  <meta name="description" content="Soluções comentadas de C11, com passo a passo, erros comuns e casos limite.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://rafakenzzz.github.io/simulador-piscine-42/respostas/c11.html">
+  <meta property="og:url" content="https://rafakenzzz.github.io/simulador-piscine-42/respostas/c11.html">
+  <meta name="theme-color" content="#07090b">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Simulador da Piscine">
+  <meta property="og:title" content="C11: respostas · Simulador da Piscine">
+  <meta property="og:description" content="Soluções comentadas de C11, com passo a passo, erros comuns e casos limite.">
+  <meta property="og:locale" content="pt_PT">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=d6190e1b">
+  <style>:root{--bg:#07090b;--bg-2:#0c1013;--bg-3:#121a1e;--line:#1d272c;--line-2:#2b3940;--fg:#d5e2db;--fg-2:#a3b5ac;--mute:#73867d;--green:#4dff9a;--green-2:#2bd97a;--green-dim:#0f3323;--cyan:#5ce1ff;--cyan-dim:#0c2e38;--amber:#ffcc66;--red:#ff7070;--violet:#c4a7ff;--orange:#ffa066;--f-mono:"JetBrains Mono",ui-monospace,'Cascadia Mono','Segoe UI Mono',Menlo,Consolas,monospace}</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"C11: respostas · Simulador da Piscine","description":"Soluções comentadas de C11, com passo a passo, erros comuns e casos limite.","inLanguage":"pt-PT","dateModified":"2026-11-24","url":"https://rafakenzzz.github.io/simulador-piscine-42/respostas/c11.html","isPartOf":{"@id":"https://rafakenzzz.github.io/simulador-piscine-42/#website"}}]}</script>
+</head>
+<body data-kind="respostas" data-root="../">
+<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+<header class="top" data-top>
+  <div class="w top__in">
+    <a class="brand" href="../index.html" aria-label="Simulador da Piscine: página inicial"><span class="pr-u">piscine@42lisboa</span><span class="pr-s">:</span><span class="pr-p">~/respostas/c11</span><span class="pr-s">$</span></a>
+    <nav class="nav" aria-label="Principal"><a href="../index.html" data-key="1"><span class="k">[1]</span>início</a><a href="../tutorial.html" data-key="2"><span class="k">[2]</span>tutorial</a><a href="../modulos.html" data-key="3"><span class="k">[3]</span>módulos</a><a href="../exames.html" data-key="4"><span class="k">[4]</span>exames</a><a href="../norminette.html" data-key="5"><span class="k">[5]</span>norminette</a></nav>
+    <button class="cmd-btn" type="button" data-cmd-open aria-label="Abrir a linha de comandos (tecla /)"><span aria-hidden="true">&gt;_</span><span class="cmd-btn__t">comando</span><kbd>/</kbd></button>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<section class="phero w">
+  <p class="crumbs"><a href="index.html">~/respostas</a>/<b>c11</b></p>
+  <h1 class="h1 " data-type>C11: respostas</h1>
+  <div class="warn" role="note">
+  <p class="warn__t">Tenta primeiro sozinho.</p>
+  <p>Ler a solução antes de tentar tira-te o treino de que vais precisar no exame, onde não há respostas. Usa esta página só depois de teres o teu código a funcionar, ou depois de estares mesmo bloqueado. Cada solução está fechada: só abre quando carregares em «mostrar solução».</p>
+</div>
+</section>
+<div class="w ans-wrap"><nav class="ansnav" aria-label="Respostas por módulo"><ol><li><a href="shell00.html">Shell00</a></li><li><a href="shell01.html">Shell01</a></li><li><a href="c00.html">C00</a></li><li><a href="c01.html">C01</a></li><li><a href="c02.html">C02</a></li><li><a href="c03.html">C03</a></li><li><a href="c04.html">C04</a></li><li><a href="c05.html">C05</a></li><li><a href="c06.html">C06</a></li><li><a href="c07.html">C07</a></li><li><a href="c08.html">C08</a></li><li><a href="c09.html">C09</a></li><li><a href="c10.html">C10</a></li><li><a href="c11.html" aria-current=page>C11</a></li><li><a href="c12.html">C12</a></li><li><a href="c13.html">C13</a></li><li><a href="rush00.html">Rush00</a></li><li><a href="rush01.html">Rush01</a></li><li><a href="rush02.html">Rush02</a></li><li><a href="bsq.html">BSQ</a></li><li><a href="exame-nivel-0.html">exame · level 0</a></li><li><a href="exame-nivel-1.html">exame · level 1</a></li><li><a href="exame-nivel-2.html">exame · level 2</a></li><li><a href="exame-nivel-3.html">exame · level 3</a></li><li><a href="exame-nivel-4.html">exame · level 4</a></li><li><a href="exame-nivel-5.html">exame · level 5</a></li></ol></nav><div class="ans-list"><article class="ans" id="r-c11-ex00">
+  <h2 class="ex__h"><span class="ex__num">ex00</span> ft_foreach</h2>
+  <p class="ans__q">Cria a função <code>ft_foreach</code>, que aplica uma função a todos os elementos de um array de inteiros, pela ordem do array.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex00/ft_foreach.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-com">/*
+** Chama f para cada elemento, pela ordem do array.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_foreach</span>(<span class="t-ty">int</span> *tab, <span class="t-ty">int</span> length, <span class="t-ty">void</span> (*f)(<span class="t-ty">int</span>))
+{
+	<span class="t-ty">int</span>	i;
+
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (i &lt; length)
+	{
+		<span class="t-fn">f</span>(tab[i]);
+		i++;
+	}
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Percorre-se o array de 0 a <code>length - 1</code> e chama-se <code>f(tab[i])</code> para cada elemento.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Aplicar fora de ordem ou ir até <code>length</code> (inclusive).</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li><code>length</code> 0 não chama a função.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c11-ex01">
+  <h2 class="ex__h"><span class="ex__num">ex01</span> ft_map</h2>
+  <p class="ans__q">Cria a função <code>ft_map</code>, que aplica uma função a todos os elementos de um array de inteiros (por ordem) e devolve um array novo com os resultados.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex01/ft_map.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">&lt;stdlib.h&gt;</span>
+
+<span class="t-com">/*
+** Array novo, do mesmo tamanho, com o resultado de f para cada elemento.
+*/</span>
+<span class="t-ty">int</span>	*<span class="t-fn">ft_map</span>(<span class="t-ty">int</span> *tab, <span class="t-ty">int</span> length, <span class="t-ty">int</span> (*f)(<span class="t-ty">int</span>))
+{
+	<span class="t-ty">int</span>	*res;
+	<span class="t-ty">int</span>	i;
+
+	res = (<span class="t-ty">int</span> *)<span class="t-fn">malloc</span>(<span class="t-kw">sizeof</span>(<span class="t-ty">int</span>) * length);
+	<span class="t-kw">if</span> (!res)
+		<span class="t-kw">return</span> (<span class="t-con">NULL</span>);
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (i &lt; length)
+	{
+		res[i] = <span class="t-fn">f</span>(tab[i]);
+		i++;
+	}
+	<span class="t-kw">return</span> (res);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Reserva-se um array novo com <code>length</code> inteiros.</li><li>Cada posição <code>i</code> recebe <code>f(tab[i])</code>. O array original não muda.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Escrever os resultados no array original.</li><li>Esquecer o <code>sizeof(int)</code> no <code>malloc</code>.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>O array original tem de ficar igual.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c11-ex02">
+  <h2 class="ex__h"><span class="ex__num">ex02</span> ft_any</h2>
+  <p class="ans__q">Cria uma função <code>ft_any</code> que devolve 1 se, passado à função <code>f</code>, pelo menos um elemento do array der algo diferente de 0. Caso contrário, devolve 0.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex02/ft_any.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-com">/*
+** O array acaba num ponteiro nulo. Devolve 1 logo que f dê algo
+** diferente de 0; se nenhum der, devolve 0.
+*/</span>
+<span class="t-ty">int</span>	<span class="t-fn">ft_any</span>(<span class="t-ty">char</span> **tab, <span class="t-ty">int</span> (*f)(<span class="t-ty">char</span> *))
+{
+	<span class="t-ty">int</span>	i;
+
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (tab[i])
+	{
+		<span class="t-kw">if</span> (<span class="t-fn">f</span>(tab[i]) != <span class="t-num">0</span>)
+			<span class="t-kw">return</span> (<span class="t-num">1</span>);
+		i++;
+	}
+	<span class="t-kw">return</span> (<span class="t-num">0</span>);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Percorre-se o array até ao ponteiro nulo.</li><li>Logo que <code>f</code> devolva algo diferente de 0, devolve-se 1 sem testar os restantes.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Comparar com 1 em vez de 0: <code>f</code> pode devolver qualquer valor diferente de 0.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Array vazio (só o ponteiro nulo) devolve 0.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c11-ex03">
+  <h2 class="ex__h"><span class="ex__num">ex03</span> ft_count_if</h2>
+  <p class="ans__q">Cria uma função <code>ft_count_if</code> que devolve quantos elementos do array dão algo diferente de 0 quando passados à função <code>f</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex03/ft_count_if.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-com">/*
+** Conta os elementos para os quais f devolve algo diferente de 0.
+*/</span>
+<span class="t-ty">int</span>	<span class="t-fn">ft_count_if</span>(<span class="t-ty">char</span> **tab, <span class="t-ty">int</span> length, <span class="t-ty">int</span> (*f)(<span class="t-ty">char</span> *))
+{
+	<span class="t-ty">int</span>	i;
+	<span class="t-ty">int</span>	count;
+
+	i = <span class="t-num">0</span>;
+	count = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (i &lt; length)
+	{
+		<span class="t-kw">if</span> (<span class="t-fn">f</span>(tab[i]) != <span class="t-num">0</span>)
+			count++;
+		i++;
+	}
+	<span class="t-kw">return</span> (count);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Aqui o tamanho vem em <code>length</code> (não há ponteiro nulo no fim). Conta-se cada elemento para o qual <code>f</code> não devolve 0.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Somar o valor devolvido por <code>f</code> em vez de contar 1.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li><code>f</code> pode devolver valores diferentes de 1.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c11-ex04">
+  <h2 class="ex__h"><span class="ex__num">ex04</span> ft_is_sort</h2>
+  <p class="ans__q">Cria uma função <code>ft_is_sort</code> que devolve 1 se o array estiver ordenado e 0 se não estiver.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex04/ft_is_sort.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-com">/*
+** Ordenado quer dizer por ordem crescente OU decrescente. Verificam-se as
+** duas ao mesmo tempo: basta um par fora de ordem para cada uma cair.
+*/</span>
+<span class="t-ty">int</span>	<span class="t-fn">ft_is_sort</span>(<span class="t-ty">int</span> *tab, <span class="t-ty">int</span> length, <span class="t-ty">int</span> (*f)(<span class="t-ty">int</span>, <span class="t-ty">int</span>))
+{
+	<span class="t-ty">int</span>	i;
+	<span class="t-ty">int</span>	asc;
+	<span class="t-ty">int</span>	desc;
+
+	asc = <span class="t-num">1</span>;
+	desc = <span class="t-num">1</span>;
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (i &lt; length - <span class="t-num">1</span>)
+	{
+		<span class="t-kw">if</span> (<span class="t-fn">f</span>(tab[i], tab[i + <span class="t-num">1</span>]) &gt; <span class="t-num">0</span>)
+			asc = <span class="t-num">0</span>;
+		<span class="t-kw">if</span> (<span class="t-fn">f</span>(tab[i], tab[i + <span class="t-num">1</span>]) &lt; <span class="t-num">0</span>)
+			desc = <span class="t-num">0</span>;
+		i++;
+	}
+	<span class="t-kw">return</span> (asc || desc);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>«Ordenado» vale para as duas ordens: crescente e decrescente.</li><li>Verificam-se as duas ao mesmo tempo. Um par com <code>f &gt; 0</code> estraga a crescente; um par com <code>f &lt; 0</code> estraga a decrescente.</li><li>Se alguma das duas sobreviver, está ordenado.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Só testar a ordem crescente: <code>9 4 4 -1</code> tem de dar 1.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Arrays com todos os valores iguais, com 0 ou 1 elemento: estão ordenados.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c11-ex05">
+  <h2 class="ex__h"><span class="ex__num">ex05</span> do-op</h2>
+  <p class="ans__q">Cria um programa chamado <code>do-op</code>, que é executado com três argumentos: <code>do-op valor1 operador valor2</code>.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="make"><figcaption><span class="code__name">ex05/Makefile</span><span class="code__lang">make</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">NAME</span>	= do-op
+<span class="t-ty">SRCS</span>	= main.c ft_ops.c ft_utils.c
+<span class="t-ty">OBJS</span>	= $(SRCS:.c=.o)
+<span class="t-ty">CC</span>		= gcc
+<span class="t-ty">CFLAGS</span>	= -Wall -Wextra -Werror
+
+<span class="t-fn">all</span>: <span class="t-var">$(NAME)</span>
+
+<span class="t-var">$(NAME)</span>: <span class="t-var">$(OBJS)</span>
+	<span class="t-var">$(CC)</span> <span class="t-var">$(CFLAGS)</span> -o <span class="t-var">$(NAME)</span> <span class="t-var">$(OBJS)</span>
+
+<span class="t-fn">%.o</span>: %.c do_op.h
+	<span class="t-var">$(CC)</span> <span class="t-var">$(CFLAGS)</span> -c <span class="t-var">$&lt;</span> -o <span class="t-var">$@</span>
+
+<span class="t-fn">clean</span>:
+	rm -f <span class="t-var">$(OBJS)</span>
+
+<span class="t-fn">fclean</span>: clean
+	rm -f <span class="t-var">$(NAME)</span>
+
+<span class="t-fn">re</span>: fclean all
+
+<span class="t-fn">.PHONY</span>: all clean fclean re
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex05/do_op.h</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#ifndef</span> <span class="t-con">DO_OP_H</span>
+<span class="t-pre"># define</span> <span class="t-con">DO_OP_H</span>
+
+<span class="t-pre"># include</span> <span class="t-str">&lt;unistd.h&gt;</span>
+
+<span class="t-kw">typedef</span> <span class="t-ty">int</span>	(*<span class="t-ty">t_op</span>)(<span class="t-ty">int</span>, <span class="t-ty">int</span>);
+
+<span class="t-ty">int</span>		<span class="t-fn">ft_add</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b);
+<span class="t-ty">int</span>		<span class="t-fn">ft_sub</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b);
+<span class="t-ty">int</span>		<span class="t-fn">ft_mul</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b);
+<span class="t-ty">int</span>		<span class="t-fn">ft_div</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b);
+<span class="t-ty">int</span>		<span class="t-fn">ft_mod</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b);
+<span class="t-ty">int</span>		<span class="t-fn">ft_atoi</span>(<span class="t-ty">char</span> *str);
+<span class="t-ty">void</span>	<span class="t-fn">ft_putnbr</span>(<span class="t-ty">int</span> nb);
+<span class="t-ty">void</span>	<span class="t-fn">ft_putstr</span>(<span class="t-ty">char</span> *str);
+
+<span class="t-pre">#endif</span>
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex05/main.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">"do_op.h"</span>
+
+<span class="t-com">/*
+** Array de ponteiros para funções, pela mesma ordem dos símbolos da
+** string symbols: o operador na posição i é calculado por ops[i].
+*/</span>
+<span class="t-kw">static</span> <span class="t-ty">void</span>	<span class="t-fn">ft_init</span>(<span class="t-ty">t_op</span> *ops)
+{
+	ops[<span class="t-num">0</span>] = &amp;ft_add;
+	ops[<span class="t-num">1</span>] = &amp;ft_sub;
+	ops[<span class="t-num">2</span>] = &amp;ft_div;
+	ops[<span class="t-num">3</span>] = &amp;ft_mul;
+	ops[<span class="t-num">4</span>] = &amp;ft_mod;
+}
+
+<span class="t-com">/*
+** O operador tem de ser exatamente um destes cinco caracteres. Se não
+** for, mostra 0. A divisão e o resto por zero têm mensagens próprias.
+*/</span>
+<span class="t-ty">int</span>	<span class="t-fn">main</span>(<span class="t-ty">int</span> argc, <span class="t-ty">char</span> **argv)
+{
+	<span class="t-ty">t_op</span>	ops[<span class="t-num">5</span>];
+	<span class="t-ty">char</span>	*symbols;
+	<span class="t-ty">int</span>		i;
+	<span class="t-ty">int</span>		b;
+
+	<span class="t-kw">if</span> (argc != <span class="t-num">4</span>)
+		<span class="t-kw">return</span> (<span class="t-num">0</span>);
+	<span class="t-fn">ft_init</span>(ops);
+	symbols = <span class="t-str">"+-/*%"</span>;
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (symbols[i] &amp;&amp; !(argv[<span class="t-num">2</span>][<span class="t-num">0</span>] == symbols[i] &amp;&amp; argv[<span class="t-num">2</span>][<span class="t-num">1</span>] == <span class="t-chr">'\0'</span>))
+		i++;
+	b = <span class="t-fn">ft_atoi</span>(argv[<span class="t-num">3</span>]);
+	<span class="t-kw">if</span> (!symbols[i])
+		<span class="t-fn">ft_putstr</span>(<span class="t-str">"0"</span>);
+	<span class="t-kw">else</span> <span class="t-kw">if</span> (b == <span class="t-num">0</span> &amp;&amp; symbols[i] == <span class="t-chr">'/'</span>)
+		<span class="t-fn">ft_putstr</span>(<span class="t-str">"Stop : division by zero"</span>);
+	<span class="t-kw">else</span> <span class="t-kw">if</span> (b == <span class="t-num">0</span> &amp;&amp; symbols[i] == <span class="t-chr">'%'</span>)
+		<span class="t-fn">ft_putstr</span>(<span class="t-str">"Stop : modulo by zero"</span>);
+	<span class="t-kw">else</span>
+		<span class="t-fn">ft_putnbr</span>(ops[i](<span class="t-fn">ft_atoi</span>(argv[<span class="t-num">1</span>]), b));
+	<span class="t-fn">ft_putstr</span>(<span class="t-str">"\n"</span>);
+	<span class="t-kw">return</span> (<span class="t-num">0</span>);
+}
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex05/ft_ops.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">"do_op.h"</span>
+
+<span class="t-ty">int</span>	<span class="t-fn">ft_add</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b)
+{
+	<span class="t-kw">return</span> (a + b);
+}
+
+<span class="t-ty">int</span>	<span class="t-fn">ft_sub</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b)
+{
+	<span class="t-kw">return</span> (a - b);
+}
+
+<span class="t-ty">int</span>	<span class="t-fn">ft_mul</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b)
+{
+	<span class="t-kw">return</span> (a * b);
+}
+
+<span class="t-ty">int</span>	<span class="t-fn">ft_div</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b)
+{
+	<span class="t-kw">return</span> (a / b);
+}
+
+<span class="t-ty">int</span>	<span class="t-fn">ft_mod</span>(<span class="t-ty">int</span> a, <span class="t-ty">int</span> b)
+{
+	<span class="t-kw">return</span> (a % b);
+}
+</code></pre></figure><figure class="code" data-lang="c"><figcaption><span class="code__name">ex05/ft_utils.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-pre">#include</span> <span class="t-str">"do_op.h"</span>
+
+<span class="t-com">/*
+** O mesmo ft_atoi do C04: espaços, vários sinais, algarismos.
+** "42amis" dá 42 e "--+-20toto12" dá -20.
+*/</span>
+<span class="t-ty">int</span>	<span class="t-fn">ft_atoi</span>(<span class="t-ty">char</span> *str)
+{
+	<span class="t-ty">int</span>	sign;
+	<span class="t-ty">int</span>	result;
+
+	<span class="t-kw">while</span> (*str == <span class="t-chr">' '</span> || (*str &gt;= <span class="t-num">9</span> &amp;&amp; *str &lt;= <span class="t-num">13</span>))
+		str++;
+	sign = <span class="t-num">1</span>;
+	<span class="t-kw">while</span> (*str == <span class="t-chr">'+'</span> || *str == <span class="t-chr">'-'</span>)
+	{
+		<span class="t-kw">if</span> (*str == <span class="t-chr">'-'</span>)
+			sign = -sign;
+		str++;
+	}
+	result = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (*str &gt;= <span class="t-chr">'0'</span> &amp;&amp; *str &lt;= <span class="t-chr">'9'</span>)
+	{
+		result = result * <span class="t-num">10</span> + (*str - <span class="t-chr">'0'</span>);
+		str++;
+	}
+	<span class="t-kw">return</span> (result * sign);
+}
+
+<span class="t-ty">void</span>	<span class="t-fn">ft_putstr</span>(<span class="t-ty">char</span> *str)
+{
+	<span class="t-kw">while</span> (*str)
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, str++, <span class="t-num">1</span>);
+}
+
+<span class="t-ty">void</span>	<span class="t-fn">ft_putnbr</span>(<span class="t-ty">int</span> nb)
+{
+	<span class="t-ty">long</span>	n;
+	<span class="t-ty">char</span>	c;
+
+	n = nb;
+	<span class="t-kw">if</span> (n &lt; <span class="t-num">0</span>)
+	{
+		<span class="t-fn">write</span>(<span class="t-num">1</span>, <span class="t-str">"-"</span>, <span class="t-num">1</span>);
+		n = -n;
+	}
+	<span class="t-kw">if</span> (n &gt;= <span class="t-num">10</span>)
+		<span class="t-fn">ft_putnbr</span>(n / <span class="t-num">10</span>);
+	c = <span class="t-chr">'0'</span> + n % <span class="t-num">10</span>;
+	<span class="t-fn">write</span>(<span class="t-num">1</span>, &amp;c, <span class="t-num">1</span>);
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Os números são lidos com o <code>ft_atoi</code> do C04 (espaços, vários sinais, algarismos). Por isso <code>42amis</code> dá 42, <code>--+-20toto12</code> dá -20 e <code>toto3</code> dá 0.</li><li>Há uma função por operação e um array <code>ops</code> com as cinco, pela mesma ordem da string <code>"+-/*%"</code>. Encontrado o símbolo na posição <code>i</code>, o resultado é <code>ops[i](a, b)</code>.</li><li>O <code>typedef int (*t_op)(int, int);</code> dá um nome ao tipo «ponteiro para função», o que torna a declaração do array legível.</li><li>O operador tem de ser exatamente um carácter: <code>plus</code> ou <code>++</code> são inválidos e mostram 0.</li><li>A divisão e o resto por zero são verificados antes de calcular. Todas as saídas terminam com quebra de linha.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Usar uma cadeia de <code>if</code> em vez do array de ponteiros para funções: o enunciado pede o array.</li><li>Aceitar só o primeiro carácter do operador (<code>p</code> de <code>plus</code>).</li><li>Mostrar alguma coisa com o número errado de argumentos.</li><li>Esquecer o Makefile: a moulinette corre <code>make</code>.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Todos os testes do exemplo, com a quebra de linha final.</li><li><code>./do-op 1 + 2 3</code> (4 argumentos) não mostra nada.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c11-ex06">
+  <h2 class="ex__h"><span class="ex__num">ex06</span> ft_sort_string_tab</h2>
+  <p class="ans__q">Cria a função <code>ft_sort_string_tab</code>, que ordena as strings de <code>tab</code> pela ordem ASCII.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex06/ft_sort_string_tab.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-kw">static</span> <span class="t-ty">int</span>	<span class="t-fn">ft_strcmp</span>(<span class="t-ty">char</span> *s1, <span class="t-ty">char</span> *s2)
+{
+	<span class="t-kw">while</span> (*s1 &amp;&amp; *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	<span class="t-kw">return</span> ((<span class="t-ty">unsigned</span> <span class="t-ty">char</span>)*s1 - (<span class="t-ty">unsigned</span> <span class="t-ty">char</span>)*s2);
+}
+
+<span class="t-com">/*
+** Ordenação por bolha que troca os ponteiros do array (as strings não
+** mudam de sítio). O array acaba num ponteiro nulo.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_sort_string_tab</span>(<span class="t-ty">char</span> **tab)
+{
+	<span class="t-ty">int</span>		i;
+	<span class="t-ty">char</span>	*tmp;
+
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (tab[i] &amp;&amp; tab[i + <span class="t-num">1</span>])
+	{
+		<span class="t-kw">if</span> (<span class="t-fn">ft_strcmp</span>(tab[i], tab[i + <span class="t-num">1</span>]) &gt; <span class="t-num">0</span>)
+		{
+			tmp = tab[i];
+			tab[i] = tab[i + <span class="t-num">1</span>];
+			tab[i + <span class="t-num">1</span>] = tmp;
+			i = <span class="t-num">0</span>;
+		}
+		<span class="t-kw">else</span>
+			i++;
+	}
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>Ordenação por bolha com <code>ft_strcmp</code>, até ao ponteiro nulo.</li><li>Trocam-se os ponteiros; o conteúdo das strings não muda.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Copiar o conteúdo das strings em vez de trocar os ponteiros.</li><li>Ler <code>tab[i + 1]</code> depois do ponteiro nulo.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Array vazio ou com um só elemento; strings repetidas ou vazias.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article>
+<article class="ans" id="r-c11-ex07">
+  <h2 class="ex__h"><span class="ex__num">ex07</span> ft_advanced_sort_string_tab</h2>
+  <p class="ans__q">Cria a função <code>ft_advanced_sort_string_tab</code>, que ordena as strings de <code>tab</code> conforme o resultado da função passada como argumento.</p>
+  <details class="reveal">
+    <summary><span class="reveal__s">mostrar solução</span><span class="reveal__h">esconder solução</span></summary>
+    <div class="reveal__in">
+      <figure class="code" data-lang="c"><figcaption><span class="code__name">ex07/ft_advanced_sort_string_tab.c</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-com">/*
+** A mesma ordenação do ft_sort_string_tab, com a comparação feita pela
+** função cmp: se cmp(a, b) &gt; 0, a deve vir depois de b.
+*/</span>
+<span class="t-ty">void</span>	<span class="t-fn">ft_advanced_sort_string_tab</span>(<span class="t-ty">char</span> **tab, <span class="t-ty">int</span> (*cmp)(<span class="t-ty">char</span> *, <span class="t-ty">char</span> *))
+{
+	<span class="t-ty">int</span>		i;
+	<span class="t-ty">char</span>	*tmp;
+
+	i = <span class="t-num">0</span>;
+	<span class="t-kw">while</span> (tab[i] &amp;&amp; tab[i + <span class="t-num">1</span>])
+	{
+		<span class="t-kw">if</span> (<span class="t-fn">cmp</span>(tab[i], tab[i + <span class="t-num">1</span>]) &gt; <span class="t-num">0</span>)
+		{
+			tmp = tab[i];
+			tab[i] = tab[i + <span class="t-num">1</span>];
+			tab[i + <span class="t-num">1</span>] = tmp;
+			i = <span class="t-num">0</span>;
+		}
+		<span class="t-kw">else</span>
+			i++;
+	}
+}
+</code></pre></figure>
+      <h3 class="h3">Passo a passo</h3><ol class="steps"><li>É o exercício anterior com <code>cmp</code> no lugar de <code>ft_strcmp</code>: se <code>cmp(a, b) &gt; 0</code>, <code>a</code> deve ficar depois de <code>b</code>.</li></ol>
+      <div class="ans__cols">
+        <div><h3 class="h3">Erros comuns</h3><ul class="bul bul--bad"><li>Interpretar o sinal de <code>cmp</code> ao contrário.</li></ul></div>
+        <div><h3 class="h3">Casos limite que a moulinette testa</h3><ul class="bul"><li>Testam com comparações diferentes: por tamanho, por ordem inversa.</li></ul></div>
+      </div>
+    </div>
+  </details>
+</article></div></div>
+</main>
+<footer class="foot">
+  <div class="w foot__in">
+    <p class="foot__brand"><span class="t-prompt">$</span> piscine.sim <span class="mute">· treino para a Piscine C</span></p>
+    <p class="foot__note">Projeto de treino pessoal, sem ligação à 42 Lisboa nem à rede 42. Os enunciados são resumos em português dos originais públicos; confirma sempre o enunciado oficial no dia.</p>
+    <p class="foot__keys"><kbd>/</kbd> comando · <kbd>?</kbd> atalhos · <kbd>1</kbd>–<kbd>5</kbd> páginas</p>
+  </div>
+</footer>
+<div class="cmd" data-cmd hidden>
+  <div class="cmd__box" role="dialog" aria-modal="true" aria-label="Linha de comandos">
+    <div class="cmd__out" data-cmd-out aria-live="polite"></div>
+    <form class="cmd__form" data-cmd-form autocomplete="off">
+      <label class="cmd__pr" for="cmd-in">piscine@42lisboa:<span data-cmd-path>~</span>$</label>
+      <input id="cmd-in" class="cmd__in" data-cmd-in type="text" spellcheck="false" autocapitalize="off" enterkeyhint="go" aria-describedby="cmd-hint">
+    </form>
+    <p class="cmd__hint" id="cmd-hint">escreve <b>help</b> · <kbd>Tab</kbd> completa · <kbd>↑</kbd> histórico · <kbd>Esc</kbd> fecha</p>
+  </div>
+</div>
+<div class="help" data-help hidden>
+  <div class="help__box" role="dialog" aria-modal="true" aria-labelledby="help-t">
+    <h2 id="help-t">Atalhos de teclado</h2>
+    <dl>
+      <div><dt><kbd>/</kbd> ou <kbd>:</kbd></dt><dd>abrir a linha de comandos</dd></div>
+      <div><dt><kbd>1</kbd> … <kbd>5</kbd></dt><dd>início, tutorial, módulos, exames, norminette</dd></div>
+      <div><dt><kbd>j</kbd> / <kbd>k</kbd></dt><dd>exercício seguinte / anterior</dd></div>
+      <div><dt><kbd>n</kbd> / <kbd>p</kbd></dt><dd>módulo seguinte / anterior</dd></div>
+      <div><dt><kbd>e</kbd></dt><dd>escrever no exercício atual</dd></div>
+      <div><dt><kbd>f</kbd></dt><dd>marcar o exercício atual como feito</dd></div>
+      <div><dt><kbd>g</kbd></dt><dd>voltar ao topo</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>mostrar ou esconder esta ajuda</dd></div>
+      <div><dt><kbd>Esc</kbd></dt><dd>fechar / sair do campo de código</dd></div>
+    </dl>
+    <button class="btn btn--ghost" type="button" data-help-close>fechar</button>
+  </div>
+</div>
+<script id="site-data" type="application/json">{"store": "p42", "mods": [{"id": "shell00", "nome": "Shell00", "href": "../modulos/shell00.html", "exs": ["shell00-ex00", "shell00-ex01", "shell00-ex02", "shell00-ex03", "shell00-ex04", "shell00-ex05", "shell00-ex06", "shell00-ex07", "shell00-ex08", "shell00-ex09"]}, {"id": "shell01", "nome": "Shell01", "href": "../modulos/shell01.html", "exs": ["shell01-ex00", "shell01-ex01", "shell01-ex02", "shell01-ex03", "shell01-ex04", "shell01-ex05", "shell01-ex06", "shell01-ex07", "shell01-ex08"]}, {"id": "c00", "nome": "C00", "href": "../modulos/c00.html", "exs": ["c00-ex00", "c00-ex01", "c00-ex02", "c00-ex03", "c00-ex04", "c00-ex05", "c00-ex06", "c00-ex07", "c00-ex08"]}, {"id": "c01", "nome": "C01", "href": "../modulos/c01.html", "exs": ["c01-ex00", "c01-ex01", "c01-ex02", "c01-ex03", "c01-ex04", "c01-ex05", "c01-ex06", "c01-ex07", "c01-ex08"]}, {"id": "c02", "nome": "C02", "href": "../modulos/c02.html", "exs": ["c02-ex00", "c02-ex01", "c02-ex02", "c02-ex03", "c02-ex04", "c02-ex05", "c02-ex06", "c02-ex07", "c02-ex08", "c02-ex09", "c02-ex10", "c02-ex11", "c02-ex12"]}, {"id": "c03", "nome": "C03", "href": "../modulos/c03.html", "exs": ["c03-ex00", "c03-ex01", "c03-ex02", "c03-ex03", "c03-ex04", "c03-ex05"]}, {"id": "c04", "nome": "C04", "href": "../modulos/c04.html", "exs": ["c04-ex00", "c04-ex01", "c04-ex02", "c04-ex03", "c04-ex04", "c04-ex05"]}, {"id": "c05", "nome": "C05", "href": "../modulos/c05.html", "exs": ["c05-ex00", "c05-ex01", "c05-ex02", "c05-ex03", "c05-ex04", "c05-ex05", "c05-ex06", "c05-ex07", "c05-ex08"]}, {"id": "c06", "nome": "C06", "href": "../modulos/c06.html", "exs": ["c06-ex00", "c06-ex01", "c06-ex02", "c06-ex03"]}, {"id": "c07", "nome": "C07", "href": "../modulos/c07.html", "exs": ["c07-ex00", "c07-ex01", "c07-ex02", "c07-ex03", "c07-ex04", "c07-ex05"]}, {"id": "c08", "nome": "C08", "href": "../modulos/c08.html", "exs": ["c08-ex00", "c08-ex01", "c08-ex02", "c08-ex03", "c08-ex04", "c08-ex05"]}, {"id": "c09", "nome": "C09", "href": "../modulos/c09.html", "exs": ["c09-ex00", "c09-ex01", "c09-ex02"]}, {"id": "c10", "nome": "C10", "href": "../modulos/c10.html", "exs": ["c10-ex00", "c10-ex01", "c10-ex02", "c10-ex03"]}, {"id": "c11", "nome": "C11", "href": "../modulos/c11.html", "exs": ["c11-ex00", "c11-ex01", "c11-ex02", "c11-ex03", "c11-ex04", "c11-ex05", "c11-ex06", "c11-ex07"]}, {"id": "c12", "nome": "C12", "href": "../modulos/c12.html", "exs": ["c12-ex00", "c12-ex01", "c12-ex02", "c12-ex03", "c12-ex04", "c12-ex05", "c12-ex06", "c12-ex07", "c12-ex08", "c12-ex09", "c12-ex10", "c12-ex11", "c12-ex12", "c12-ex13", "c12-ex14", "c12-ex15", "c12-ex16", "c12-ex17"]}, {"id": "c13", "nome": "C13", "href": "../modulos/c13.html", "exs": ["c13-ex00", "c13-ex01", "c13-ex02", "c13-ex03", "c13-ex04", "c13-ex05", "c13-ex06", "c13-ex07"]}, {"id": "rush00", "nome": "Rush00", "href": "../modulos/rush00.html", "exs": ["rush00-ex00"]}, {"id": "rush01", "nome": "Rush01", "href": "../modulos/rush01.html", "exs": ["rush01-ex00"]}, {"id": "rush02", "nome": "Rush02", "href": "../modulos/rush02.html", "exs": ["rush02-ex00"]}, {"id": "bsq", "nome": "BSQ", "href": "../modulos/bsq.html", "exs": ["bsq-ex00"]}], "pages": {"inicio": "../index.html", "tutorial": "../tutorial.html", "modulos": "../modulos.html", "exames": "../exames.html", "norminette": "../norminette.html", "respostas": "../respostas/index.html"}, "prompt": "piscine@42lisboa"}</script>
+<script src="../assets/js/site.js?v=f96fd0ac" defer></script>
+</body>
+</html>

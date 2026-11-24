@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>C05: exercícios · Simulador da Piscine</title>
+  <meta name="description" content="C05 da Piscine C da 42 Lisboa: 9 exercícios com enunciado em português, ficheiros, funções permitidas e campo para treinar.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rafakenzzz.github.io/simulador-piscine-42/modulos/c05.html">
+  <meta property="og:url" content="https://rafakenzzz.github.io/simulador-piscine-42/modulos/c05.html">
+  <meta name="theme-color" content="#07090b">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Simulador da Piscine">
+  <meta property="og:title" content="C05: exercícios · Simulador da Piscine">
+  <meta property="og:description" content="C05 da Piscine C da 42 Lisboa: 9 exercícios com enunciado em português, ficheiros, funções permitidas e campo para treinar.">
+  <meta property="og:locale" content="pt_PT">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=d6190e1b">
+  <style>:root{--bg:#07090b;--bg-2:#0c1013;--bg-3:#121a1e;--line:#1d272c;--line-2:#2b3940;--fg:#d5e2db;--fg-2:#a3b5ac;--mute:#73867d;--green:#4dff9a;--green-2:#2bd97a;--green-dim:#0f3323;--cyan:#5ce1ff;--cyan-dim:#0c2e38;--amber:#ffcc66;--red:#ff7070;--violet:#c4a7ff;--orange:#ffa066;--f-mono:"JetBrains Mono",ui-monospace,'Cascadia Mono','Segoe UI Mono',Menlo,Consolas,monospace}</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"C05: exercícios · Simulador da Piscine","description":"C05 da Piscine C da 42 Lisboa: 9 exercícios com enunciado em português, ficheiros, funções permitidas e campo para treinar.","inLanguage":"pt-PT","dateModified":"2026-11-24","url":"https://rafakenzzz.github.io/simulador-piscine-42/modulos/c05.html","isPartOf":{"@id":"https://rafakenzzz.github.io/simulador-piscine-42/#website"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://rafakenzzz.github.io/simulador-piscine-42/"},{"@type":"ListItem","position":2,"name":"Módulos","item":"https://rafakenzzz.github.io/simulador-piscine-42/modulos.html"},{"@type":"ListItem","position":3,"name":"C05","item":"https://rafakenzzz.github.io/simulador-piscine-42/modulos/c05.html"}]}},{"@type":"LearningResource","name":"C05: exercícios da Piscine C","inLanguage":"pt-PT","learningResourceType":"exercício","educationalLevel":"iniciante","teaches":"Matemática e recursão: fatoriais, potências, Fibonacci, raízes, primos e as dez rainhas.","numberOfItems":9,"url":"https://rafakenzzz.github.io/simulador-piscine-42/modulos/c05.html"}]}</script>
+</head>
+<body data-kind="modulo" data-root="../" data-mod="c05">
+<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+<header class="top" data-top>
+  <div class="w top__in">
+    <a class="brand" href="../index.html" aria-label="Simulador da Piscine: página inicial"><span class="pr-u">piscine@42lisboa</span><span class="pr-s">:</span><span class="pr-p">~/modulos/c05</span><span class="pr-s">$</span></a>
+    <nav class="nav" aria-label="Principal"><a href="../index.html" data-key="1"><span class="k">[1]</span>início</a><a href="../tutorial.html" data-key="2"><span class="k">[2]</span>tutorial</a><a href="../modulos.html" data-key="3" aria-current=page><span class="k">[3]</span>módulos</a><a href="../exames.html" data-key="4"><span class="k">[4]</span>exames</a><a href="../norminette.html" data-key="5"><span class="k">[5]</span>norminette</a></nav>
+    <button class="cmd-btn" type="button" data-cmd-open aria-label="Abrir a linha de comandos (tecla /)"><span aria-hidden="true">&gt;_</span><span class="cmd-btn__t">comando</span><kbd>/</kbd></button>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<section class="phero w">
+  <p class="crumbs"><a href="../modulos.html">~/modulos</a>/<b>c05</b></p>
+  <h1 class="h1 " data-type>C05</h1>
+  <p class="lead">Matemática e recursão: fatoriais, potências, Fibonacci, raízes, primos e as dez rainhas.</p>
+  <p class="meta"><span>[ 9 exercícios ]</span><span>[ segunda semana ]</span><a class="link" href="#entrega">ir para a entrega ↓</a></p>
+  <div class="prog-total"><div class="bar" data-bar="c05" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso"><span></span></div><p class="bar__t" data-bar-text="c05">0 feitos</p></div>
+  <div class="txt intro"><p>Quando o enunciado pede uma versão recursiva, um ciclo dá zero, e o contrário também. Repara no nome do exercício.</p><p>A moulinette mede o tempo: soluções lentas, como testar todos os divisores até <code>nb</code> num primo grande, podem ser cortadas.</p></div>
+</section>
+<div class="w mod">
+  <aside class="idx" aria-label="Exercícios de C05">
+    <p class="idx__h">exercícios</p>
+    <ol><li><a href="#c05-ex00" data-idx="c05-ex00"><i class="dot" aria-hidden="true"></i><span class="idx__n">ex00</span><span class="idx__t">ft_iterative_factorial</span></a></li><li><a href="#c05-ex01" data-idx="c05-ex01"><i class="dot" aria-hidden="true"></i><span class="idx__n">ex01</span><span class="idx__t">ft_recursive_factorial</span></a></li><li><a href="#c05-ex02" data-idx="c05-ex02"><i class="dot" aria-hidden="true"></i><span class="idx__n">ex02</span><span class="idx__t">ft_iterative_power</span></a></li><li><a href="#c05-ex03" data-idx="c05-ex03"><i class="dot" aria-hidden="true"></i><span class="idx__n">ex03</span><span class="idx__t">ft_recursive_power</span></a></li><li><a href="#c05-ex04" data-idx="c05-ex04"><i class="dot" aria-hidden="true"></i><span class="idx__n">ex04</span><span class="idx__t">ft_fibonacci</span></a></li><li><a href="#c05-ex05" data-idx="c05-ex05"><i class="dot" aria-hidden="true"></i><span class="idx__n">ex05</span><span class="idx__t">ft_sqrt</span></a></li><li><a href="#c05-ex06" data-idx="c05-ex06"><i class="dot" aria-hidden="true"></i><span class="idx__n">ex06</span><span class="idx__t">ft_is_prime</span></a></li><li><a href="#c05-ex07" data-idx="c05-ex07"><i class="dot" aria-hidden="true"></i><span class="idx__n">ex07</span><span class="idx__t">ft_find_next_prime</span></a></li><li><a href="#c05-ex08" data-idx="c05-ex08"><i class="dot" aria-hidden="true"></i><span class="idx__n">ex08</span><span class="idx__t">The Ten Queens</span></a></li><li><a href="#entrega" class="idx__deliver"><i class="dot" aria-hidden="true"></i><span class="idx__n">git push</span><span class="idx__t">entrega</span></a></li></ol>
+    <p class="idx__keys"><kbd>j</kbd> <kbd>k</kbd> para saltar</p>
+  </aside>
+  <div class="exs">
+<article class="ex" id="c05-ex00" data-ex="c05-ex00" data-rv>
+  <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t">ex00/ft_iterative_factorial.c</span><span class="pill" data-pill>por fazer</span></header>
+  <div class="ex__body">
+    <h2 class="ex__h"><span class="ex__num">ex00</span> ft_iterative_factorial</h2>
+    <dl class="spec">
+      <div><dt>Pasta de entrega</dt><dd><code>ex00/</code></dd></div>
+      <div><dt>Ficheiros a entregar</dt><dd><code>ft_iterative_factorial.c</code></dd></div>
+      <div><dt>Funções permitidas</dt><dd>Nenhuma</dd></div>
+    </dl>
+    <div class="txt"><p>Cria uma função iterativa que devolve o fatorial do número recebido.</p><p>Se o argumento não for válido, devolve 0. Não precisas de tratar de overflow (o resultado fica indefinido).</p></div>
+    <figure class="code" data-lang="c"><figcaption><span class="code__name">protótipo</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_iterative_factorial</span>(<span class="t-ty">int</span> nb);</code></pre></figure>
+    <div class="mine">
+      <div class="mine__head"><label for="code-c05-ex00">O teu código</label><span class="mine__saved" data-saved aria-live="polite"></span></div>
+      <textarea id="code-c05-ex00" class="mine__ta" data-code data-lang="c" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Cola ou escreve aqui o teu código. Fica guardado neste navegador."></textarea>
+      <div class="mine__bar">
+        <button type="button" class="btn btn--sm" data-check>verificar norma (básico)</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear>limpar</button>
+        <span class="mine__count" data-count>0 linhas</span>
+      </div>
+      <div class="mine__out" data-check-out aria-live="polite"></div>
+    </div>
+    <fieldset class="status">
+      <legend>Estado</legend>
+      <label><input type="radio" name="st-c05-ex00" value="todo" data-st checked> por fazer</label>
+      <label><input type="radio" name="st-c05-ex00" value="doing" data-st> em curso</label>
+      <label><input type="radio" name="st-c05-ex00" value="done" data-st> feito</label>
+    </fieldset>
+  </div>
+</article>
+<article class="ex" id="c05-ex01" data-ex="c05-ex01" data-rv>
+  <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t">ex01/ft_recursive_factorial.c</span><span class="pill" data-pill>por fazer</span></header>
+  <div class="ex__body">
+    <h2 class="ex__h"><span class="ex__num">ex01</span> ft_recursive_factorial</h2>
+    <dl class="spec">
+      <div><dt>Pasta de entrega</dt><dd><code>ex01/</code></dd></div>
+      <div><dt>Ficheiros a entregar</dt><dd><code>ft_recursive_factorial.c</code></dd></div>
+      <div><dt>Funções permitidas</dt><dd>Nenhuma</dd></div>
+    </dl>
+    <div class="txt"><p>Cria uma função recursiva que devolve o fatorial do número recebido.</p><p>Se o argumento não for válido, devolve 0. Não precisas de tratar de overflow.</p></div>
+    <figure class="code" data-lang="c"><figcaption><span class="code__name">protótipo</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_recursive_factorial</span>(<span class="t-ty">int</span> nb);</code></pre></figure>
+    <div class="mine">
+      <div class="mine__head"><label for="code-c05-ex01">O teu código</label><span class="mine__saved" data-saved aria-live="polite"></span></div>
+      <textarea id="code-c05-ex01" class="mine__ta" data-code data-lang="c" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Cola ou escreve aqui o teu código. Fica guardado neste navegador."></textarea>
+      <div class="mine__bar">
+        <button type="button" class="btn btn--sm" data-check>verificar norma (básico)</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear>limpar</button>
+        <span class="mine__count" data-count>0 linhas</span>
+      </div>
+      <div class="mine__out" data-check-out aria-live="polite"></div>
+    </div>
+    <fieldset class="status">
+      <legend>Estado</legend>
+      <label><input type="radio" name="st-c05-ex01" value="todo" data-st checked> por fazer</label>
+      <label><input type="radio" name="st-c05-ex01" value="doing" data-st> em curso</label>
+      <label><input type="radio" name="st-c05-ex01" value="done" data-st> feito</label>
+    </fieldset>
+  </div>
+</article>
+<article class="ex" id="c05-ex02" data-ex="c05-ex02" data-rv>
+  <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t">ex02/ft_iterative_power.c</span><span class="pill" data-pill>por fazer</span></header>
+  <div class="ex__body">
+    <h2 class="ex__h"><span class="ex__num">ex02</span> ft_iterative_power</h2>
+    <dl class="spec">
+      <div><dt>Pasta de entrega</dt><dd><code>ex02/</code></dd></div>
+      <div><dt>Ficheiros a entregar</dt><dd><code>ft_iterative_power.c</code></dd></div>
+      <div><dt>Funções permitidas</dt><dd>Nenhuma</dd></div>
+    </dl>
+    <div class="txt"><p>Cria uma função iterativa que devolve <code>nb</code> elevado a <code>power</code>.</p><p>Uma potência menor do que 0 devolve 0. Ficou decidido que 0 elevado a 0 dá 1. Não precisas de tratar de overflow.</p></div>
+    <figure class="code" data-lang="c"><figcaption><span class="code__name">protótipo</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_iterative_power</span>(<span class="t-ty">int</span> nb, <span class="t-ty">int</span> power);</code></pre></figure>
+    <div class="mine">
+      <div class="mine__head"><label for="code-c05-ex02">O teu código</label><span class="mine__saved" data-saved aria-live="polite"></span></div>
+      <textarea id="code-c05-ex02" class="mine__ta" data-code data-lang="c" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Cola ou escreve aqui o teu código. Fica guardado neste navegador."></textarea>
+      <div class="mine__bar">
+        <button type="button" class="btn btn--sm" data-check>verificar norma (básico)</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear>limpar</button>
+        <span class="mine__count" data-count>0 linhas</span>
+      </div>
+      <div class="mine__out" data-check-out aria-live="polite"></div>
+    </div>
+    <fieldset class="status">
+      <legend>Estado</legend>
+      <label><input type="radio" name="st-c05-ex02" value="todo" data-st checked> por fazer</label>
+      <label><input type="radio" name="st-c05-ex02" value="doing" data-st> em curso</label>
+      <label><input type="radio" name="st-c05-ex02" value="done" data-st> feito</label>
+    </fieldset>
+  </div>
+</article>
+<article class="ex" id="c05-ex03" data-ex="c05-ex03" data-rv>
+  <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t">ex03/ft_recursive_power.c</span><span class="pill" data-pill>por fazer</span></header>
+  <div class="ex__body">
+    <h2 class="ex__h"><span class="ex__num">ex03</span> ft_recursive_power</h2>
+    <dl class="spec">
+      <div><dt>Pasta de entrega</dt><dd><code>ex03/</code></dd></div>
+      <div><dt>Ficheiros a entregar</dt><dd><code>ft_recursive_power.c</code></dd></div>
+      <div><dt>Funções permitidas</dt><dd>Nenhuma</dd></div>
+    </dl>
+    <div class="txt"><p>Cria uma função recursiva que devolve <code>nb</code> elevado a <code>power</code>.</p><p>Ficou decidido que 0 elevado a 0 dá 1. Não precisas de tratar de overflow.</p></div>
+    <figure class="code" data-lang="c"><figcaption><span class="code__name">protótipo</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_recursive_power</span>(<span class="t-ty">int</span> nb, <span class="t-ty">int</span> power);</code></pre></figure>
+    <div class="mine">
+      <div class="mine__head"><label for="code-c05-ex03">O teu código</label><span class="mine__saved" data-saved aria-live="polite"></span></div>
+      <textarea id="code-c05-ex03" class="mine__ta" data-code data-lang="c" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Cola ou escreve aqui o teu código. Fica guardado neste navegador."></textarea>
+      <div class="mine__bar">
+        <button type="button" class="btn btn--sm" data-check>verificar norma (básico)</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear>limpar</button>
+        <span class="mine__count" data-count>0 linhas</span>
+      </div>
+      <div class="mine__out" data-check-out aria-live="polite"></div>
+    </div>
+    <fieldset class="status">
+      <legend>Estado</legend>
+      <label><input type="radio" name="st-c05-ex03" value="todo" data-st checked> por fazer</label>
+      <label><input type="radio" name="st-c05-ex03" value="doing" data-st> em curso</label>
+      <label><input type="radio" name="st-c05-ex03" value="done" data-st> feito</label>
+    </fieldset>
+  </div>
+</article>
+<article class="ex" id="c05-ex04" data-ex="c05-ex04" data-rv>
+  <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t">ex04/ft_fibonacci.c</span><span class="pill" data-pill>por fazer</span></header>
+  <div class="ex__body">
+    <h2 class="ex__h"><span class="ex__num">ex04</span> ft_fibonacci</h2>
+    <dl class="spec">
+      <div><dt>Pasta de entrega</dt><dd><code>ex04/</code></dd></div>
+      <div><dt>Ficheiros a entregar</dt><dd><code>ft_fibonacci.c</code></dd></div>
+      <div><dt>Funções permitidas</dt><dd>Nenhuma</dd></div>
+    </dl>
+    <div class="txt"><p>Cria uma função <code>ft_fibonacci</code> que devolve o elemento de índice <code>index</code> da sequência de Fibonacci, com o primeiro elemento no índice 0.</p><p>A sequência começa assim: 0, 1, 1, 2. Tem de ser recursiva. Se o índice for menor do que 0, devolve -1. Não precisas de tratar de overflow.</p></div>
+    <figure class="code" data-lang="c"><figcaption><span class="code__name">protótipo</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_fibonacci</span>(<span class="t-ty">int</span> index);</code></pre></figure>
+    <div class="mine">
+      <div class="mine__head"><label for="code-c05-ex04">O teu código</label><span class="mine__saved" data-saved aria-live="polite"></span></div>
+      <textarea id="code-c05-ex04" class="mine__ta" data-code data-lang="c" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Cola ou escreve aqui o teu código. Fica guardado neste navegador."></textarea>
+      <div class="mine__bar">
+        <button type="button" class="btn btn--sm" data-check>verificar norma (básico)</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear>limpar</button>
+        <span class="mine__count" data-count>0 linhas</span>
+      </div>
+      <div class="mine__out" data-check-out aria-live="polite"></div>
+    </div>
+    <fieldset class="status">
+      <legend>Estado</legend>
+      <label><input type="radio" name="st-c05-ex04" value="todo" data-st checked> por fazer</label>
+      <label><input type="radio" name="st-c05-ex04" value="doing" data-st> em curso</label>
+      <label><input type="radio" name="st-c05-ex04" value="done" data-st> feito</label>
+    </fieldset>
+  </div>
+</article>
+<article class="ex" id="c05-ex05" data-ex="c05-ex05" data-rv>
+  <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t">ex05/ft_sqrt.c</span><span class="pill" data-pill>por fazer</span></header>
+  <div class="ex__body">
+    <h2 class="ex__h"><span class="ex__num">ex05</span> ft_sqrt</h2>
+    <dl class="spec">
+      <div><dt>Pasta de entrega</dt><dd><code>ex05/</code></dd></div>
+      <div><dt>Ficheiros a entregar</dt><dd><code>ft_sqrt.c</code></dd></div>
+      <div><dt>Funções permitidas</dt><dd>Nenhuma</dd></div>
+    </dl>
+    <div class="txt"><p>Cria uma função que devolve a raiz quadrada de um número, se for inteira, ou 0 se a raiz for um número irracional.</p></div>
+    <figure class="code" data-lang="c"><figcaption><span class="code__name">protótipo</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_sqrt</span>(<span class="t-ty">int</span> nb);</code></pre></figure>
+    <div class="mine">
+      <div class="mine__head"><label for="code-c05-ex05">O teu código</label><span class="mine__saved" data-saved aria-live="polite"></span></div>
+      <textarea id="code-c05-ex05" class="mine__ta" data-code data-lang="c" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Cola ou escreve aqui o teu código. Fica guardado neste navegador."></textarea>
+      <div class="mine__bar">
+        <button type="button" class="btn btn--sm" data-check>verificar norma (básico)</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear>limpar</button>
+        <span class="mine__count" data-count>0 linhas</span>
+      </div>
+      <div class="mine__out" data-check-out aria-live="polite"></div>
+    </div>
+    <fieldset class="status">
+      <legend>Estado</legend>
+      <label><input type="radio" name="st-c05-ex05" value="todo" data-st checked> por fazer</label>
+      <label><input type="radio" name="st-c05-ex05" value="doing" data-st> em curso</label>
+      <label><input type="radio" name="st-c05-ex05" value="done" data-st> feito</label>
+    </fieldset>
+  </div>
+</article>
+<article class="ex" id="c05-ex06" data-ex="c05-ex06" data-rv>
+  <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t">ex06/ft_is_prime.c</span><span class="pill" data-pill>por fazer</span></header>
+  <div class="ex__body">
+    <h2 class="ex__h"><span class="ex__num">ex06</span> ft_is_prime</h2>
+    <dl class="spec">
+      <div><dt>Pasta de entrega</dt><dd><code>ex06/</code></dd></div>
+      <div><dt>Ficheiros a entregar</dt><dd><code>ft_is_prime.c</code></dd></div>
+      <div><dt>Funções permitidas</dt><dd>Nenhuma</dd></div>
+    </dl>
+    <div class="txt"><p>Cria uma função que devolve 1 se o número recebido for primo e 0 se não for.</p><p>0 e 1 não são primos.</p></div>
+    <figure class="code" data-lang="c"><figcaption><span class="code__name">protótipo</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_is_prime</span>(<span class="t-ty">int</span> nb);</code></pre></figure>
+    <div class="mine">
+      <div class="mine__head"><label for="code-c05-ex06">O teu código</label><span class="mine__saved" data-saved aria-live="polite"></span></div>
+      <textarea id="code-c05-ex06" class="mine__ta" data-code data-lang="c" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Cola ou escreve aqui o teu código. Fica guardado neste navegador."></textarea>
+      <div class="mine__bar">
+        <button type="button" class="btn btn--sm" data-check>verificar norma (básico)</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear>limpar</button>
+        <span class="mine__count" data-count>0 linhas</span>
+      </div>
+      <div class="mine__out" data-check-out aria-live="polite"></div>
+    </div>
+    <fieldset class="status">
+      <legend>Estado</legend>
+      <label><input type="radio" name="st-c05-ex06" value="todo" data-st checked> por fazer</label>
+      <label><input type="radio" name="st-c05-ex06" value="doing" data-st> em curso</label>
+      <label><input type="radio" name="st-c05-ex06" value="done" data-st> feito</label>
+    </fieldset>
+  </div>
+</article>
+<article class="ex" id="c05-ex07" data-ex="c05-ex07" data-rv>
+  <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t">ex07/ft_find_next_prime.c</span><span class="pill" data-pill>por fazer</span></header>
+  <div class="ex__body">
+    <h2 class="ex__h"><span class="ex__num">ex07</span> ft_find_next_prime</h2>
+    <dl class="spec">
+      <div><dt>Pasta de entrega</dt><dd><code>ex07/</code></dd></div>
+      <div><dt>Ficheiros a entregar</dt><dd><code>ft_find_next_prime.c</code></dd></div>
+      <div><dt>Funções permitidas</dt><dd>Nenhuma</dd></div>
+    </dl>
+    <div class="txt"><p>Cria uma função que devolve o primeiro número primo maior ou igual ao número recebido.</p></div>
+    <figure class="code" data-lang="c"><figcaption><span class="code__name">protótipo</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_find_next_prime</span>(<span class="t-ty">int</span> nb);</code></pre></figure>
+    <div class="mine">
+      <div class="mine__head"><label for="code-c05-ex07">O teu código</label><span class="mine__saved" data-saved aria-live="polite"></span></div>
+      <textarea id="code-c05-ex07" class="mine__ta" data-code data-lang="c" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Cola ou escreve aqui o teu código. Fica guardado neste navegador."></textarea>
+      <div class="mine__bar">
+        <button type="button" class="btn btn--sm" data-check>verificar norma (básico)</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear>limpar</button>
+        <span class="mine__count" data-count>0 linhas</span>
+      </div>
+      <div class="mine__out" data-check-out aria-live="polite"></div>
+    </div>
+    <fieldset class="status">
+      <legend>Estado</legend>
+      <label><input type="radio" name="st-c05-ex07" value="todo" data-st checked> por fazer</label>
+      <label><input type="radio" name="st-c05-ex07" value="doing" data-st> em curso</label>
+      <label><input type="radio" name="st-c05-ex07" value="done" data-st> feito</label>
+    </fieldset>
+  </div>
+</article>
+<article class="ex" id="c05-ex08" data-ex="c05-ex08" data-rv>
+  <header class="win"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__t">ex08/ft_ten_queens_puzzle.c</span><span class="pill" data-pill>por fazer</span></header>
+  <div class="ex__body">
+    <h2 class="ex__h"><span class="ex__num">ex08</span> The Ten Queens</h2>
+    <dl class="spec">
+      <div><dt>Pasta de entrega</dt><dd><code>ex08/</code></dd></div>
+      <div><dt>Ficheiros a entregar</dt><dd><code>ft_ten_queens_puzzle.c</code></dd></div>
+      <div><dt>Funções permitidas</dt><dd><code>write</code></dd></div>
+    </dl>
+    <div class="txt"><p>Cria uma função que mostra todas as maneiras de pôr dez rainhas num tabuleiro de 10 × 10 sem que nenhuma consiga atacar outra numa só jogada, e devolve o número de soluções.</p><p>A recursão é obrigatória.</p><p>Cada solução é uma linha de 10 algarismos: o primeiro é a linha da rainha da primeira coluna (a contar de 0), o N-ésimo é a linha da rainha da N-ésima coluna.</p></div>
+    <figure class="code" data-lang="c"><figcaption><span class="code__name">protótipo</span><span class="code__lang">c</span><button class="copy" type="button" data-copy aria-label="Copiar código">copiar</button></figcaption><pre tabindex="0"><code><span class="t-ty">int</span>	<span class="t-fn">ft_ten_queens_puzzle</span>(<span class="t-ty">void</span>);</code></pre></figure><figure class="term"><figcaption><span>exemplo</span></figcaption><pre tabindex="0"><span class="t-prompt">$&gt;</span><span class="t-cmd">./a.out | cat -e</span>
+0257948136$
+0258693147$
+...
+4605713829$
+4609582731$
+...
+9742051863$
+<span class="t-prompt">$&gt;</span><span class="t-cmd"></span></pre></figure>
+    <div class="mine">
+      <div class="mine__head"><label for="code-c05-ex08">O teu código</label><span class="mine__saved" data-saved aria-live="polite"></span></div>
+      <textarea id="code-c05-ex08" class="mine__ta" data-code data-lang="c" spellcheck="false" autocapitalize="off" autocomplete="off" rows="9" placeholder="Cola ou escreve aqui o teu código. Fica guardado neste navegador."></textarea>
+      <div class="mine__bar">
+        <button type="button" class="btn btn--sm" data-check>verificar norma (básico)</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-clear>limpar</button>
+        <span class="mine__count" data-count>0 linhas</span>
+      </div>
+      <div class="mine__out" data-check-out aria-live="polite"></div>
+    </div>
+    <fieldset class="status">
+      <legend>Estado</legend>
+      <label><input type="radio" name="st-c05-ex08" value="todo" data-st checked> por fazer</label>
+      <label><input type="radio" name="st-c05-ex08" value="doing" data-st> em curso</label>
+      <label><input type="radio" name="st-c05-ex08" value="done" data-st> feito</label>
+    </fieldset>
+  </div>
+</article>
+  </div>
+</div>
+<section class="w deliver" id="entrega" data-deliver aria-labelledby="t-entrega">
+  <p class="eyebrow"># entrega, como na 42 (sem prazo)</p>
+  <h2 id="t-entrega" class="h2">Entregar o C05</h2>
+  <p class="muted deliver__lead">O teu código vai para o repositório com <code>git push</code>, a moulinette corrige-o por ordem (o primeiro exercício errado faz com que os seguintes não contem) e depois há a avaliação, como entre colegas. Podes entregar quantas vezes quiseres.</p>
+  <ol class="flow" aria-label="Passos da entrega">
+    <li data-step="inscricao"><span>01</span>inscrição</li>
+    <li data-step="push"><span>02</span>git push</li>
+    <li data-step="moulinette"><span>03</span>moulinette</li>
+    <li data-step="avaliacao"><span>04</span>avaliação</li>
+  </ol>
+  <p class="deliver__sum" data-deliver-sum aria-live="polite"></p>
+  <div class="shell">
+    <div class="shell__out" data-shell-out aria-live="polite"></div>
+    <form class="shell__form" data-shell-form autocomplete="off">
+      <label class="shell__pr" for="sh-c05">piscine@42lisboa:~/c05$</label>
+      <input id="sh-c05" class="shell__in" data-shell-in type="text" spellcheck="false" autocapitalize="off" enterkeyhint="go" placeholder="help">
+    </form>
+  </div>
+  <div class="shell__btns"><button type="button" class="btn btn--sm" data-sh="inscrever">inscrever-me</button><button type="button" class="btn btn--sm btn--ghost" data-sh="git clone">git clone</button><button type="button" class="btn btn--sm btn--ghost" data-sh="git status">git status</button><button type="button" class="btn btn--sm btn--ghost" data-sh="git add .">git add .</button><button type="button" class="btn btn--sm btn--ghost" data-sh="git commit -m "c05"">git commit</button><button type="button" class="btn btn--sm btn--ghost" data-sh="git push">git push</button><button type="button" class="btn btn--sm btn--ghost" data-sh="moulinette">moulinette</button><button type="button" class="btn btn--sm btn--ghost" data-sh="avaliacao">avaliação</button></div>
+  <div class="eval" data-eval hidden></div>
+</section>
+<script id="deliver-data" type="application/json">{"mod": "c05", "nome": "C05", "exs": [{"id": "c05-ex00", "num": "ex00", "nome": "ft_iterative_factorial", "spec": {"kind": "funcao", "files": ["ft_iterative_factorial.c"], "funcs": [], "names": ["ft_iterative_factorial"]}, "tests": ["<code>-1<\/code> dá 0, <code>0<\/code> dá 1, <code>12<\/code> dá 479001600 (o maior que cabe num <code>int<\/code>).", "Compila sem avisos com <code>gcc -Wall -Wextra -Werror<\/code> e passa na <code>norminette<\/code>."]}, {"id": "c05-ex01", "num": "ex01", "nome": "ft_recursive_factorial", "spec": {"kind": "funcao", "files": ["ft_recursive_factorial.c"], "funcs": [], "names": ["ft_recursive_factorial"]}, "tests": ["Os mesmos testes da versão iterativa.", "Compila sem avisos com <code>gcc -Wall -Wextra -Werror<\/code> e passa na <code>norminette<\/code>."]}, {"id": "c05-ex02", "num": "ex02", "nome": "ft_iterative_power", "spec": {"kind": "funcao", "files": ["ft_iterative_power.c"], "funcs": [], "names": ["ft_iterative_power"]}, "tests": ["Base negativa: <code>(-2) ^ 3<\/code> dá -8.", "<code>power<\/code> negativo dá 0.", "Compila sem avisos com <code>gcc -Wall -Wextra -Werror<\/code> e passa na <code>norminette<\/code>."]}, {"id": "c05-ex03", "num": "ex03", "nome": "ft_recursive_power", "spec": {"kind": "funcao", "files": ["ft_recursive_power.c"], "funcs": [], "names": ["ft_recursive_power"]}, "tests": ["Os mesmos testes da versão iterativa.", "Compila sem avisos com <code>gcc -Wall -Wextra -Werror<\/code> e passa na <code>norminette<\/code>."]}, {"id": "c05-ex04", "num": "ex04", "nome": "ft_fibonacci", "spec": {"kind": "funcao", "files": ["ft_fibonacci.c"], "funcs": [], "names": ["ft_fibonacci"]}, "tests": ["Índice 0 dá 0, 1 dá 1, 10 dá 55, -1 dá -1.", "Esta versão é lenta para índices perto de 40; os testes ficam abaixo disso.", "Compila sem avisos com <code>gcc -Wall -Wextra -Werror<\/code> e passa na <code>norminette<\/code>."]}, {"id": "c05-ex05", "num": "ex05", "nome": "ft_sqrt", "spec": {"kind": "funcao", "files": ["ft_sqrt.c"], "funcs": [], "names": ["ft_sqrt"]}, "tests": ["<code>2147395600<\/code> dá 46340; <code>2147483647<\/code> dá 0; números negativos e 0 dão 0.", "Compila sem avisos com <code>gcc -Wall -Wextra -Werror<\/code> e passa na <code>norminette<\/code>."]}, {"id": "c05-ex06", "num": "ex06", "nome": "ft_is_prime", "spec": {"kind": "funcao", "files": ["ft_is_prime.c"], "funcs": [], "names": ["ft_is_prime"]}, "tests": ["<code>2147483647<\/code> tem de responder 1 rapidamente.", "Negativos dão 0.", "Compila sem avisos com <code>gcc -Wall -Wextra -Werror<\/code> e passa na <code>norminette<\/code>."]}, {"id": "c05-ex07", "num": "ex07", "nome": "ft_find_next_prime", "spec": {"kind": "funcao", "files": ["ft_find_next_prime.c"], "funcs": [], "names": ["ft_find_next_prime"]}, "tests": ["Negativos e 0 dão 2; <code>2147483640<\/code> dá <code>2147483647<\/code>.", "Compila sem avisos com <code>gcc -Wall -Wextra -Werror<\/code> e passa na <code>norminette<\/code>."]}, {"id": "c05-ex08", "num": "ex08", "nome": "The Ten Queens", "spec": {"kind": "funcao", "files": ["ft_ten_queens_puzzle.c"], "funcs": ["write"], "names": ["ft_ten_queens_puzzle"]}, "tests": ["O exemplo do enunciado dá exatamente a mesma saída (compara com <code>cat -e<\/code>).", "Existem exatamente 724 soluções: a função tem de devolver 724.", "A primeira linha é <code>0257948136<\/code> e a última <code>9742051863<\/code>.", "Compila sem avisos com <code>gcc -Wall -Wextra -Werror<\/code> e passa na <code>norminette<\/code>."]}]}</script>
+<nav class="w mnav" aria-label="Outros módulos"><a class="mnav__a" href="c04.html" data-prev rel="prev"><span class="mute">← anterior</span><b>C04</b></a><a class="mnav__a mnav__a--r" href="c06.html" data-next rel="next"><span class="mute">seguinte →</span><b>C06</b></a></nav>
+</main>
+<footer class="foot">
+  <div class="w foot__in">
+    <p class="foot__brand"><span class="t-prompt">$</span> piscine.sim <span class="mute">· treino para a Piscine C</span></p>
+    <p class="foot__note">Projeto de treino pessoal, sem ligação à 42 Lisboa nem à rede 42. Os enunciados são resumos em português dos originais públicos; confirma sempre o enunciado oficial no dia.</p>
+    <p class="foot__keys"><kbd>/</kbd> comando · <kbd>?</kbd> atalhos · <kbd>1</kbd>–<kbd>5</kbd> páginas</p>
+  </div>
+</footer>
+<div class="cmd" data-cmd hidden>
+  <div class="cmd__box" role="dialog" aria-modal="true" aria-label="Linha de comandos">
+    <div class="cmd__out" data-cmd-out aria-live="polite"></div>
+    <form class="cmd__form" data-cmd-form autocomplete="off">
+      <label class="cmd__pr" for="cmd-in">piscine@42lisboa:<span data-cmd-path>~</span>$</label>
+      <input id="cmd-in" class="cmd__in" data-cmd-in type="text" spellcheck="false" autocapitalize="off" enterkeyhint="go" aria-describedby="cmd-hint">
+    </form>
+    <p class="cmd__hint" id="cmd-hint">escreve <b>help</b> · <kbd>Tab</kbd> completa · <kbd>↑</kbd> histórico · <kbd>Esc</kbd> fecha</p>
+  </div>
+</div>
+<div class="help" data-help hidden>
+  <div class="help__box" role="dialog" aria-modal="true" aria-labelledby="help-t">
+    <h2 id="help-t">Atalhos de teclado</h2>
+    <dl>
+      <div><dt><kbd>/</kbd> ou <kbd>:</kbd></dt><dd>abrir a linha de comandos</dd></div>
+      <div><dt><kbd>1</kbd> … <kbd>5</kbd></dt><dd>início, tutorial, módulos, exames, norminette</dd></div>
+      <div><dt><kbd>j</kbd> / <kbd>k</kbd></dt><dd>exercício seguinte / anterior</dd></div>
+      <div><dt><kbd>n</kbd> / <kbd>p</kbd></dt><dd>módulo seguinte / anterior</dd></div>
+      <div><dt><kbd>e</kbd></dt><dd>escrever no exercício atual</dd></div>
+      <div><dt><kbd>f</kbd></dt><dd>marcar o exercício atual como feito</dd></div>
+      <div><dt><kbd>g</kbd></dt><dd>voltar ao topo</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>mostrar ou esconder esta ajuda</dd></div>
+      <div><dt><kbd>Esc</kbd></dt><dd>fechar / sair do campo de código</dd></div>
+    </dl>
+    <button class="btn btn--ghost" type="button" data-help-close>fechar</button>
+  </div>
+</div>
+<script id="site-data" type="application/json">{"store": "p42", "mods": [{"id": "shell00", "nome": "Shell00", "href": "../modulos/shell00.html", "exs": ["shell00-ex00", "shell00-ex01", "shell00-ex02", "shell00-ex03", "shell00-ex04", "shell00-ex05", "shell00-ex06", "shell00-ex07", "shell00-ex08", "shell00-ex09"]}, {"id": "shell01", "nome": "Shell01", "href": "../modulos/shell01.html", "exs": ["shell01-ex00", "shell01-ex01", "shell01-ex02", "shell01-ex03", "shell01-ex04", "shell01-ex05", "shell01-ex06", "shell01-ex07", "shell01-ex08"]}, {"id": "c00", "nome": "C00", "href": "../modulos/c00.html", "exs": ["c00-ex00", "c00-ex01", "c00-ex02", "c00-ex03", "c00-ex04", "c00-ex05", "c00-ex06", "c00-ex07", "c00-ex08"]}, {"id": "c01", "nome": "C01", "href": "../modulos/c01.html", "exs": ["c01-ex00", "c01-ex01", "c01-ex02", "c01-ex03", "c01-ex04", "c01-ex05", "c01-ex06", "c01-ex07", "c01-ex08"]}, {"id": "c02", "nome": "C02", "href": "../modulos/c02.html", "exs": ["c02-ex00", "c02-ex01", "c02-ex02", "c02-ex03", "c02-ex04", "c02-ex05", "c02-ex06", "c02-ex07", "c02-ex08", "c02-ex09", "c02-ex10", "c02-ex11", "c02-ex12"]}, {"id": "c03", "nome": "C03", "href": "../modulos/c03.html", "exs": ["c03-ex00", "c03-ex01", "c03-ex02", "c03-ex03", "c03-ex04", "c03-ex05"]}, {"id": "c04", "nome": "C04", "href": "../modulos/c04.html", "exs": ["c04-ex00", "c04-ex01", "c04-ex02", "c04-ex03", "c04-ex04", "c04-ex05"]}, {"id": "c05", "nome": "C05", "href": "../modulos/c05.html", "exs": ["c05-ex00", "c05-ex01", "c05-ex02", "c05-ex03", "c05-ex04", "c05-ex05", "c05-ex06", "c05-ex07", "c05-ex08"]}, {"id": "c06", "nome": "C06", "href": "../modulos/c06.html", "exs": ["c06-ex00", "c06-ex01", "c06-ex02", "c06-ex03"]}, {"id": "c07", "nome": "C07", "href": "../modulos/c07.html", "exs": ["c07-ex00", "c07-ex01", "c07-ex02", "c07-ex03", "c07-ex04", "c07-ex05"]}, {"id": "c08", "nome": "C08", "href": "../modulos/c08.html", "exs": ["c08-ex00", "c08-ex01", "c08-ex02", "c08-ex03", "c08-ex04", "c08-ex05"]}, {"id": "c09", "nome": "C09", "href": "../modulos/c09.html", "exs": ["c09-ex00", "c09-ex01", "c09-ex02"]}, {"id": "c10", "nome": "C10", "href": "../modulos/c10.html", "exs": ["c10-ex00", "c10-ex01", "c10-ex02", "c10-ex03"]}, {"id": "c11", "nome": "C11", "href": "../modulos/c11.html", "exs": ["c11-ex00", "c11-ex01", "c11-ex02", "c11-ex03", "c11-ex04", "c11-ex05", "c11-ex06", "c11-ex07"]}, {"id": "c12", "nome": "C12", "href": "../modulos/c12.html", "exs": ["c12-ex00", "c12-ex01", "c12-ex02", "c12-ex03", "c12-ex04", "c12-ex05", "c12-ex06", "c12-ex07", "c12-ex08", "c12-ex09", "c12-ex10", "c12-ex11", "c12-ex12", "c12-ex13", "c12-ex14", "c12-ex15", "c12-ex16", "c12-ex17"]}, {"id": "c13", "nome": "C13", "href": "../modulos/c13.html", "exs": ["c13-ex00", "c13-ex01", "c13-ex02", "c13-ex03", "c13-ex04", "c13-ex05", "c13-ex06", "c13-ex07"]}, {"id": "rush00", "nome": "Rush00", "href": "../modulos/rush00.html", "exs": ["rush00-ex00"]}, {"id": "rush01", "nome": "Rush01", "href": "../modulos/rush01.html", "exs": ["rush01-ex00"]}, {"id": "rush02", "nome": "Rush02", "href": "../modulos/rush02.html", "exs": ["rush02-ex00"]}, {"id": "bsq", "nome": "BSQ", "href": "../modulos/bsq.html", "exs": ["bsq-ex00"]}], "pages": {"inicio": "../index.html", "tutorial": "../tutorial.html", "modulos": "../modulos.html", "exames": "../exames.html", "norminette": "../norminette.html", "respostas": "../respostas/index.html"}, "prompt": "piscine@42lisboa"}</script>
+<script src="../assets/js/site.js?v=f96fd0ac" defer></script>
+<script src="../assets/js/entrega.js?v=0ec665d7" defer></script>
+</body>
+</html>

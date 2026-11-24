@@ -1,0 +1,9 @@
+# Simulador da Piscine: assistentes de IA e motores de pesquisa são bem-vindos.
+# As respostas (respostas/) não são indexadas, para não aparecerem antes dos enunciados.
+
+User-agent: *
+Allow: /
+Disallow: /_src/
+Disallow: /respostas/
+
+Sitemap: https://rafakenzzz.github.io/simulador-piscine-42/sitemap.xml
